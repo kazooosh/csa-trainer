@@ -94,7 +94,8 @@ function normalize(raw) {
       answer,
       multi: answer.length > 1,
       explanation: q.explanation || '',
-      reference: q.reference || ''
+      reference: q.reference || '',
+      referenceUrl: /^https?:\/\//i.test(q.referenceUrl || '') ? q.referenceUrl : ''
     };
   }).filter((q) => q.question && q.options.length >= 2 && q.answer.length);
   BY_ID = {};
@@ -386,7 +387,11 @@ function explainHtml(q, a) {
     '<div class="verdict ' + (a.firstTry ? 'ok' : 'bad') + '">' +
       verdict + ' &middot; Lösung ' + letters +
     '</div><p>' + esc(q.explanation) + '</p>' +
-    (q.reference ? '<div class="ref">' + esc(q.reference) + '</div>' : '') +
+    (q.reference
+      ? '<div class="ref">' + (q.referenceUrl
+          ? '<a href="' + esc(q.referenceUrl) + '" target="_blank" rel="noopener noreferrer">' + esc(q.reference) + ' &#8599;</a>'
+          : esc(q.reference)) + '</div>'
+      : '') +
     '</div>';
 }
 

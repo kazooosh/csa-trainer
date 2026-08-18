@@ -5,6 +5,7 @@ Fortschritt liegt im localStorage des Browsers und lässt sich als JSON exportie
 
 ```
 index.html       Gerüst mit allen Screens
+parse_pdf.py     PDF nach questions.json
 styles.css       Dark Theme
 app.js           Logik
 questions.json   Fragenkatalog
@@ -69,6 +70,35 @@ Jede Frage hat eine Leitner-Box von 0 bis 4.
 
 Beim Ziehen einer Runde bekommen ungesehene Fragen das höchste Gewicht, danach niedrige Boxen, Wissenslücken zählen doppelt. Antwortoptionen werden nie gemischt, weil die Erklärungen sich auf die Buchstaben beziehen. Die Reihenfolge der Fragen ist zufällig.
 
+## Fragen aus der PDF ziehen
+
+```bash
+pip install pdfplumber
+python parse_pdf.py exam.pdf -o questions.json
+```
+
+Das Skript liest Frage, Kategorie, Schwierigkeit, Optionen, Antwort, Erklärung und die Reference-Zeile.
+Der Hyperlink hinter der Reference wird aus den PDF-Annotationen gelesen und landet als `referenceUrl`
+in der JSON, in der App wird die Quelle dann klickbar.
+
+Am Ende kommt ein Report mit Anzahl, Kategorien, Verteilung und Hinweisen, zum Beispiel wenn eine Frage
+"Choose two" sagt, die Answer-Zeile aber nur einen Buchstaben nennt, oder wenn zwei Fragen inhaltsgleich sind.
+Die Hinweise sind Prüfpunkte, keine Abbrüche.
+
+Weitere Schalter:
+
+| Option | Wirkung |
+|---|---|
+| `--pages 1-40` | nur bestimmte Seiten, gut zum Testen |
+| `--dump-text` | zeigt die eingelesenen Zeilen samt erkannter Links und schreibt nichts |
+| `--keep-caps` | lässt die Fragen in Großbuchstaben, so wie sie in der PDF stehen |
+| `--keep-em-dashes` | ersetzt Geviertstriche nicht durch normale Bindestriche |
+
+Standardmäßig werden die durchgehend groß geschriebenen Fragen in normale Schreibweise übersetzt.
+Welche Wörter dabei groß bleiben, leitet das Skript aus den Erklärungstexten ab: Wörter, die dort
+durchgängig groß geschrieben sind, bleiben groß, Funktionswörter bleiben klein. Bei Fragen mit
+Sonderlayout, etwa Tabellen oder Screenshots, hilft `--dump-text` beim Nachjustieren.
+
 ## Format von questions.json
 
 ```json
@@ -83,7 +113,8 @@ Beim Ziehen einer Runde bekommen ungesehene Fragen das höchste Gewicht, danach 
       "options": ["List column heading", "Metrics module", "Statistics module", "View / Run module"],
       "answer": ["A", "D"],
       "explanation": "…",
-      "reference": "ServiceNow Docs - Create a report"
+      "reference": "ServiceNow Docs - Create a report",
+      "referenceUrl": "https://www.servicenow.com/docs/..."
     }
   ]
 }
@@ -91,6 +122,7 @@ Beim Ziehen einer Runde bekommen ungesehene Fragen das höchste Gewicht, danach 
 
 - `answer` mit mehr als einem Buchstaben macht die Frage automatisch zur Mehrfachauswahl.
 - `difficulty` erwartet `easy`, `medium` oder `hard`.
+- `referenceUrl` ist optional. Ist sie gesetzt, wird die Quelle unter der Erklärung zum Link.
 - `id` ist optional. Ohne Angabe wird sie aus dem Fragetext gehasht, damit ein Neu-Parsen der PDF den Fortschritt nicht zerstört. Umformulierte Fragen gelten dann allerdings als neu.
 
 ## Fortschritt mitnehmen
