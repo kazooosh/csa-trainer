@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<title>CSA Trainer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <button class="brand" id="brandBtn" title="Zum Hauptmenü">
+      <span class="dot"></span>
+      <span>CSA Trainer</span>
+      <span class="sub" id="brandSub"></span>
+    </button>
+    <span class="spacer"></span>
+    <span class="counter" id="counter"></span>
+  </div>
+  <div class="rail hidden" id="rail"></div>
+</header>
+
+<main class="wrap">
+
+  <!-- MENU -->
+  <section id="screen-menu">
+    <div class="eyebrow">Prüfungstraining</div>
+    <h1 class="screen-title">Was üben wir heute?</h1>
+    <p class="screen-sub" id="menuSub"></p>
+
+    <div class="stat-strip">
+      <div class="stat-box"><div class="value" id="mStatSeen">0</div><div class="label">Fragen gesehen</div></div>
+      <div class="stat-box"><div class="value" id="mStatRate">0%</div><div class="label">Trefferquote</div></div>
+      <div class="stat-box"><div class="value" id="mStatGaps">0</div><div class="label">Wissenslücken</div></div>
+    </div>
+
+    <div class="menu">
+      <button class="menu-card primary" data-mode="all">
+        <span class="glyph">▶</span>
+        <span class="body">
+          <span class="title">Neue Runde starten</span>
+          <span class="desc">Gewichtete Auswahl aus allen Fragen, neue und schwache zuerst</span>
+        </span>
+        <span class="count" id="cntAll">0</span>
+      </button>
+
+      <button class="menu-card" data-mode="wrong" id="cardWrong">
+        <span class="glyph">✕</span>
+        <span class="body">
+          <span class="title">Wissenslücken ausbessern</span>
+          <span class="desc">Fragen, die du zuletzt falsch hattest</span>
+        </span>
+        <span class="count" id="cntWrong">0</span>
+      </button>
+
+      <button class="menu-card" data-mode="marked" id="cardMarked">
+        <span class="glyph">★</span>
+        <span class="body">
+          <span class="title">Markierte Fragen</span>
+          <span class="desc">Alles, was du dir zum Nachlesen gemerkt hast</span>
+        </span>
+        <span class="count" id="cntMarked">0</span>
+      </button>
+
+      <button class="menu-card" data-mode="mix" id="cardMix">
+        <span class="glyph">◆</span>
+        <span class="body">
+          <span class="title">Mix aus Lücken und Markierten</span>
+          <span class="desc">Beide Listen zusammen in einer Runde</span>
+        </span>
+        <span class="count" id="cntMix">0</span>
+      </button>
+    </div>
+
+    <div class="menu" style="margin-top:10px">
+      <button class="menu-card hidden" id="resumeCard">
+        <span class="glyph">↺</span>
+        <span class="body">
+          <span class="title">Runde fortsetzen</span>
+          <span class="desc" id="resumeDesc"></span>
+        </span>
+      </button>
+    </div>
+
+    <div class="btn-row" style="margin-top:26px">
+      <button class="btn btn-ghost" id="toStats">Statistik</button>
+      <button class="btn btn-ghost" id="toData">Daten und Sicherung</button>
+    </div>
+  </section>
+
+  <!-- SETUP -->
+  <section id="screen-setup" class="hidden">
+    <div class="eyebrow" id="setupEyebrow">Runde konfigurieren</div>
+    <h1 class="screen-title" id="setupTitle">Neue Runde</h1>
+    <p class="screen-sub" id="setupSub"></p>
+
+    <div class="field" id="sourceField">
+      <label>Quelle</label>
+      <div class="chips" id="sourceChips">
+        <button class="chip" data-src="all">Alle Fragen</button>
+        <button class="chip" data-src="wrong">Falsch beantwortete</button>
+        <button class="chip" data-src="marked">Markierte</button>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Kategorien</label>
+      <div class="chips" id="catChips"></div>
+      <div class="hint">Nichts ausgewählt bedeutet: alle Kategorien.</div>
+    </div>
+
+    <div class="field">
+      <label>Schwierigkeit</label>
+      <div class="chips" id="diffChips"></div>
+    </div>
+
+    <div class="field">
+      <label>Anzahl Fragen</label>
+      <input type="number" id="countInput" min="1" step="1" value="20">
+      <div class="hint" id="poolHint"></div>
+    </div>
+
+    <div class="btn-row">
+      <button class="btn btn-primary" id="startBtn">Runde starten</button>
+      <button class="btn btn-ghost" data-nav="menu">Zurück</button>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="screen-quiz" class="hidden">
+    <div class="q-meta" id="qMeta"></div>
+    <div class="q-text" id="qText"></div>
+    <div class="q-note" id="qNote"></div>
+    <div class="options" id="qOptions"></div>
+    <div id="qConfirmRow" class="btn-row" style="margin-top:14px"></div>
+    <div id="qExplain"></div>
+    <div class="q-nav">
+      <button class="btn" id="prevBtn">← Zurück</button>
+      <span class="spacer"></span>
+      <button class="btn btn-ghost" id="quitBtn">Runde beenden</button>
+      <button class="btn btn-primary" id="nextBtn">Weiter →</button>
+    </div>
+  </section>
+
+  <!-- RESULT -->
+  <section id="screen-result" class="hidden">
+    <div class="result-hero">
+      <div class="big" id="resPct">0%</div>
+      <div class="cap" id="resCap"></div>
+    </div>
+    <div class="stat-strip">
+      <div class="stat-box"><div class="value" id="resRight">0</div><div class="label">Richtig</div></div>
+      <div class="stat-box"><div class="value" id="resWrong">0</div><div class="label">Falsch</div></div>
+      <div class="stat-box"><div class="value" id="resOpen">0</div><div class="label">Offen</div></div>
+    </div>
+    <div class="section-head">Durchgang im Detail</div>
+    <div id="resList"></div>
+    <div class="btn-row" style="margin-top:24px">
+      <button class="btn btn-primary" id="resRetry">Falsche direkt nachüben</button>
+      <button class="btn" data-nav="menu">Hauptmenü</button>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section id="screen-stats" class="hidden">
+    <div class="eyebrow">Auswertung</div>
+    <h1 class="screen-title">Statistik</h1>
+    <p class="screen-sub">Alles über deinen gesamten Lernfortschritt.</p>
+    <div class="stat-strip">
+      <div class="stat-box"><div class="value" id="sTotal">0</div><div class="label">Fragen im Katalog</div></div>
+      <div class="stat-box"><div class="value" id="sSeen">0</div><div class="label">Davon bearbeitet</div></div>
+      <div class="stat-box"><div class="value" id="sRate">0%</div><div class="label">Trefferquote</div></div>
+    </div>
+    <div class="section-head">Leitner-Boxen</div>
+    <div id="sBoxes"></div>
+    <div class="section-head">Nach Kategorie</div>
+    <div id="sCats"></div>
+    <div class="section-head">Nach Schwierigkeit</div>
+    <div id="sDiffs"></div>
+    <div class="btn-row" style="margin-top:26px">
+      <button class="btn" data-nav="menu">Hauptmenü</button>
+    </div>
+  </section>
+
+  <!-- DATA -->
+  <section id="screen-data" class="hidden">
+    <div class="eyebrow">Verwaltung</div>
+    <h1 class="screen-title">Daten und Sicherung</h1>
+    <p class="screen-sub">Fortschritt sichern, auf ein anderes Gerät holen, oder den Fragenkatalog austauschen.</p>
+
+    <div class="section-head">Fortschritt</div>
+    <div class="btn-row">
+      <button class="btn" id="expProgress">Fortschritt exportieren</button>
+      <button class="btn" id="impProgressBtn">Fortschritt importieren</button>
+      <input type="file" id="impProgress" accept="application/json,.json" class="hidden">
+    </div>
+    <div class="hint">Der Export ist eine JSON-Datei. Import überschreibt den lokalen Stand.</div>
+
+    <div class="section-head">Fragenkatalog</div>
+    <div class="btn-row">
+      <button class="btn" id="impQuestionsBtn">questions.json laden</button>
+      <input type="file" id="impQuestions" accept="application/json,.json" class="hidden">
+      <button class="btn btn-ghost" id="resetQuestions">Auf mitgelieferte Datei zurücksetzen</button>
+    </div>
+    <div class="hint" id="qSourceHint"></div>
+
+    <div class="section-head">Zurücksetzen</div>
+    <p class="hint" style="margin-top:0">Löscht alle Antworten, Boxen und Markierungen. Tippe zur Bestätigung <strong>FORTSCHRITT LOESCHEN</strong> ein.</p>
+    <div class="btn-row" style="margin-top:12px">
+      <input type="text" id="resetConfirm" placeholder="FORTSCHRITT LOESCHEN" style="max-width:280px" autocomplete="off">
+      <button class="btn btn-danger" id="resetBtn" disabled>Alles löschen</button>
+    </div>
+
+    <div class="btn-row" style="margin-top:30px">
+      <button class="btn" data-nav="menu">Hauptmenü</button>
+    </div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "title": "ServiceNow CSA",
+    "subtitle": "Practice Exam",
+    "version": 1
+  },
+  "questions": [
+    {
+      "number": "Q1",
+      "category": "Service Catalog",
+      "difficulty": "easy",
+      "question": "A Service Catalog may include which of the following components?",
+      "options": [
+        "Order Guides, Exchange Rates, Calendars",
+        "Order Guides, Catalog Items, and Interceptors",
+        "Catalog Items, Asset Contracts, Task Surveys",
+        "Record Producers, Order Guides, and Catalog Items"
+      ],
+      "answer": ["D"],
+      "explanation": "A Service Catalog is assembled from Catalog Items (the orderable products and services), Order Guides (which bundle several related items into a single guided request), and Record Producers (catalog-style forms that create records on a target table). Option D names all three. The other choices fold in unrelated platform features such as Exchange Rates, Calendars, Asset Contracts, and Task Surveys, none of which are catalog building blocks.",
+      "reference": "ServiceNow Docs - Service Catalog Management"
+    },
+    {
+      "number": "Q2",
+      "category": "Import Sets & Data Sources",
+      "difficulty": "medium",
+      "question": "Which one of the following statements applies to a set of fields when they are coalesced during an import?",
+      "options": [
+        "If a match is found using the coalesce fields, the existing record is updated with the information being imported",
+        "If a match is not found using the coalesce fields, the system does not create a Transform Map",
+        "If a match is found using the coalesce fields, the system creates a new record",
+        "If a match is not found using the coalesce fields, the existing record is updated with the information being imported"
+      ],
+      "answer": ["A"],
+      "explanation": "The coalesce field(s) serve as the match key during a transform. When the system finds an existing record whose coalesce value equals the incoming row, it updates that record rather than inserting a duplicate (A). If no match exists it inserts a new record, so options C and D have the logic reversed, and coalescing has no bearing on whether a Transform Map is created (B).",
+      "reference": "ServiceNow Docs - Field mapping and coalesce"
+    },
+    {
+      "number": "Q3",
+      "category": "Reporting & Analytics",
+      "difficulty": "medium",
+      "question": "As it relates to ServiceNow reporting, which of the following statements describes what a metric can do?",
+      "options": [
+        "A metric is a report gauge used on homepages to display real-time data",
+        "A metric is a time measurement used to report the effectiveness of workflows and SLAs",
+        "A metric is used to measure and evaluate the effectiveness of IT service management processes",
+        "A metric is a comparative measurement used to report the effectiveness of workflows and SLAs"
+      ],
+      "answer": ["C"],
+      "explanation": "A Metric measures and evaluates how effective and efficient your ITSM processes are over time, such as how long a record spends in a given state (C). A gauge (A) is a homepage visualization rather than the metric itself, and options B and D describe SLA behavior, not what a metric does.",
+      "reference": "ServiceNow Docs - Metrics"
+    },
+    {
+      "number": "Q4",
+      "category": "Service Catalog",
+      "difficulty": "medium",
+      "question": "The display sequence is controlled in a Service Catalog item using which of the following?",
+      "options": [
+        "The Default Value field in the Catalog Item form",
+        "The Sequence field in the Catalog Item form",
+        "The Order field in the Variable form",
+        "The Choice field in the Variable form"
+      ],
+      "answer": ["C"],
+      "explanation": "The order in which variables appear on a catalog item is governed by the Order field on each Variable record; lower Order values render higher on the form (C). The Default Value field seeds a starting value, the Choice field defines selectable options for choice-type variables, and there is no Sequence field on the Catalog Item form that drives variable display order.",
+      "reference": "ServiceNow Docs - Service Catalog variables"
+    },
+    {
+      "number": "Q5",
+      "category": "Reporting & Analytics",
+      "difficulty": "medium",
+      "question": "Reports can be created from which different places in the platform? (Choose two.)",
+      "options": [
+        "List column heading",
+        "Metrics module",
+        "Statistics module",
+        "View / Run module"
+      ],
+      "answer": ["A", "D"],
+      "explanation": "A report can be generated straight from a list column heading by clicking the header and choosing a chart/create-report option (A), and from the Reports application using the View / Run module, which opens the report designer (D). The Metrics and Statistics modules (B and C) are not entry points for building reports.",
+      "reference": "ServiceNow Docs - Create a report"
+    }
+  ]
+}

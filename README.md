@@ -1,0 +1,98 @@
+# CSA Trainer
+
+Statische Lern-App für Multiple-Choice-Prüfungsfragen. Kein Backend, kein Build, kein Framework.
+Fortschritt liegt im localStorage des Browsers und lässt sich als JSON exportieren und importieren.
+
+```
+index.html       Gerüst mit allen Screens
+styles.css       Dark Theme
+app.js           Logik
+questions.json   Fragenkatalog
+build.py         baut standalone.html
+standalone.html  alles in einer Datei, läuft per Doppelklick
+```
+
+## Lokal starten
+
+`questions.json` wird per fetch geladen, das geht nicht per Doppelklick auf die HTML-Datei.
+Kleiner Webserver reicht:
+
+```bash
+cd csa-trainer
+python -m http.server 8000
+# http://localhost:8000
+```
+
+Alternativ `python build.py` ausführen und `standalone.html` per Doppelklick öffnen. Darin stecken CSS, JS und Fragen in einer Datei.
+
+## Auf GitHub Pages hosten
+
+1. Neues Repository anlegen, zum Beispiel `csa-trainer`. Public, sonst braucht Pages einen bezahlten Plan.
+2. Dateien hochladen (Web-Oberfläche: "Add file" > "Upload files") oder per Git:
+
+```bash
+cd csa-trainer
+git init -b main
+git add .
+git commit -m "CSA Trainer"
+git remote add origin git@github.com:kazoosh/csa-trainer.git
+git push -u origin main
+```
+
+3. Im Repository auf **Settings** > **Pages**.
+4. Bei "Build and deployment" als Source **Deploy from a branch** wählen, Branch `main`, Ordner `/ (root)`, dann **Save**.
+5. Nach etwa einer Minute liegt die Seite auf `https://kazoosh.github.io/csa-trainer/`. Den Stand des Deployments siehst du im Tab **Actions**.
+
+Wichtig: Die Dateien müssen im Wurzelverzeichnis des Repos liegen, nicht in einem Unterordner, sonst zeigt Pages ein 404.
+
+Fragen aktualisieren heißt danach nur noch: `questions.json` ändern, committen, pushen. Wenn du die Einzeldatei-Version weiterreichst, vorher `python build.py` laufen lassen.
+
+## Bedienung
+
+| Taste | Funktion |
+|---|---|
+| `1` bis `9` | Antwort wählen, bei Mehrfachauswahl umschalten |
+| `Enter` | Antwort prüfen, danach weiter |
+| `←` `→` | Frage zurück und vor |
+| `M` | Frage markieren |
+| `Esc` | zurück ins Hauptmenü, Runde bleibt gespeichert |
+
+Die Leiste unter der Kopfzeile zeigt einen Strich pro Frage der Runde, grün für richtig, rot für falsch. Klick springt direkt zur Frage.
+
+## Lernlogik
+
+Jede Frage hat eine Leitner-Box von 0 bis 4.
+
+- Im ersten Versuch richtig: Box plus 1, Serie plus 1
+- Falsch: Box minus 1, Serie zurück auf 0, Frage landet in den Wissenslücken
+- Zwei richtige Antworten in Folge: Frage verlässt die Wissenslücken
+
+Beim Ziehen einer Runde bekommen ungesehene Fragen das höchste Gewicht, danach niedrige Boxen, Wissenslücken zählen doppelt. Antwortoptionen werden nie gemischt, weil die Erklärungen sich auf die Buchstaben beziehen. Die Reihenfolge der Fragen ist zufällig.
+
+## Format von questions.json
+
+```json
+{
+  "meta": { "title": "ServiceNow CSA", "subtitle": "Practice Exam", "version": 1 },
+  "questions": [
+    {
+      "number": "Q5",
+      "category": "Reporting & Analytics",
+      "difficulty": "medium",
+      "question": "Reports can be created from which different places in the platform? (Choose two.)",
+      "options": ["List column heading", "Metrics module", "Statistics module", "View / Run module"],
+      "answer": ["A", "D"],
+      "explanation": "…",
+      "reference": "ServiceNow Docs - Create a report"
+    }
+  ]
+}
+```
+
+- `answer` mit mehr als einem Buchstaben macht die Frage automatisch zur Mehrfachauswahl.
+- `difficulty` erwartet `easy`, `medium` oder `hard`.
+- `id` ist optional. Ohne Angabe wird sie aus dem Fragetext gehasht, damit ein Neu-Parsen der PDF den Fortschritt nicht zerstört. Umformulierte Fragen gelten dann allerdings als neu.
+
+## Fortschritt mitnehmen
+
+Unter "Daten und Sicherung": Export lädt eine JSON-Datei, Import spielt sie auf einem anderen Gerät wieder ein und überschreibt dort den lokalen Stand.
