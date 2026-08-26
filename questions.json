@@ -35,7 +35,7 @@
       "options": [
         "If a match is found using the coalesce fields, the existing record is updated with the information being imported",
         "If a match is not found using the coalesce fields, the system does not create a Transform Map",
-        "If a match is found using the coalesce fields, the system creates a new record 2 of 204 CONFIDENTIAL",
+        "If a match is found using the coalesce fields, the system creates a new record",
         "If a match is not found using the coalesce fields, the existing record is updated with the information being imported"
       ],
       "answer": [
@@ -72,7 +72,7 @@
       "question": "The display Sequence is controlled in a service catalog item using which of the following?",
       "options": [
         "The Default Value field in the Catalog Item form",
-        "The Sequence field in the Catalog Item form 3 of 204 CONFIDENTIAL",
+        "The Sequence field in the Catalog Item form",
         "The Order field in the Variable form",
         "The Choice field in the Variable form"
       ],
@@ -113,7 +113,7 @@
         "Most recent update",
         "Popularity",
         "Relevancy",
-        "Manager assignment 4 of 204 CONFIDENTIAL",
+        "Manager assignment",
         "Number of views"
       ],
       "answer": [
@@ -154,7 +154,7 @@
         "Breadcrumb",
         "Favorite",
         "Tag",
-        "Bookmark 5 of 204 CONFIDENTIAL"
+        "Bookmark"
       ],
       "answer": [
         "B"
@@ -194,7 +194,7 @@
         "Elevate Roles",
         "Impersonate Users",
         "Order from Service Catalog",
-        "Approve Records 6 of 204 CONFIDENTIAL"
+        "Approve Records"
       ],
       "answer": [
         "B",
@@ -239,7 +239,7 @@
       "answer": [
         "B"
       ],
-      "explanation": "7 of 204 CONFIDENTIAL Catalog Items are the fundamental building blocks of a Service Catalog; they are the orderable products and services that users actually request (B). They are visible front-end records rather than something that runs behind the scenes, they are not optional to a functioning catalog, and 'provide options' more accurately describes variables within an item.",
+      "explanation": "Catalog Items are the fundamental building blocks of a Service Catalog; they are the orderable products and services that users actually request (B). They are visible front-end records rather than something that runs behind the scenes, they are not optional to a functioning catalog, and 'provide options' more accurately describes variables within an item.",
       "reference": "ServiceNow Docs - Catalog Items",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/service-catalog-management/concept/c_ServiceCatalogManagement.html"
     },
@@ -277,7 +277,7 @@
       "answer": [
         "D"
       ],
-      "explanation": "The platform (database) name of the User table is sys_user (D), singular and carrying the sys_ prefix used for core platform tables. 'sys_users' is wrong because it is plural, while the u_ and x_ prefixes denote custom tables in the global and scoped applications respectively, not the 8 of 204 CONFIDENTIAL core User table.",
+      "explanation": "The platform (database) name of the User table is sys_user (D), singular and carrying the sys_ prefix used for core platform tables. 'sys_users' is wrong because it is plural, while the u_ and x_ prefixes denote custom tables in the global and scoped applications respectively, not the core User table.",
       "reference": "ServiceNow Docs - User administration (sys_user)",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/users-and-groups/concept/c_UserAdministration.html"
     },
@@ -353,7 +353,7 @@
       "answer": [
         "A"
       ],
-      "explanation": "Every Flow Designer flow begins with a Trigger, which defines the condition that starts the flow, such as a record being created or updated, a schedule, or an inbound email (A). Core Actions are steps inside the flow, a Spoke is a packaged set of integration actions, and an Event is a separate, legacy automation mechanism. 10 of 204 CONFIDENTIAL",
+      "explanation": "Every Flow Designer flow begins with a Trigger, which defines the condition that starts the flow, such as a record being created or updated, a schedule, or an inbound email (A). Core Actions are steps inside the flow, a Spoke is a packaged set of integration actions, and an Event is a separate, legacy automation mechanism.",
       "reference": "ServiceNow Docs - Flow Designer triggers",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-build-workflows/page/administer/flow-designer/concept/flow-triggers.html"
     },
@@ -391,7 +391,7 @@
       "answer": [
         "A"
       ],
-      "explanation": "The column context menu, opened by clicking a list column heading, exposes actions for working with the displayed data such as creating quick reports, configuring the list, grouping, and exporting (A). Viewing a related form or record and 'add relationship' belong to the row/record context menu, not the column header menu. 11 of 204 CONFIDENTIAL",
+      "explanation": "The column context menu, opened by clicking a list column heading, exposes actions for working with the displayed data such as creating quick reports, configuring the list, grouping, and exporting (A). Viewing a related form or record and 'add relationship' belong to the row/record context menu, not the column header menu.",
       "reference": "ServiceNow Docs - List column context menu",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/use/using-lists/concept/c_ListColumnContextMenu.html"
     },
@@ -429,7 +429,7 @@
       "answer": [
         "D"
       ],
-      "explanation": "Mapping Assist is the visual tool that lets you create field maps by pairing source columns to target fields, so it maps fields using a Field Map (D). The Import Log and Transform History are diagnostic records of what happened during a load, and an SLA is unrelated to field mapping 12 of 204 CONFIDENTIAL entirely.",
+      "explanation": "Mapping Assist is the visual tool that lets you create field maps by pairing source columns to target fields, so it maps fields using a Field Map (D). The Import Log and Transform History are diagnostic records of what happened during a load, and an SLA is unrelated to field mapping entirely.",
       "reference": "ServiceNow Docs - Mapping fields with Mapping Assist",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/script/server-scripting/concept/c_MappingFieldsWithMappingAssist.html"
     },
@@ -467,7 +467,7 @@
       "answer": [
         "A"
       ],
-      "explanation": "A filter condition is built in the order Field, Operator, then Value, for example 'Priority' 'is' '1 - Critical' (A). The other sequences scramble these elements; 'Condition' is the whole expression rather than a standalone third element, and reversing to Value-first does not match how the con‐ 13 of 204 CONFIDENTIAL dition builder accepts input.",
+      "explanation": "A filter condition is built in the order Field, Operator, then Value, for example 'Priority' 'is' '1 - Critical' (A). The other sequences scramble these elements; 'Condition' is the whole expression rather than a standalone third element, and reversing to Value-first does not match how the con‐ dition builder accepts input.",
       "reference": "ServiceNow Docs - Filters and the condition builder",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/use/using-lists/concept/c_Filters.html"
     },
@@ -511,7 +511,7 @@
         "D",
         "F"
       ],
-      "explanation": "14 of 204 CONFIDENTIAL ServiceNow supports four client script types: onLoad (runs when the form loads), onChange (runs when a specified field changes), onSubmit (runs when the form is submitted), and onCell‐ Edit (runs when a field is edited inline in a list) - A, C, D, and F. onUpdate, onEdit, and onSave are not valid client script types.",
+      "explanation": "ServiceNow supports four client script types: onLoad (runs when the form loads), onChange (runs when a specified field changes), onSubmit (runs when the form is submitted), and onCell‐ Edit (runs when a field is edited inline in a list) - A, C, D, and F. onUpdate, onEdit, and onSave are not valid client script types.",
       "reference": "ServiceNow Docs - Client Scripts",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/script/client-scripts/concept/c_ClientScripts.html"
     },
@@ -549,7 +549,7 @@
       "answer": [
         "C"
       ],
-      "explanation": "15 of 204 CONFIDENTIAL An Order Guide lets a user order multiple related items together as a single request, often gathering shared information once and using it to populate each included item (C). This is the opposite of restricting an order to one item (A), it is a user-facing ordering tool rather than admin guidelines (B), and it adds a guided flow rather than skipping straight to checkout (D).",
+      "explanation": "An Order Guide lets a user order multiple related items together as a single request, often gathering shared information once and using it to populate each included item (C). This is the opposite of restricting an order to one item (A), it is a user-facing ordering tool rather than admin guidelines (B), and it adds a guided flow rather than skipping straight to checkout (D).",
       "reference": "ServiceNow Docs - Order Guides",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/service-catalog-management/concept/c_OrderGuides.html"
     },
@@ -591,7 +591,7 @@
         "D",
         "E"
       ],
-      "explanation": "16 of 204 CONFIDENTIAL The CMDB is associated with a Database of configuration items, the Tables and Fields that model those CIs, the Service Processes the CIs support, and the Dependency View that visualizes CI relationships - A, C, D, and E. User Permissions are governed by roles and ACLs, which are a separate security concern rather than a CMDB concept.",
+      "explanation": "The CMDB is associated with a Database of configuration items, the Tables and Fields that model those CIs, the Service Processes the CIs support, and the Dependency View that visualizes CI relationships - A, C, D, and E. User Permissions are governed by roles and ACLs, which are a separate security concern rather than a CMDB concept.",
       "reference": "ServiceNow Docs - CMDB concepts",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/configuration-management/concept/c_ConfigurationManagementDatabase.html"
     },
@@ -634,7 +634,7 @@
         "C",
         "D"
       ],
-      "explanation": "17 of 204 CONFIDENTIAL Typing in the Application Navigator filter narrows the navigation tree by matching application names, module names, the combination of both, and favorites - A, B, C, and D. It filters the navigator content, so it does not return browsing History records or the titles of dashboard gauges.",
+      "explanation": "Typing in the Application Navigator filter narrows the navigation tree by matching application names, module names, the combination of both, and favorites - A, B, C, and D. It filters the navigator content, so it does not return browsing History records or the titles of dashboard gauges.",
       "reference": "ServiceNow Docs - Application Navigator filter",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/administer/navigation-and-ui/concept/application-navigator.html"
     },
@@ -672,7 +672,7 @@
       "answer": [
         "D"
       ],
-      "explanation": "18 of 204 CONFIDENTIAL A schema map visually displays tables and the relationships between them, letting administrators explore and navigate the database schema (D). Graphically displaying the CIs that support a business service describes a dependency/business service map (C), and the other options invent unrelated trouble-source or task-board behavior.",
+      "explanation": "A schema map visually displays tables and the relationships between them, letting administrators explore and navigate the database schema (D). Graphically displaying the CIs that support a business service describes a dependency/business service map (C), and the other options invent unrelated trouble-source or task-board behavior.",
       "reference": "ServiceNow Docs - Schema map",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/table-administration/concept/c_SchemaMap.html"
     },
@@ -706,7 +706,7 @@
         "Record Number Format",
         "Browser Tab Title",
         "System Date Format",
-        "Form Header Size 19 of 204 CONFIDENTIAL"
+        "Form Header Size"
       ],
       "answer": [
         "A",
@@ -751,7 +751,7 @@
       "answer": [
         "B"
       ],
-      "explanation": "The System Dictionary (sys_dictionary) stores the definition of every table and field, including data type, length, and attributes (B). Human-readable labels live in the related Field Labels (sys_documentation) table (A), table relationships are modeled separately through references 20 of 204 CONFIDENTIAL and the schema map (C), and it has nothing to do with spell-check dictionaries (D).",
+      "explanation": "The System Dictionary (sys_dictionary) stores the definition of every table and field, including data type, length, and attributes (B). Human-readable labels live in the related Field Labels (sys_documentation) table (A), table relationships are modeled separately through references and the schema map (C), and it has nothing to do with spell-check dictionaries (D).",
       "reference": "ServiceNow Docs - System Dictionary",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/table-administration/concept/c_SystemDictionary.html"
     },
@@ -789,7 +789,7 @@
       "answer": [
         "A"
       ],
-      "explanation": "21 of 204 CONFIDENTIAL The Event Log (sysevent) records actual event instances that the system has generated and queued, while the Event Registry (sysevent_register) is the catalog of event definitions that can be fired (A). They are therefore not the same record set (D), and the other options misdescribe the distinction as formatting or time-window differences.",
+      "explanation": "The Event Log (sysevent) records actual event instances that the system has generated and queued, while the Event Registry (sysevent_register) is the catalog of event definitions that can be fired (A). They are therefore not the same record set (D), and the other options misdescribe the distinction as formatting or time-window differences.",
       "reference": "ServiceNow Docs - Events and the Event Registry",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/administer/notification/concept/c_EventRegistry.html"
     },
@@ -827,7 +827,7 @@
       "answer": [
         "C"
       ],
-      "explanation": "22 of 204 CONFIDENTIAL Applications and modules are shown or hidden based on Roles; you assign a required role to the application menu or module, and only users with that role see it (C). Access Control Rules secure data operations on tables and fields, UI Policies control field behavior on forms, and Assignment Rules route records, so none of those governs navigator visibility.",
+      "explanation": "Applications and modules are shown or hidden based on Roles; you assign a required role to the application menu or module, and only users with that role see it (C). Access Control Rules secure data operations on tables and fields, UI Policies control field behavior on forms, and Assignment Rules route records, so none of those governs navigator visibility.",
       "reference": "ServiceNow Docs - Roles",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/roles/concept/c_Roles.html"
     },
@@ -865,7 +865,7 @@
       "answer": [
         "A"
       ],
-      "explanation": "23 of 204 CONFIDENTIAL Create Incident, Password Reset, and Report Outage all create a record on a target table from a catalog-style form, which is exactly what a Record Producer does (A). Catalog properties, catalog UI policies, and catalog client scripts are configuration or behavior components within catalog items rather than the user-facing item these services point to.",
+      "explanation": "Create Incident, Password Reset, and Report Outage all create a record on a target table from a catalog-style form, which is exactly what a Record Producer does (A). Catalog properties, catalog UI policies, and catalog client scripts are configuration or behavior components within catalog items rather than the user-facing item these services point to.",
       "reference": "ServiceNow Docs - Record Producers",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/service-catalog-management/concept/c_RecordProducer.html"
     },
@@ -903,7 +903,7 @@
       "answer": [
         "D"
       ],
-      "explanation": "A saved Transform Map is reusable; you can run it repeatedly against the same import set or against new import sets, so it is not limited to a single use (D, contradicting A). Coalesce fields are evaluated during the transform to match records, and managing import sets requires the ap‐ 24 of 204 CONFIDENTIAL propriate admin/import role rather than being open to any user.",
+      "explanation": "A saved Transform Map is reusable; you can run it repeatedly against the same import set or against new import sets, so it is not limited to a single use (D, contradicting A). Coalesce fields are evaluated during the transform to match records, and managing import sets requires the ap‐ propriate admin/import role rather than being open to any user.",
       "reference": "ServiceNow Docs - Transform Maps",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/import-sets/concept/c_TransformMaps.html"
     },
@@ -1064,7 +1064,7 @@
       "number": "Q55",
       "category": "Self-Service & Notifications",
       "difficulty": "easy",
-      "question": "WHAT IS THE NAME OF THE CONVERSATIONAL BOT PLATFORM THAT PROVIDES ASSISTANCE TO HELP USERS OBTAIN 28 of 204 CONFIDENTIAL INFORMATION, MAKE DECISIONS, AND PERFORM COMMON TASKS?",
+      "question": "WHAT IS THE NAME OF THE CONVERSATIONAL BOT PLATFORM THAT PROVIDES ASSISTANCE TO HELP USERS OBTAIN INFORMATION, MAKE DECISIONS, AND PERFORM COMMON TASKS?",
       "options": [
         "Answer Agent",
         "live Feed",
@@ -1102,7 +1102,7 @@
       "number": "Q57",
       "category": "Flow Designer & Workflows",
       "difficulty": "medium",
-      "question": "WHICH ONE OF THE FOLLOWING STATEMENTS DESCRIBES THE PURPOSE OF A SERVICE CATALOG WORKFLOW? 29 of 204 CONFIDENTIAL",
+      "question": "WHICH ONE OF THE FOLLOWING STATEMENTS DESCRIBES THE PURPOSE OF A SERVICE CATALOG WORKFLOW?",
       "options": [
         "A Service Catalog workflow generates three basic components: item variable types, tasks, and approvals",
         "Although a Service Catalog workflow cannot send notifications, the workflow drives complex fulfillment processes",
@@ -1221,7 +1221,7 @@
       "number": "Q63",
       "category": "User Interface & Navigation",
       "difficulty": "medium",
-      "question": "WHAT ARE THE MAIN UI COMPONENT(S) OF THE SERVICENOW PLATFORM? 32 of 204 CONFIDENTIAL",
+      "question": "WHAT ARE THE MAIN UI COMPONENT(S) OF THE SERVICENOW PLATFORM?",
       "options": [
         "Banner Navigator",
         "Banner Frame",
@@ -1240,7 +1240,7 @@
       "number": "Q64",
       "category": "Ohne Kategorie",
       "difficulty": "medium",
-      "question": "THERE ARE ______ COMMON TYPES OF INTERFACES (NUMERIC VALUE) 6: There are six common types of interfaces User Interface & Navigation · medium",
+      "question": "There are six common types of interfaces. Which interface enables the user to enter data?",
       "options": [
         "Homepage: Consists of navigational elements, functional controls, and platform information.",
         "List: Display records from a data table, as well as allow you to edit the record information using the List Editor functionally.",
@@ -1252,7 +1252,7 @@
       "answer": [
         "C"
       ],
-      "explanation": "This item asks for the numeric value (six) but the dump records the keyed Answer as C (Form), the interface through which data is entered into ServiceNow. The list A - F is simply an enumeration of the six common interface types (Homepage, List, Form, Dashboard, Maps, Timelines).",
+      "explanation": "The interface through which data is commonly entered into ServiceNow by the user.",
       "reference": "ServiceNow Docs - User interfaces",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/administer/navigation-and-ui/concept/c_UserInterfaces.html"
     },
@@ -1261,7 +1261,7 @@
       "number": "Q65",
       "category": "Reporting & Analytics",
       "difficulty": "easy",
-      "question": "WHICH TYPE OF INTERFACE ENABLES YOU TO DISPLAY MULTIPLE PERFORMANCE ANALYTICS, REPORTING AND OTHER 33 of 204 CONFIDENTIAL WIDGETS ON A SINGLE SCREEN?",
+      "question": "WHICH TYPE OF INTERFACE ENABLES YOU TO DISPLAY MULTIPLE PERFORMANCE ANALYTICS, REPORTING AND OTHER WIDGETS ON A SINGLE SCREEN?",
       "options": [
         "Form",
         "List",
@@ -1303,7 +1303,7 @@
       "difficulty": "easy",
       "question": "Configuration will not affect what others see on their forms.",
       "options": [
-        "True 34 of 204 CONFIDENTIAL",
+        "True",
         "False"
       ],
       "answer": [
@@ -1347,7 +1347,7 @@
       "answer": [
         "A"
       ],
-      "explanation": "35 of 204 CONFIDENTIAL User records are stored in the User [sys_user] table (A). sys_user_group is the Group table, while syst_user_profile and user_profile are not real platform table names, making the other options invalid.",
+      "explanation": "User records are stored in the User [sys_user] table (A). sys_user_group is the Group table, while syst_user_profile and user_profile are not real platform table names, making the other options invalid.",
       "reference": "ServiceNow Docs - User administration",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/users-and-groups/concept/c_UserAdministration.html"
     },
@@ -1382,7 +1382,7 @@
         "LDAP: The user name and password are accessed via LDAP in the corporate directory, which has a matching user account in the database.",
         "SAML 2.0: The user name and password configured in a SAML identity provider account, which has a matching user account in the database.",
         "OAuth 2.0: The user name and password of OAuth identity provider, which has a matching user account in the database.",
-        "Digest Token: An encrypted digest of the user name and password in the user record. 36 of 204 CONFIDENTIAL"
+        "Digest Token: An encrypted digest of the user name and password in the user record."
       ],
       "answer": [
         "A",
@@ -1425,7 +1425,7 @@
         "System Administrator: The admin role provides access to all platform features, applications, functions and data.",
         "Specialized Administrator: Specialized administrator roles manage specific functions or applications, such as Assignment Rules, Knowledge base, reports, or web services",
         "Fulfiller: Users with the ITIL role may fulfill ITIL activities associated with the ITIL workflow, including Incident and Change management.",
-        "Approver: Users with the Approver user role can perform all requester actions and may view or modify approval records directed to the approver 37 of 204 CONFIDENTIAL",
+        "Approver: Users with the Approver user role can perform all requester actions and may view or modify approval records directed to the approver",
         "Requester: Also known as Employee Self Service (ESS) users, these users have no roles but can submit and manage their own requests, access public pages, etc."
       ],
       "answer": [
@@ -1469,7 +1469,7 @@
         "Fields",
         "Form",
         "Record",
-        "Lists 38 of 204 CONFIDENTIAL"
+        "Lists"
       ],
       "answer": [
         "C"
@@ -1513,7 +1513,7 @@
       "answer": [
         "A"
       ],
-      "explanation": "The Number Maintenance application (System Definition > Number Maintenance) controls the auto-numbering prefix, number of digits, and starting value per table (A). The other options are not real applications used for this purpose. 39 of 204 CONFIDENTIAL",
+      "explanation": "The Number Maintenance application (System Definition > Number Maintenance) controls the auto-numbering prefix, number of digits, and starting value per table (A). The other options are not real applications used for this purpose.",
       "reference": "ServiceNow Docs - Number maintenance",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/task-table-management/task/t_DefineANumberFormatForATask.html"
     },
@@ -1560,7 +1560,7 @@
       "difficulty": "easy",
       "question": "Knowledge articles within a knowledge base are grouped by category.",
       "options": [
-        "True 40 of 204 CONFIDENTIAL",
+        "True",
         "False"
       ],
       "answer": [
@@ -1605,7 +1605,7 @@
         "C",
         "D"
       ],
-      "explanation": "41 of 204 CONFIDENTIAL The ServiceNow base instance ships four knowledge workflows: Approval Publish, Instant Publish, Instant Retire, and Retire Knowledge. Options A-D each describe one of these, so all four are correct. New knowledge bases default to the Instant Publish/Retire workflows but can be switched to the approval-based workflows.",
+      "explanation": "The ServiceNow base instance ships four knowledge workflows: Approval Publish, Instant Publish, Instant Retire, and Retire Knowledge. Options A-D each describe one of these, so all four are correct. New knowledge bases default to the Instant Publish/Retire workflows but can be switched to the approval-based workflows.",
       "reference": "ServiceNow Docs - Knowledge workflows",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/knowledge-management/concept/knowledge-workflows.html"
     },
@@ -1644,7 +1644,7 @@
         "A",
         "D"
       ],
-      "explanation": "Feedback/flags on published articles can be reached through Knowledge > Articles > My Flagged (articles you flagged) and Knowledge > Articles > Published (open a published article to read its feedback) - A and D match the source answer. The other two navigation paths do not 42 of 204 CONFIDENTIAL exist in the base Knowledge application.",
+      "explanation": "Feedback/flags on published articles can be reached through Knowledge > Articles > My Flagged (articles you flagged) and Knowledge > Articles > Published (open a published article to read its feedback) - A and D match the source answer. The other two navigation paths do not exist in the base Knowledge application.",
       "reference": "ServiceNow Docs - Knowledge article feedback",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/knowledge-management/concept/knowledge-feedback.html"
     },
@@ -1753,7 +1753,7 @@
       "answer": [
         "B"
       ],
-      "explanation": "Business Rules are server-side scripts that run during database operations (insert/update/delete/query); they do not control mandatory fields on a form, so the statement is False (B). Making a field mandatory on a form is the job of a UI Policy (or the dictionary), while Data Policies enforce mandatory data regardless of the entry path. 45 of 204 CONFIDENTIAL",
+      "explanation": "Business Rules are server-side scripts that run during database operations (insert/update/delete/query); they do not control mandatory fields on a form, so the statement is False (B). Making a field mandatory on a form is the job of a UI Policy (or the dictionary), while Data Policies enforce mandatory data regardless of the entry path.",
       "reference": "ServiceNow Docs - Business Rules",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/script/business-rules/concept/c_BusinessRules.html"
     },
@@ -1802,7 +1802,7 @@
       "number": "Q94",
       "category": "Platform Automation",
       "difficulty": "medium",
-      "question": "DATA POLICY CAN ENFORCE MANDATORY DATA ON IMPORT. 46 of 204 CONFIDENTIAL",
+      "question": "DATA POLICY CAN ENFORCE MANDATORY DATA ON IMPORT.",
       "options": [
         "True",
         "False"
@@ -1844,7 +1844,7 @@
       "answer": [
         "B"
       ],
-      "explanation": "47 of 204 CONFIDENTIAL UI Policies control field states (read-only, mandatory, hidden) on a form, while UI Actions add controls such as buttons/links - for example a save button shown to appropriate users - making B correct. Option A simply swaps the two definitions.",
+      "explanation": "UI Policies control field states (read-only, mandatory, hidden) on a form, while UI Actions add controls such as buttons/links - for example a save button shown to appropriate users - making B correct. Option A simply swaps the two definitions.",
       "reference": "ServiceNow Docs - UI Policies and UI Actions",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/script/ui-policies/concept/c_UIPolicy.html"
     },
@@ -1883,7 +1883,7 @@
         "C",
         "D"
       ],
-      "explanation": "48 of 204 CONFIDENTIAL ServiceNow best practice is to assign roles to groups and add users to those groups (C, D), so access is managed by group membership rather than per-user. Assigning roles directly to individual users (B) is discouraged because it is hard to maintain, and 'never assign roles to groups' (A) is the opposite of the recommendation.",
+      "explanation": "ServiceNow best practice is to assign roles to groups and add users to those groups (C, D), so access is managed by group membership rather than per-user. Assigning roles directly to individual users (B) is discouraged because it is hard to maintain, and 'never assign roles to groups' (A) is the opposite of the recommendation.",
       "reference": "ServiceNow Docs - Roles and groups best practice",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/roles/concept/c_Roles.html"
     },
@@ -1921,7 +1921,7 @@
       "answer": [
         "A"
       ],
-      "explanation": "The Tables & Columns module (System Definition) lets you select a table and inspect its columns/field settings (A). 'Columns and Fields' and 'Tables and Fields' are not real modules, and Access Control is for ACLs, not field definitions. 49 of 204 CONFIDENTIAL",
+      "explanation": "The Tables & Columns module (System Definition) lets you select a table and inspect its columns/field settings (A). 'Columns and Fields' and 'Tables and Fields' are not real modules, and Access Control is for ACLs, not field definitions.",
       "reference": "ServiceNow Docs - Tables & Columns",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/table-administration/concept/c_TableAdministration.html"
     },
@@ -1968,7 +1968,7 @@
       "number": "Q103",
       "category": "Task Management",
       "difficulty": "hard",
-      "question": "WHICH ONE OF THE FOLLOWING STATEMENTS IS TRUE? 50 of 204 CONFIDENTIAL",
+      "question": "WHICH ONE OF THE FOLLOWING STATEMENTS IS TRUE?",
       "options": [
         "When an incident form is saved, all the Work Notes field text is recorded to the Activity Log field",
         "When an incident form is saved, the Work Notes field text is overwritten each time work is logged against the incident",
@@ -2122,7 +2122,7 @@
       "difficulty": "hard",
       "question": "In addition to the admin role, which one of the following roles allows a user to add or remove fields from a list?",
       "options": [
-        "personal ize.control 54 of 204 CONFIDENTIAL",
+        "personalize_control",
         "personal_list",
         "ul_page_admin",
         "ui_action_admin"
@@ -2130,7 +2130,7 @@
       "answer": [
         "A"
       ],
-      "explanation": "The personalize_control role (shown here as 'personal ize.control' due to OCR spacing) lets a non-admin user personalize lists by adding or removing columns (A). The other listed role names are not the role that grants list-personalization rights.",
+      "explanation": "The personalize_control role lets a non-admin user personalize lists by adding or removing columns (A). The other listed role names are not the role that grants list-personalization rights.",
       "reference": "ServiceNow Docs - Base system roles",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/roles/reference/r_BaseSystemRoles.html"
     },
@@ -2162,7 +2162,7 @@
       "options": [
         "Filter applications in order of use",
         "Quickly navigate to applications and modules",
-        "Collapse and expand applications 55 of 204 CONFIDENTIAL",
+        "Collapse and expand applications",
         "List applications In order of Top Requests"
       ],
       "answer": [
@@ -2200,7 +2200,7 @@
       "options": [
         "An Event is a trigger that has a direct response in the platform",
         "An Event is an indication to the ServiceNow processes that something has occurred",
-        "An Event is an indicator that a Priority 1 (P1) Incident has been logged 56 of 204 CONFIDENTIAL",
+        "An Event is an indicator that a Priority 1 (P1) Incident has been logged",
         "An Event is a recognized, scheduled occurrence of a process"
       ],
       "answer": [
@@ -2240,7 +2240,7 @@
         "table.",
         "Roles",
         "Script",
-        "table.\" 57 of 204 CONFIDENTIAL",
+        "table.\"",
         "table.none"
       ],
       "answer": [
@@ -2248,7 +2248,7 @@
         "C",
         "D"
       ],
-      "explanation": "An Access Control rule grants access only when all three of its permission requirements pass: the required Roles, the Condition(s), and the Script must each evaluate to true (any empty one is treated as true). Mapping to the (OCR-garbled) options, these are Conditions (A), Roles (C), and Script (D); the 'table.' variants are corrupted text, not requirements.",
+      "explanation": "An Access Control rule grants access only when all three of its permission requirements pass: the required Roles, the Condition(s), and the Script must each evaluate to true (any empty one is treated as true). Mapping to the options, these are Conditions (A), Roles (C), and Script (D); the 'table.' variants are corrupted text, not requirements.",
       "reference": "ServiceNow Docs - Access control rules",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/contextual-security/concept/access-control-rules.html"
     },
@@ -2286,7 +2286,7 @@
       "answer": [
         "B"
       ],
-      "explanation": "58 of 204 CONFIDENTIAL Data records, group records, and CMDB configuration items are data - not configuration - so by default they are NOT captured in an Update Set (B). Update Sets track customizations like business rules, UI policies, and tables, which is exactly why data records must be moved separately.",
+      "explanation": "Data records, group records, and CMDB configuration items are data - not configuration - so by default they are NOT captured in an Update Set (B). Update Sets track customizations like business rules, UI policies, and tables, which is exactly why data records must be moved separately.",
       "reference": "ServiceNow Docs - What Update Sets capture",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/system-update-sets/concept/c_UpdateSets.html"
     },
@@ -2324,7 +2324,7 @@
       "answer": [
         "B"
       ],
-      "explanation": "59 of 204 CONFIDENTIAL Function fields let you build calculated values in reports - arithmetic, coalesce, concatenation, length, and more - without changing the underlying table (B). 'Sourcing', 'Computational', and 'Calculation' fields are not the ServiceNow reporting feature for this.",
+      "explanation": "Function fields let you build calculated values in reports - arithmetic, coalesce, concatenation, length, and more - without changing the underlying table (B). 'Sourcing', 'Computational', and 'Calculation' fields are not the ServiceNow reporting feature for this.",
       "reference": "ServiceNow Docs - Function fields in reports",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/reporting/concept/function-field.html"
     },
@@ -2362,7 +2362,7 @@
       "answer": [
         "B"
       ],
-      "explanation": "60 of 204 CONFIDENTIAL The source marks B (CICD) as correct, tying batch installation to the Continuous Integration and Continuous Delivery capability that can apply applications, customizations, and plugins together in one operation. The other three acronyms (A1PD, MIPD, QIMD) are invented and do not correspond to any ServiceNow plugin.",
+      "explanation": "The source marks B (CICD) as correct, tying batch installation to the Continuous Integration and Continuous Delivery capability that can apply applications, customizations, and plugins together in one operation. The other three acronyms (A1PD, MIPD, QIMD) are invented and do not correspond to any ServiceNow plugin.",
       "reference": "ServiceNow Docs - Batch install",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/applications/concept/batch-install.html"
     },
@@ -2396,7 +2396,7 @@
         "Organization Verification Card (OVC)",
         "Common Access Card (CAC)",
         "Domain Authentication Card (DAC)",
-        "Personal Identify Verification (PIV) 61 of 204 CONFIDENTIAL"
+        "Personal Identify Verification (PIV)"
       ],
       "answer": [
         "C",
@@ -2416,7 +2416,7 @@
         "Localization Framework plugin (com.glide.localization_framework)",
         "Translation Framework plugin (com.glide.translation_framework)",
         "Multiple Language Framework plugin (com.glide.multiple.language_framework)",
-        "Language Al Framework plugin (com .g I id e. language.ai _framework)"
+        "Language Al Framework plugin (com.glide.language.ai_framework)"
       ],
       "answer": [
         "A"
@@ -2440,7 +2440,7 @@
       "answer": [
         "C"
       ],
-      "explanation": "62 of 204 CONFIDENTIAL Flow Designer includes a Help Panel that displays contextual information and documentation about the actions you add to a flow (C). 'Virtual Agent Help', 'Local Action Help', and 'Flow Assistant' are not Flow Designer interface elements, so they are incorrect.",
+      "explanation": "Flow Designer includes a Help Panel that displays contextual information and documentation about the actions you add to a flow (C). 'Virtual Agent Help', 'Local Action Help', and 'Flow Assistant' are not Flow Designer interface elements, so they are incorrect.",
       "reference": "ServiceNow Docs - Flow Designer",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-build-workflows/page/administer/flow-designer/concept/flow-designer.html"
     },
@@ -2478,7 +2478,7 @@
       "answer": [
         "B"
       ],
-      "explanation": "Global (text) search is performed from the search icon in the banner frame - the bar across the top of every page (B). The Application Navigator filters the menu, not global records; the list pane and content frame display results and forms but do not host the global search control. 63 of 204 CONFIDENTIAL",
+      "explanation": "Global (text) search is performed from the search icon in the banner frame - the bar across the top of every page (B). The Application Navigator filters the menu, not global records; the list pane and content frame display results and forms but do not host the global search control.",
       "reference": "ServiceNow Docs - Global text search",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/use/using-search/concept/c_GlobalTextSearch.html"
     },
@@ -2563,7 +2563,7 @@
       "number": "Q134",
       "category": "Self-Service & Notifications",
       "difficulty": "easy",
-      "question": "WHAT IS A NOTIFICATION? 65 of 204 CONFIDENTIAL",
+      "question": "WHAT IS A NOTIFICATION?",
       "options": [
         "A new Knowledge article created by a Business Rule",
         "A tool for alerting users that events that concern them have occurred",
@@ -2602,7 +2602,7 @@
       "number": "Q136",
       "category": "Task Management",
       "difficulty": "easy",
-      "question": "WHICH CORE TABLE IN THE SERVICENOW PLATFORM PROVIDES A SERIES OF STANDARD FIELDS USED ON EACH OF THE TABLES THAT EXTEND IT, SUCH AS THE INCIDENT [INCIDENT] AND PROBLEM [PROBLEM] TABLES? 66 of 204 CONFIDENTIAL",
+      "question": "WHICH CORE TABLE IN THE SERVICENOW PLATFORM PROVIDES A SERIES OF STANDARD FIELDS USED ON EACH OF THE TABLES THAT EXTEND IT, SUCH AS THE INCIDENT [INCIDENT] AND PROBLEM [PROBLEM] TABLES?",
       "options": [
         "Task [task]",
         "Assignment [assignment]",
@@ -2644,7 +2644,7 @@
       "options": [
         "Unique 32-character identifier that is assigned to every record",
         "A client-side Business Rule",
-        "A server-side Business Rule 67 of 204 CONFIDENTIAL",
+        "A server-side Business Rule",
         "Unique 64-character identifier that is assigned to every record"
       ],
       "answer": [
@@ -2683,7 +2683,7 @@
         "For a specific role, group, or user",
         "For a specific row, column, or table",
         "For specific groups",
-        "For a specific CMDB Configuration item 68 of 204 CONFIDENTIAL"
+        "For a specific CMDB Configuration item"
       ],
       "answer": [
         "B"
@@ -2726,7 +2726,7 @@
       "answer": [
         "B"
       ],
-      "explanation": "69 of 204 CONFIDENTIAL To import new spreadsheet data you Load Data (which creates the import set staging table), then Create a Transform Map to align source columns to target fields, then Run Transform to write the records to the target table. Option B captures this end-to-end flow for new data.",
+      "explanation": "To import new spreadsheet data you Load Data (which creates the import set staging table), then Create a Transform Map to align source columns to target fields, then Run Transform to write the records to the target table. Option B captures this end-to-end flow for new data.",
       "reference": "ServiceNow Docs - Load data using import sets",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/import-sets/task/t_LoadDataUsingImportSets.html"
     },
@@ -2764,7 +2764,7 @@
       "answer": [
         "C"
       ],
-      "explanation": "70 of 204 CONFIDENTIAL Data Policies enforce field rules at the data layer, so they apply no matter how the data arrives - form, import set, web service, or script - whereas UI Policies act only on the form in the browser (C). A is wrong because UI Policies are not 'web services only', and D invents an execution-order dependency that does not exist.",
+      "explanation": "Data Policies enforce field rules at the data layer, so they apply no matter how the data arrives - form, import set, web service, or script - whereas UI Policies act only on the form in the browser (C). A is wrong because UI Policies are not 'web services only', and D invents an execution-order dependency that does not exist.",
       "reference": "ServiceNow Docs - Data Policy",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/field-administration/concept/c_DataPolicy.html"
     },
@@ -2802,7 +2802,7 @@
       "answer": [
         "B"
       ],
-      "explanation": "In IntegrationHub, related integration actions for a given third-party system are packaged together as a spoke (for example, a Slack or Microsoft Teams spoke) (B). An individual action is one step inside a spoke, and a connection stores credentials/endpoints - neither term names 71 of 204 CONFIDENTIAL the packaged integration itself.",
+      "explanation": "In IntegrationHub, related integration actions for a given third-party system are packaged together as a spoke (for example, a Slack or Microsoft Teams spoke) (B). An individual action is one step inside a spoke, and a connection stores credentials/endpoints - neither term names the packaged integration itself.",
       "reference": "ServiceNow Docs - IntegrationHub spokes",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-build-workflows/page/administer/integrationhub/concept/integrationhub.html"
     },
@@ -2835,7 +2835,7 @@
         "Common Services Data Model (CSDM)",
         "Information Technology Service Management (ITSM)",
         "Configuration Management Database (CMDB)",
-        "Information Technology Infrastructure Library (ITIL) 72 of 204 CONFIDENTIAL"
+        "Information Technology Infrastructure Library (ITIL)"
       ],
       "answer": [
         "A"
@@ -2871,7 +2871,7 @@
       "difficulty": "hard",
       "question": "What do you need to do before you can use an application-based trigger in your flow?",
       "options": [
-        "Activate application trigger spoke 73 of 204 CONFIDENTIAL",
+        "Activate application trigger spoke",
         "Activate trigger security rules",
         "Activate application spoke, and plug-ins as needed",
         "Assign Application trigger role [sn_app_trigger_write] to SME",
@@ -2912,7 +2912,7 @@
       "number": "Q152",
       "category": "Migration & Update Sets",
       "difficulty": "hard",
-      "question": "WHICH OF THE FOLLOWING ARE NOT INCLUDED IN AN UPDATE SET, BY DEFAULT? (CHOOSE FOUR.) 74 of 204 CONFIDENTIAL",
+      "question": "WHICH OF THE FOLLOWING ARE NOT INCLUDED IN AN UPDATE SET, BY DEFAULT? (CHOOSE FOUR.)",
       "options": [
         "Homepages",
         "Data",
@@ -2951,7 +2951,7 @@
         "B",
         "C"
       ],
-      "explanation": "You can add a field to a form using Form Layout (the slushbucket reached from Configure > Form Layout) or the drag-and-drop Form Designer, both opened from the form's context menu - B and C. 'Fields and Columns module' and 'Field Class Manager module' are not the tools 75 of 204 CONFIDENTIAL used to place a field on a form.",
+      "explanation": "You can add a field to a form using Form Layout (the slushbucket reached from Configure > Form Layout) or the drag-and-drop Form Designer, both opened from the form's context menu - B and C. 'Fields and Columns module' and 'Field Class Manager module' are not the tools used to place a field on a form.",
       "reference": "ServiceNow Docs - Form Designer and Form Layout",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/administer/form-administration/concept/c_FormDesigner.html"
     },
@@ -2991,7 +2991,7 @@
       "answer": [
         "D"
       ],
-      "explanation": "76 of 204 CONFIDENTIAL Plugins are the packaged components you activate to add applications, features, or demo data to an instance (D). 'App Package', 'Updated Pack', 'Patch', and 'App Updated Set' are not the mechanism for adding optional functionality - a patch updates platform code rather than adding a feature you choose to enable.",
+      "explanation": "Plugins are the packaged components you activate to add applications, features, or demo data to an instance (D). 'App Package', 'Updated Pack', 'Patch', and 'App Updated Set' are not the mechanism for adding optional functionality - a patch updates platform code rather than adding a feature you choose to enable.",
       "reference": "ServiceNow Docs - Plugins",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/plugins/concept/c_Plugins.html"
     },
@@ -3024,7 +3024,7 @@
       "difficulty": "hard",
       "question": "Your company is giving all first line workers a special t-shirt as a recognition for their hard work. Management team wants a way for employees to order the t-shirt, with the ability to specify the preferred size and color. How would you ensure that only first line workers (Non-managers) can submit the order?",
       "options": [
-        "Create Record Producer and use the Available For list to specify First Line [sn_first_line] role 77 of 204 CONFIDENTIAL",
+        "Create Record Producer and use the Available For list to specify First Line [sn_first_line] role",
         "Create Catalog Item and use the Not Available list to specify the Manager Group",
         "Create Catalog Item and use the Available For list to specify ITIL [itil] role",
         "Create Order Guide and use the User Criteria list to specify First Line [sn_first_line] role"
@@ -3102,7 +3102,7 @@
         "H",
         "I"
       ],
-      "explanation": "79 of 204 CONFIDENTIAL When creating a Business Rule you select the Table it runs on, the Timing/When (Before, After, Async, or Display) plus the database operations, the Condition that must evaluate true, and the Script to execute. Those four are Table, Timing, Condition, and Script (B, E, H, I).",
+      "explanation": "When creating a Business Rule you select the Table it runs on, the Timing/When (Before, After, Async, or Display) plus the database operations, the Condition that must evaluate true, and the Script to execute. Those four are Table, Timing, Condition, and Script (B, E, H, I).",
       "reference": "ServiceNow Docs - Business Rules",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/script/business-rules/concept/c_BusinessRules.html"
     },
@@ -3142,7 +3142,7 @@
       "answer": [
         "D"
       ],
-      "explanation": "80 of 204 CONFIDENTIAL From a list view you can apply a filter, right-click the column header you want to group by, and choose Bar Chart (or Pie Chart). ServiceNow immediately generates a report grouped on that column, which you can then refine. This makes option D the quick list-to-report method.",
+      "explanation": "From a list view you can apply a filter, right-click the column header you want to group by, and choose Bar Chart (or Pie Chart). ServiceNow immediately generates a report grouped on that column, which you can then refine. This makes option D the quick list-to-report method.",
       "reference": "ServiceNow Docs - Create a report",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/reporting/task/t_CreateAReport.html"
     },
@@ -3181,7 +3181,7 @@
       "answer": [
         "A"
       ],
-      "explanation": "81 of 204 CONFIDENTIAL The Knowledge (Knowledge Base) application is where ServiceNow stores and lets employees browse internal documentation such as troubleshooting steps and FAQs (A). 'Knowledge Now' and 'ServiceNow Wiki' are not current platform features, and SharePoint and Stack Overflow are external, non-ServiceNow tools.",
+      "explanation": "The Knowledge (Knowledge Base) application is where ServiceNow stores and lets employees browse internal documentation such as troubleshooting steps and FAQs (A). 'Knowledge Now' and 'ServiceNow Wiki' are not current platform features, and SharePoint and Stack Overflow are external, non-ServiceNow tools.",
       "reference": "ServiceNow Docs - Knowledge Management",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/knowledge-management/concept/c_KnowledgeManagement.html"
     },
@@ -3217,7 +3217,7 @@
         "System Security > Security",
         "Self-Service > My Access",
         "System Security > Access Control (ACL)",
-        "Password Management > Security Questions 82 of 204 CONFIDENTIAL",
+        "Password Management > Security Questions",
         "System Security > High Security Settings"
       ],
       "answer": [
@@ -3259,7 +3259,7 @@
       "difficulty": "easy",
       "question": "What is a no-code approach to control the mandatory or read-only state of a form field?",
       "options": [
-        "UI Action 83 of 204 CONFIDENTIAL",
+        "UI Action",
         "Client Script",
         "UI Script",
         "UI Rule",
@@ -3300,7 +3300,7 @@
       "options": [
         "Groups, Conditional Expressions and Workflows",
         "Table Schema, CRUD, and User Authentication",
-        "Object and Operation being secured; Permissions required to access the object 84 of 204 CONFIDENTIAL",
+        "Object and Operation being secured; Permissions required to access the object",
         "security_admin"
       ],
       "answer": [
@@ -3339,7 +3339,7 @@
         "CSDM Items",
         "CMDB",
         "Configuration item",
-        "Service Offerings 85 of 204 CONFIDENTIAL"
+        "Service Offerings"
       ],
       "answer": [
         "C"
@@ -3373,7 +3373,7 @@
       "number": "Q174",
       "category": "Lists, Filters & Forms",
       "difficulty": "medium",
-      "question": "A USER WANTS TO CREATE A SET OF FILTER CONDITIONS, WHERE THEY WANT TO SHOW RECORDS WHICH SATISFY TWO CONDITIONS: INCIDENTS WHERE THE STATE IS CLOSED INCIDENTS 86 of 204 CONFIDENTIAL WHERE ASSIGNMENT GROUP IS NETWORK AFTER CLICKING THE FUNNEL ICON, WHAT SHOULD THE USER DO?",
+      "question": "A USER WANTS TO CREATE A SET OF FILTER CONDITIONS, WHERE THEY WANT TO SHOW RECORDS WHICH SATISFY TWO CONDITIONS: INCIDENTS WHERE THE STATE IS CLOSED INCIDENTS WHERE ASSIGNMENT GROUP IS NETWORK AFTER CLICKING THE FUNNEL ICON, WHAT SHOULD THE USER DO?",
       "options": [
         "Define the first condition; click AND button; define second condition; click Run",
         "Define the first condition; click AND button; define second condition; press enter",
@@ -3404,7 +3404,7 @@
       "answer": [
         "E"
       ],
-      "explanation": "An ACL that targets a single field uses the table.field naming convention with the lowercase database names, giving incident.major_incident (E). The names must match the platform field names exactly, so capitalized forms like Incident.Major_Incident (A) are wrong, and the 87 of 204 CONFIDENTIAL arrow/pipe separators in the other options are not valid ACL object syntax.",
+      "explanation": "An ACL that targets a single field uses the table.field naming convention with the lowercase database names, giving incident.major_incident (E). The names must match the platform field names exactly, so capitalized forms like Incident.Major_Incident (A) are wrong, and the arrow/pipe separators in the other options are not valid ACL object syntax.",
       "reference": "ServiceNow Docs - Access control rule types",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/contextual-security/concept/access-control-rules.html"
     },
@@ -3432,7 +3432,7 @@
       "number": "Q177",
       "category": "Application Access & Security",
       "difficulty": "medium",
-      "question": "AFTER FINISHING YOUR WORK ON HIGH SECURITY SETTINGS, WHAT DO YOU DO TO RETURN TO NORMAL ADMIN SECURITY LEVELS? 88 of 204 CONFIDENTIAL",
+      "question": "AFTER FINISHING YOUR WORK ON HIGH SECURITY SETTINGS, WHAT DO YOU DO TO RETURN TO NORMAL ADMIN SECURITY LEVELS?",
       "options": [
         "Select Normal role",
         "Log out and back in",
@@ -3584,7 +3584,7 @@
       "answer": [
         "F"
       ],
-      "explanation": "92 of 204 CONFIDENTIAL Right-clicking the Priority field label and selecting Configure Choices (shown here as 'Configure Options', F) opens the Choices list for that field so you can relabel the values. Because Priority is defined on the Task table and Incident extends Task, editing the choices at that level makes the P1 - P4 labels consistent across all task-based tables, which is exactly what the customer asked for.",
+      "explanation": "Right-clicking the Priority field label and selecting Configure Choices (shown here as 'Configure Options', F) opens the Choices list for that field so you can relabel the values. Because Priority is defined on the Task table and Incident extends Task, editing the choices at that level makes the P1 - P4 labels consistent across all task-based tables, which is exactly what the customer asked for.",
       "reference": "ServiceNow Docs - Configure choice lists",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/field-administration/concept/c_ChoiceLists.html"
     },
@@ -3617,7 +3617,7 @@
       "options": [
         "Drag the table icon onto the flow definition",
         "Use the condition builder to specify the desired values",
-        "Specify the source table on the data pill related list 93 of 204 CONFIDENTIAL",
+        "Specify the source table on the data pill related list",
         "Drag the data pill onto the flow definition",
         "Add the table reference using the slush bucket"
       ],
@@ -3693,7 +3693,7 @@
       "answer": [
         "C"
       ],
-      "explanation": "Virtual Agent is ServiceNow's conversational bot that uses pre-built topics and NLU to help users get information, make decisions, and complete tasks through a chat/messaging interface (C). 'Chat bot' (B) is only a generic description, not the named platform capability, and Agent Workspace is the interface human agents use rather than the automated assistant the question describes. 95 of 204 CONFIDENTIAL",
+      "explanation": "Virtual Agent is ServiceNow's conversational bot that uses pre-built topics and NLU to help users get information, make decisions, and complete tasks through a chat/messaging interface (C). 'Chat bot' (B) is only a generic description, not the named platform capability, and Agent Workspace is the interface human agents use rather than the automated assistant the question describes.",
       "reference": "ServiceNow Docs - Virtual Agent overview",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/administer/virtual-agent/concept/virtual-agent-overview.html"
     },
@@ -3735,7 +3735,7 @@
         "B",
         "C"
       ],
-      "explanation": "From a form's context menu you reach Configure > Form Layout (a slushbucket/text-based editor) or Configure > Form Design (a drag-and-drop builder); both let you add fields to the form. The correct pair is therefore B and C. 96 of 204 CONFIDENTIAL",
+      "explanation": "From a form's context menu you reach Configure > Form Layout (a slushbucket/text-based editor) or Configure > Form Design (a drag-and-drop builder); both let you add fields to the form. The correct pair is therefore B and C.",
       "reference": "ServiceNow Docs - Form layout and design",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/form-administration/concept/c_FormAdministration.html"
     },
@@ -3773,7 +3773,7 @@
       "answer": [
         "C"
       ],
-      "explanation": "The three horizontal lines in the form header are commonly called the hamburger icon, and clicking it opens the form context menu of additional actions (C). While 'Additional Actions / Context Menu' (B) describes what the menu does, the question specifically asks the name of the three-bar icon, which is the hamburger. 97 of 204 CONFIDENTIAL",
+      "explanation": "The three horizontal lines in the form header are commonly called the hamburger icon, and clicking it opens the form context menu of additional actions (C). While 'Additional Actions / Context Menu' (B) describes what the menu does, the question specifically asks the name of the three-bar icon, which is the hamburger.",
       "reference": "ServiceNow Docs - Form context menu",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/use/using-forms/concept/c_FormContextMenu.html"
     },
@@ -4015,7 +4015,7 @@
       "answer": [
         "D"
       ],
-      "explanation": "If the user can navigate to the module but gets a blank form on Create New, the most likely cause is that they have read access to the Inventory table but lack the write (create) role, so ACLs suppress the field/form and nothing renders (D). A broken module link or timed-out session would typically produce a different error, and the module is confirmed visible, ruling those out. 103 of 204 CONFIDENTIAL",
+      "explanation": "If the user can navigate to the module but gets a blank form on Create New, the most likely cause is that they have read access to the Inventory table but lack the write (create) role, so ACLs suppress the field/form and nothing renders (D). A broken module link or timed-out session would typically produce a different error, and the module is confirmed visible, ruling those out.",
       "reference": "ServiceNow Docs - Access control rules",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/contextual-security/concept/access-control-rules.html"
     },
@@ -4054,7 +4054,7 @@
       "answer": [
         "D"
       ],
-      "explanation": "104 of 204 CONFIDENTIAL Performance Analytics is purpose-built for exactly this: it captures periodic snapshots (scores), compares them against targets, trends them over time, and can forecast future values (D). The build-it-yourself options using scheduled reports and custom snapshot tables (A, C) would crudely approximate this but are far more fragile, and a single KPI (E) is just one indicator, not the trending-and-forecasting solution.",
+      "explanation": "Performance Analytics is purpose-built for exactly this: it captures periodic snapshots (scores), compares them against targets, trends them over time, and can forecast future values (D). The build-it-yourself options using scheduled reports and custom snapshot tables (A, C) would crudely approximate this but are far more fragile, and a single KPI (E) is just one indicator, not the trending-and-forecasting solution.",
       "reference": "ServiceNow Docs - Performance Analytics (forecasting data)",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/use/performance-analytics/concept/c_PerformanceAnalytics.html"
     },
@@ -4090,7 +4090,7 @@
         "Add the role Log Write [sn_log_write] to the Impersonator Group",
         "Create user update set for impersonation tracking",
         "Activate the glide.sys.log_impersonation prop",
-        "From User icon, select Elevate Roles 105 of 204 CONFIDENTIAL",
+        "From User icon, select Elevate Roles",
         "On the Impersonator role record, right click and select Create Log"
       ],
       "answer": [
@@ -4128,7 +4128,7 @@
       "question": "The wait time for end users is based on the round- trip between the client and the server. What activities are included in the round-trips?",
       "options": [
         "Request + Response",
-        "Save + Update 106 of 204 CONFIDENTIAL",
+        "Save + Update",
         "Write + Read",
         "Submit + Query",
         "Insert + Verify"
@@ -4168,7 +4168,7 @@
       "options": [
         "Security Admin [security_admin]",
         "Sys Admin [sys_admin]",
-        "Admin [sn_admin] 107 of 204 CONFIDENTIAL",
+        "Admin [sn_admin]",
         "System Administrator [admin]",
         "Base Admin [base_admin]"
       ],
@@ -4208,7 +4208,7 @@
         "Factor",
         "Field",
         "Datapoint",
-        "Element 108 of 204 CONFIDENTIAL",
+        "Element",
         "Item"
       ],
       "answer": [
@@ -4252,7 +4252,7 @@
       "answer": [
         "A"
       ],
-      "explanation": "109 of 204 CONFIDENTIAL User records live in the User table whose platform name is sys_user (A), consistent with the sys_ prefix on core platform tables. The sn_, u_, and s_ prefixed names are not the core user table - sys_user is where every user account is stored.",
+      "explanation": "User records live in the User table whose platform name is sys_user (A), consistent with the sys_ prefix on core platform tables. The sn_, u_, and s_ prefixed names are not the core user table - sys_user is where every user account is stored.",
       "reference": "ServiceNow Docs - User administration (sys_user)",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/users-and-groups/concept/c_UserAdministration.html"
     },
@@ -4291,7 +4291,7 @@
       "answer": [
         "B"
       ],
-      "explanation": "110 of 204 CONFIDENTIAL Virtual Agent is the conversational, chatbot-style interface that can surface knowledge articles and run automated topics for users (B). Agent Assist helps a live human fulfiller find relevant knowledge while working a record, so it is agent-facing rather than the conversational self-service channel described here.",
+      "explanation": "Virtual Agent is the conversational, chatbot-style interface that can surface knowledge articles and run automated topics for users (B). Agent Assist helps a live human fulfiller find relevant knowledge while working a record, so it is agent-facing rather than the conversational self-service channel described here.",
       "reference": "ServiceNow Docs - Virtual Agent overview",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-conversational-interfaces/page/administer/virtual-agent/concept/virtual-agent-overview.html"
     },
@@ -4329,7 +4329,7 @@
       "answer": [
         "C"
       ],
-      "explanation": "111 of 204 CONFIDENTIAL Client Scripts run in the user's web browser (the client side) and react to form events such as load, change, and submit, while Business Rules run on the server when records are queried, inserted, updated, or deleted (C). Option B reverses these execution contexts, and the timingbased options conflate the two without correctly stating where each runs.",
+      "explanation": "Client Scripts run in the user's web browser (the client side) and react to form events such as load, change, and submit, while Business Rules run on the server when records are queried, inserted, updated, or deleted (C). Option B reverses these execution contexts, and the timingbased options conflate the two without correctly stating where each runs.",
       "reference": "ServiceNow Docs - Client Scripts",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/script/client-scripts/concept/c_ClientScripts.html"
     },
@@ -4372,7 +4372,7 @@
       "answer": [
         "B"
       ],
-      "explanation": "112 of 204 CONFIDENTIAL Dot-walking follows a reference field from one table to a field on the related table, letting you pull in columns from a secondary table when building a report (B). ServiceNow abstracts the database layer, so administrators do not write raw SQL or manual joins to traverse related records - they dot-walk through reference fields instead.",
+      "explanation": "Dot-walking follows a reference field from one table to a field on the related table, letting you pull in columns from a secondary table when building a report (B). ServiceNow abstracts the database layer, so administrators do not write raw SQL or manual joins to traverse related records - they dot-walk through reference fields instead.",
       "reference": "ServiceNow Docs - Dot-walking",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/use/common-ui-elements/concept/c_DotWalking.html"
     },
@@ -4413,7 +4413,7 @@
         "Match Fields",
         "Coalesce Fields",
         "Key Fields",
-        "Sys IDs 113 of 204 CONFIDENTIAL"
+        "Sys IDs"
       ],
       "answer": [
         "B"
@@ -4449,7 +4449,7 @@
       "question": "What is the result of the order in which access controls are evaluated?",
       "options": [
         "Ensures user has access to the fields in a table, before considering their access to the table",
-        "Ensures user can get to work as quickly as possible 114 of 204 CONFIDENTIAL",
+        "Ensures user can get to work as quickly as possible",
         "Ensures user has access to the application, before evaluating access to a module within the application",
         "Ensures user has access to a table, before evaluating access to a field in the table"
       ],
@@ -4487,7 +4487,7 @@
       "question": "What are examples of core tables in the ServiceNow platform?",
       "options": [
         "Configuration, Connect, Chat",
-        "Team, Party, Awards 115 of 204 CONFIDENTIAL",
+        "Team, Party, Awards",
         "User, Task, Incident",
         "Work, Caller, Timecard"
       ],
@@ -4527,7 +4527,7 @@
         "Field Layout",
         "Page Header",
         "Field Navigator",
-        "Field Picker 116 of 204 CONFIDENTIAL",
+        "Field Picker",
         "Form Layout"
       ],
       "answer": [
@@ -4569,7 +4569,7 @@
         "sn_cmdb_bak",
         "cmdb_rel_ci",
         "sn_cmdb",
-        "cmdb_bak 117 of 204 CONFIDENTIAL",
+        "cmdb_bak",
         "cmdb_ci",
         "sn_cmdb_ci"
       ],
@@ -4610,7 +4610,7 @@
       "options": [
         "Module",
         "Content Frame",
-        "Application Navigator 118 of 204 CONFIDENTIAL",
+        "Application Navigator",
         "User Menu"
       ],
       "answer": [
@@ -4650,7 +4650,7 @@
         "Any user with an article's permalink",
         "Any active user",
         "No users",
-        "Users with kb_user role 119 of 204 CONFIDENTIAL"
+        "Users with kb_user role"
       ],
       "answer": [
         "C"
@@ -4690,7 +4690,7 @@
         "Specify, Transform, Apply",
         "Retrieve, Assess, Apply",
         "Get, Test, Push",
-        "Pull, Review, Push 120 of 204 CONFIDENTIAL"
+        "Pull, Review, Push"
       ],
       "answer": [
         "A"
@@ -4729,7 +4729,7 @@
         "On list Context Menu, select Group By > Category",
         "On the Filter Menu, select Group By > Category",
         "Click Group On icon, select Category",
-        "On Navigator Filter, type tablename.group.category and press enter 121 of 204 CONFIDENTIAL",
+        "On Navigator Filter, type tablename.group.category and press enter",
         "On the Category column title, click Context menu > Group By Category"
       ],
       "answer": [
@@ -4770,7 +4770,7 @@
         "CSDM Schema",
         "Business Service Map",
         "Dependency View",
-        "CI Class Map 122 of 204 CONFIDENTIAL"
+        "CI Class Map"
       ],
       "answer": [
         "D"
@@ -4880,7 +4880,7 @@
         "C",
         "D"
       ],
-      "explanation": "Every notification needs three things defined: when it fires (the conditions/trigger), who it goes to (the recipients), and what it says (the content/message) - A, C, and D. A knowledge base association and inactive-account handling are not part of configuring a notification record. 125 of 204 CONFIDENTIAL",
+      "explanation": "Every notification needs three things defined: when it fires (the conditions/trigger), who it goes to (the recipients), and what it says (the content/message) - A, C, and D. A knowledge base association and inactive-account handling are not part of configuring a notification record.",
       "reference": "ServiceNow Docs - Create an email notification",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/notification/task/define-an-email-notification.html"
     },
@@ -4918,7 +4918,7 @@
       "answer": [
         "B"
       ],
-      "explanation": "A Base Class table sits at the top of a hierarchy and is not extended from any other table, while a Parent table is simply any table that has children extending it - and a parent can itself be extended from a higher table (B). The distinction is about position in the extension chain: base = the root, parent = has descendants. 126 of 204 CONFIDENTIAL",
+      "explanation": "A Base Class table sits at the top of a hierarchy and is not extended from any other table, while a Parent table is simply any table that has children extending it - and a parent can itself be extended from a higher table (B). The distinction is about position in the extension chain: base = the root, parent = has descendants.",
       "reference": "ServiceNow Docs - Table extension",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/table-administration/concept/c_TableExtension.html"
     },
@@ -5173,7 +5173,7 @@
       "difficulty": "easy",
       "question": "While on an incident record, how would you add a tag for \"special handling\" to the record?",
       "options": [
-        "Click on the More options (.,.) icon, click Add Tag, type Special Handling, press enter",
+        "Click on the More options (...) icon, click Add Tag, type Special Handling, press enter",
         "On the Special Handling field, check the box",
         "On the Tag field, select Special Handling from the choice list",
         "Click on the Context menu, select Add Tag, type Special Handling, press enter"
@@ -5209,7 +5209,7 @@
       "number": "Q265",
       "category": "Service Catalog",
       "difficulty": "hard",
-      "question": "WHILE TESTING A CATALOG ITEM FOR ORDERING AN EXPENSIVE COMPUTER, THE MANDATORY APPROVAL IS BEING 133 of 204 CONFIDENTIAL SKIPPED FOR REQUESTER BOB, SMITH, BUT NOT FOR ANY OF THE OTHER REQUESTERS. WHAT COULD EXPLAIN THE ISSUE?",
+      "question": "WHILE TESTING A CATALOG ITEM FOR ORDERING AN EXPENSIVE COMPUTER, THE MANDATORY APPROVAL IS BEING SKIPPED FOR REQUESTER BOB, SMITH, BUT NOT FOR ANY OF THE OTHER REQUESTERS. WHAT COULD EXPLAIN THE ISSUE?",
       "options": [
         "There is a business rule, excluding Bob.Smith from any approvals.",
         "Bob Smith does not have a delegate set up on his account,",
@@ -5280,7 +5280,7 @@
       "answer": [
         "F"
       ],
-      "explanation": "The small information (i) icon next to a populated field, shown here beside the Caller field, marks a Reference field - clicking it opens a preview of the referenced record without leaving the form. Reference fields store a pointer (sys_id) to a record on another table, which is why they offer this peek-ahead preview. The other terms are not ServiceNow field types. 135 of 204 CONFIDENTIAL",
+      "explanation": "The small information (i) icon next to a populated field, shown here beside the Caller field, marks a Reference field - clicking it opens a preview of the referenced record without leaving the form. Reference fields store a pointer (sys_id) to a record on another table, which is why they offer this peek-ahead preview. The other terms are not ServiceNow field types.",
       "reference": "ServiceNow Docs - Reference fields",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/reference-pages/concept/c_ReferenceFields.html"
     },
@@ -5313,7 +5313,7 @@
         "On the Knowledge Base, add User Criteria with a Manager Can Read script to the Can Read list, publish article to any category",
         "Add User Criteria for HR Manager Group on the Category's Can Read list",
         "On the Knowledge Article, add an Access Control for HR Manager Group on the Can Read list, then publish article to any category.",
-        "Add User Criteria for HR Manager Group on the Can Read list of the article 136 of 204 CONFIDENTIAL"
+        "Add User Criteria for HR Manager Group on the Can Read list of the article"
       ],
       "answer": [
         "B"
@@ -5349,7 +5349,7 @@
       "number": "Q272",
       "category": "Flow Designer & Workflows",
       "difficulty": "hard",
-      "question": "MANY ACTIONS ARE INCLUDED WITH FLOW DESIGNER, WHAT ARE SOME FREQUENTLY USED CORE ACTIONS? CHOOSE 4 ANSWERS. 137 of 204 CONFIDENTIAL",
+      "question": "MANY ACTIONS ARE INCLUDED WITH FLOW DESIGNER, WHAT ARE SOME FREQUENTLY USED CORE ACTIONS? CHOOSE 4 ANSWERS.",
       "options": [
         "Wait for Condition",
         "Ask for Approval",
@@ -5513,7 +5513,7 @@
         "G",
         "H"
       ],
-      "explanation": "141 of 204 CONFIDENTIAL Task is the Base table at the top of the hierarchy and is therefore also a Parent (G, H). Incident sits in the middle: it is a Child of Task and simultaneously a Parent of Super Incident (B, C). Super Incident is at the bottom, making it purely a Child (D). Super Incident cannot be a Base or Parent, and Incident is not the base since Task is above it.",
+      "explanation": "Task is the Base table at the top of the hierarchy and is therefore also a Parent (G, H). Incident sits in the middle: it is a Child of Task and simultaneously a Parent of Super Incident (B, C). Super Incident is at the bottom, making it purely a Child (D). Super Incident cannot be a Base or Parent, and Incident is not the base since Task is above it.",
       "reference": "ServiceNow Docs - Table extension and hierarchy",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/table-administration/concept/c_TableExtension.html"
     },
@@ -5551,7 +5551,7 @@
       "answer": [
         "C"
       ],
-      "explanation": "142 of 204 CONFIDENTIAL Homepages and dashboards are not tracked automatically by update sets, so you must manually add them - typically by using the 'Add to Update Set' related link or the Update Set Picker for unloaded records (C). Because they are data-style records rather than tracked configuration, leaving them to be captured automatically (B) would result in them being missed on the target instance.",
+      "explanation": "Homepages and dashboards are not tracked automatically by update sets, so you must manually add them - typically by using the 'Add to Update Set' related link or the Update Set Picker for unloaded records (C). Because they are data-style records rather than tracked configuration, leaving them to be captured automatically (B) would result in them being missed on the target instance.",
       "reference": "ServiceNow Docs - Update Sets",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/build/system-update-sets/concept/c_UpdateSets.html"
     },
@@ -5585,7 +5585,7 @@
         "Bottom to top: Table ACL. Table.Field ACL, Parent Table. Field ACL",
         "General to specific: Table ACL, Table.Field ACL, Parent Table, Field ACL",
         "Top to bottom: Wildcard Table ACL, Parent Table ACL, Table ACL",
-        "Specific general: Table ACL, Parent Table ACL, Wildcard (*) ACL 143 of 204 CONFIDENTIAL"
+        "Specific general: Table ACL, Parent Table ACL, Wildcard (*) ACL"
       ],
       "answer": [
         "E"
@@ -5601,12 +5601,12 @@
       "difficulty": "hard",
       "question": "What are the three key tables in an enterprise CMDB? Choose 3 answers.",
       "options": [
-        "omadb_rel_ci",
+        "cmdb_rel_ci",
         "sn_emdb",
         "sn_emdb_ci",
-        "Ey omdb",
+        "cmdb",
         "sn_emdb_bak",
-        "omdb_ci",
+        "cmdb_ci",
         "emdb_bak"
       ],
       "answer": [
@@ -5614,7 +5614,7 @@
         "D",
         "F"
       ],
-      "explanation": "The three foundational CMDB tables are cmdb (the base Configuration Item parent table), cmdb_ci (the base Configuration Item table where CIs are stored), and cmdb_rel_ci (which stores the relationships between CIs). In this dump the option text is OCR-corrupted (cmdb appears as 'omdb', cmdb_rel_ci as 'omadb_rel_ci', cmdb_ci as 'omdb_ci'), so the keyed answer A, D, F maps to those three real tables.",
+      "explanation": "The three foundational CMDB tables are cmdb (the base Configuration Item parent table), cmdb_ci (the base Configuration Item table where CIs are stored), and cmdb_rel_ci (which stores the relationships between CIs).",
       "reference": "ServiceNow Docs - CMDB tables",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/configuration-management/concept/c_ConfigurationManagementDatabase.html"
     },
@@ -5626,7 +5626,7 @@
       "question": "On access control definitions, what are ways you can set the permissions on a table? Choose 3 answers",
       "options": [
         "Groups",
-        "CRUD 144 of 204 CONFIDENTIAL",
+        "CRUD",
         "Roles",
         "Script that sets the answer variable to true or false",
         "Conditional Expressions"
@@ -5665,7 +5665,7 @@
       "number": "Q287",
       "category": "Import Sets & Data Sources",
       "difficulty": "medium",
-      "question": "WHAT MODULE ENABLES AN ADMINISTRATOR TO DEFINE DESTINATIONS FOR IMPORTED DATA ON ANY SERVICENOW TABLE? 145 of 204 CONFIDENTIAL",
+      "question": "WHAT MODULE ENABLES AN ADMINISTRATOR TO DEFINE DESTINATIONS FOR IMPORTED DATA ON ANY SERVICENOW TABLE?",
       "options": [
         "Field Transform",
         "Transform Map",
@@ -5706,7 +5706,7 @@
       "difficulty": "medium",
       "question": "What table acts as a staging area for records imported from a data source?",
       "options": [
-        "Transform Table 146 of 204 CONFIDENTIAL",
+        "Transform Table",
         "Staging Table",
         "Import Set Row Table",
         "Temp Table"
@@ -5746,7 +5746,7 @@
       "question": "When looking at a long list of records, you want to quickly filter, to show only those which have category of hardware. How might you do that?",
       "options": [
         "On the list, locate and right click on the value Hardware, select Show Matching",
-        "Click Funnel ten, type Hardware and click enter 147 of 204 CONFIDENTIAL",
+        "Click Funnel ten, type Hardware and click enter",
         "On the Category column header, right click and select Show > Hardware",
         "Right dick on magnifier, type Hardware and click enter",
         "On Breadcrumb, click > icon, type Hardware and click enter"
@@ -5788,7 +5788,7 @@
       "question": "Which one of the following describes the primary operations performed against tables in the ServiceNow platform?",
       "options": [
         "Create, Rate, Update, Delete",
-        "Create, Read, Upload, Delete 148 of 204 CONFIDENTIAL",
+        "Create, Read, Upload, Delete",
         "Create, Read, Write, Delete",
         "Capture, Rate, Write, Develop"
       ],
@@ -5828,7 +5828,7 @@
         "Star",
         "Triangle",
         "Pencil",
-        "Clock 149 of 204 CONFIDENTIAL"
+        "Clock"
       ],
       "answer": [
         "C"
@@ -5871,7 +5871,7 @@
       "answer": [
         "D"
       ],
-      "explanation": "150 of 204 CONFIDENTIAL The Gear (settings/personalize) icon on a list or related list opens the Personalize List Columns dialog, where a user adds, removes, and reorders columns (D). The Magnifier toggles column search, and the Context Menu offers list actions, but it is the Gear icon that personalizes the column layout.",
+      "explanation": "The Gear (settings/personalize) icon on a list or related list opens the Personalize List Columns dialog, where a user adds, removes, and reorders columns (D). The Magnifier toggles column search, and the Context Menu offers list actions, but it is the Gear icon that personalizes the column layout.",
       "reference": "ServiceNow Docs - Personalize list columns",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/use/using-lists/task/t_PersonalizeListColumns.html"
     },
@@ -5910,7 +5910,7 @@
       "answer": [
         "D"
       ],
-      "explanation": "151 of 204 CONFIDENTIAL The Activity section (activity stream) on a task record presents the chronological record of updates, with the most recent entry shown so you can see what last changed (D). The Audit Log is a separate technical record of field changes rather than the form's at-a-glance update section, and 'Journal' is the underlying field type, not the displayed section.",
+      "explanation": "The Activity section (activity stream) on a task record presents the chronological record of updates, with the most recent entry shown so you can see what last changed (D). The Audit Log is a separate technical record of field changes rather than the form's at-a-glance update section, and 'Journal' is the underlying field type, not the displayed section.",
       "reference": "ServiceNow Docs - Activity stream",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/use/using-forms/concept/activity-stream.html"
     },
@@ -5942,18 +5942,18 @@
       "options": [
         "sn_cmdt_bak",
         "Sh_emdb_ci",
-        "cmap_ret_ci",
-        "cmdb_bak 152 of 204 CONFIDENTIAL",
+        "cmdb_rel_ci",
+        "cmdb_bak",
         "cmdb_ci",
         "sh_eomdb",
-        "cmap"
+        "cmdb"
       ],
       "answer": [
         "C",
         "E",
         "G"
       ],
-      "explanation": "The three foundational CMDB tables are cmdb (base CI parent table), cmdb_ci (the Configuration Items table), and cmdb_rel_ci (CI relationships). The dump's option text is OCRcorrupted, so the keyed answer C, E, G is meant to point at cmdb_rel_ci ('cmap_ret_ci'), cmdb_ci, and cmdb ('cmap'); only cmdb_ci (E) is unambiguously legible.",
+      "explanation": "The three foundational CMDB tables are cmdb (base CI parent table), cmdb_ci (the Configuration Items table), and cmdb_rel_ci (CI relationships).",
       "reference": "ServiceNow Docs - CMDB tables",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/configuration-management/concept/c_ConfigurationManagementDatabase.html"
     },
@@ -5987,7 +5987,7 @@
       "options": [
         "user is a record stored in the User Preference [Sys_user_preference] table",
         "A User is a record stored in the Profile [sys_user_profile] table",
-        "A user is a field in the LDAP integration 153 of 204 CONFIDENTIAL",
+        "A user is a field in the LDAP integration",
         "A user is a record stored in the User [sys_user] table"
       ],
       "answer": [
@@ -6025,7 +6025,7 @@
       "options": [
         "Requests can contain many items; and Items can be any item from the catalog.",
         "Vendors can sell multiple products; and products can be sold by multiple vendors.",
-        "A Task can trigger many Workflows; and a Workflow can trigger many Tasks 154 of 204 CONFIDENTIAL",
+        "A Task can trigger many Workflows; and a Workflow can trigger many Tasks",
         "A Configuration Item can belong to multiple Classes; and Classes can contain multiple Configuration Items."
       ],
       "answer": [
@@ -6062,7 +6062,7 @@
       "question": "The employee on-boarding team has asked for a way for managers to order computers, monitors, business cards, and cell phones for new employees. How would you proceed to meet this requirement?",
       "options": [
         "Create Record Producer",
-        "Create Order Guide 155 of 204 CONFIDENTIAL",
+        "Create Order Guide",
         "Create Requested Item",
         "Create On-boarding Bot"
       ],
@@ -6100,7 +6100,7 @@
       "difficulty": "medium",
       "question": "After you create a new table, what is the best practice regarding the navigation pane? Choose 2 answers",
       "options": [
-        "Set the filter condition on the Application Menu 156 of 204 CONFIDENTIAL",
+        "Set the filter condition on the Application Menu",
         "Set the font style on both the Application Menu and the Module",
         "Specify which Roles are able to see the Module",
         "Specify which Roles are able to see the Application Menu",
@@ -6141,7 +6141,7 @@
       "difficulty": "medium",
       "question": "What options can you see, when you right click on a CI, from the CI dependency view map? Choose 3 answers",
       "options": [
-        "View Affected CIs 157 of 204 CONFIDENTIAL",
+        "View Affected CIs",
         "View Related Tasks",
         "View Recent Outages",
         "View Cases",
@@ -6210,7 +6210,7 @@
       "options": [
         "Publish",
         "New",
-        "Ada",
+        "Add",
         "Manage",
         "Edit"
       ],
@@ -6219,7 +6219,7 @@
         "C",
         "E"
       ],
-      "explanation": "Related lists commonly expose New (create a new related record), Edit (open the slushbucket to add/remove existing records), and Add ('Ada' is an OCR typo for Add) for managing the records shown - B, C, E. 'Publish' and 'Manage' are not the standard related-list management buttons.",
+      "explanation": "Related lists commonly expose New (create a new related record), Edit (open the slushbucket to add/remove existing records), and Add for managing the records shown - B, C, E. 'Publish' and 'Manage' are not the standard related-list management buttons.",
       "reference": "ServiceNow Docs - Related list buttons",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/use/using-forms/concept/c_RelatedLists.html"
     },
@@ -6258,7 +6258,7 @@
       "answer": [
         "D"
       ],
-      "explanation": "From the My Work list, the Activity Stream icon opens a live-updating frame that shows ongoing activity (such as customer responses) across the records, so the worker can monitor changes without opening each one (D). Opening a separate workspace tab per record is inefficient, and there is no 'Monitor frame' eyeglass feature as described in C. 160 of 204 CONFIDENTIAL",
+      "explanation": "From the My Work list, the Activity Stream icon opens a live-updating frame that shows ongoing activity (such as customer responses) across the records, so the worker can monitor changes without opening each one (D). Opening a separate workspace tab per record is inefficient, and there is no 'Monitor frame' eyeglass feature as described in C.",
       "reference": "ServiceNow Docs - Activity stream",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/use/using-forms/concept/activity-stream.html"
     },
@@ -6296,7 +6296,7 @@
       "answer": [
         "B"
       ],
-      "explanation": "The in-instance Help Panel, opened from the question-mark (?) icon, provides guided tours and contextual help - including guidance on actions and how to use inputs/outputs while building a flow (B). Community, Docs, and the Wiki are external resources, whereas the question asks about an in-instance resource embedded in the UI. 161 of 204 CONFIDENTIAL",
+      "explanation": "The in-instance Help Panel, opened from the question-mark (?) icon, provides guided tours and contextual help - including guidance on actions and how to use inputs/outputs while building a flow (B). Community, Docs, and the Wiki are external resources, whereas the question asks about an in-instance resource embedded in the UI.",
       "reference": "ServiceNow Docs - Help panel",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/administer/navigation-and-ui/concept/help-panel.html"
     },
@@ -6375,7 +6375,7 @@
       "answer": [
         "C"
       ],
-      "explanation": "The out-of-box Service Catalog Request workflow runs against the Request (sc_request) record, where the order total lives, so the approval-threshold logic that compares the request total against a dollar amount is edited there. The other names are not the standard catalog re‐ 163 of 204 CONFIDENTIAL quest workflow that evaluates the overall request total for approval.",
+      "explanation": "The out-of-box Service Catalog Request workflow runs against the Request (sc_request) record, where the order total lives, so the approval-threshold logic that compares the request total against a dollar amount is edited there. The other names are not the standard catalog re‐ quest workflow that evaluates the overall request total for approval.",
       "reference": "ServiceNow Docs - Service Catalog request fulfillment",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/service-catalog-management/concept/c_RequestFulfillment.html"
     },
@@ -6417,7 +6417,7 @@
         "D",
         "E"
       ],
-      "explanation": "164 of 204 CONFIDENTIAL Every condition (filter) row in ServiceNow is built from three parts: the Field to evaluate, the Operator that defines the comparison (is, contains, greater than, and so on), and the Value to compare against. 'Column' and 'Match Criteria' are not the named building blocks of a condition row, so C, D, and E are correct.",
+      "explanation": "Every condition (filter) row in ServiceNow is built from three parts: the Field to evaluate, the Operator that defines the comparison (is, contains, greater than, and so on), and the Value to compare against. 'Column' and 'Match Criteria' are not the named building blocks of a condition row, so C, D, and E are correct.",
       "reference": "ServiceNow Docs - Condition builder",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/use/using-lists/concept/c_ConditionBuilder.html"
     },
@@ -6449,7 +6449,7 @@
       "question": "What is the language used for scriptingin ServiceNow?",
       "options": [
         "JavaScript",
-        "C++ 165 of 204 CONFIDENTIAL",
+        "C++",
         "PHP",
         "Python"
       ],
@@ -6490,7 +6490,7 @@
         "Group [sn_sys_user_group]}",
         "User Group [user_groups]",
         "User Groups [sn_user_groups]",
-        "Groups [sys_user_groups] 166 of 204 CONFIDENTIAL"
+        "Groups [sys_user_groups]"
       ],
       "answer": [
         "A"
@@ -6525,7 +6525,7 @@
       "number": "Q330",
       "category": "Ohne Kategorie",
       "difficulty": "medium",
-      "question": "A SERVICE CATALOG PROJECT WILL INVOLVE BUILDING 80 CATALOG ITEMS. FOR EACH OF THE CATALOG ITEMS, THE FOLLOWING FIELDS WILL BE MANDATORY ON THE FORMS: Requested for *Requested by Approving manager 167 of 204 CONFIDENTIAL Delivery instructions All of the other variables will be specific to the individual catalog item. What features would you use when designing the catalog item form? Service Catalog · medium",
+      "question": "A SERVICE CATALOG PROJECT WILL INVOLVE BUILDING 80 CATALOG ITEMS. FOR EACH OF THE CATALOG ITEMS, THE FOLLOWING FIELDS WILL BE MANDATORY ON THE FORMS: Requested for *Requested by Approving manager Delivery instructions All of the other variables will be specific to the individual catalog item. What features would you use when designing the catalog item form? Service Catalog · medium",
       "options": [
         "Create one Variable Set for the four variables; then add that variable set to each of the 80 catalog items.",
         "Create a Record Producer that contains the four fields: then add to the record producer related list on the Catalog files.",
@@ -6555,7 +6555,7 @@
       "answer": [
         "D"
       ],
-      "explanation": "The standard import-set flow is: load the source data into a staging (import set) table, create a transform map that links source fields to target fields, run the transform to move the data into the target table, then clean up the staging import table (D). The other sequences mix in unrelated steps like LDAP setup or update sets, which are not part of the import-set process. 168 of 204 CONFIDENTIAL",
+      "explanation": "The standard import-set flow is: load the source data into a staging (import set) table, create a transform map that links source fields to target fields, run the transform to move the data into the target table, then clean up the staging import table (D). The other sequences mix in unrelated steps like LDAP setup or update sets, which are not part of the import-set process.",
       "reference": "ServiceNow Docs - Import sets",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/import-sets/concept/c_ImportSets.html"
     },
@@ -6593,7 +6593,7 @@
       "answer": [
         "B"
       ],
-      "explanation": "A free personal developer instance is the safe sandbox for trying a new plugin hands-on without risking real data, so activating the plugin there lets you evaluate the application (B). Activating an unproven plugin directly on production (D) is risky and not a recommended way to experiment. 169 of 204 CONFIDENTIAL",
+      "explanation": "A free personal developer instance is the safe sandbox for trying a new plugin hands-on without risking real data, so activating the plugin there lets you evaluate the application (B). Activating an unproven plugin directly on production (D) is risky and not a recommended way to experiment.",
       "reference": "ServiceNow Developer - Personal developer instances",
       "referenceUrl": "https://developer.servicenow.com/dev.do"
     },
@@ -6683,7 +6683,7 @@
       "number": "Q338",
       "category": "Reporting & Analytics",
       "difficulty": "medium",
-      "question": "THE REPORT DESIGNER CONTAINS DIFFERENT SECTIONS FOR CONFIGURING YOUR REPORT. WHICH SECTION IS USED TO SPECIFY 171 of 204 CONFIDENTIAL GROUPING AND CALCULATIONS TO BE RUN AGAINST ME DATA?",
+      "question": "THE REPORT DESIGNER CONTAINS DIFFERENT SECTIONS FOR CONFIGURING YOUR REPORT. WHICH SECTION IS USED TO SPECIFY GROUPING AND CALCULATIONS TO BE RUN AGAINST ME DATA?",
       "options": [
         "Style",
         "Format",
@@ -6762,7 +6762,7 @@
       "number": "Q342",
       "category": "Application Access & Security",
       "difficulty": "easy",
-      "question": "SECURITY RULES ARE DEFINED TO RESTRICT THE PERMISSION OF USERS FROM VIEWING AND INTERACTING WITH 173 of 204 CONFIDENTIAL DATA. WHAT ARE THESE SECURITY RULES CALLED?",
+      "question": "SECURITY RULES ARE DEFINED TO RESTRICT THE PERMISSION OF USERS FROM VIEWING AND INTERACTING WITH DATA. WHAT ARE THESE SECURITY RULES CALLED?",
       "options": [
         "Role Assignment Rules",
         "CRUD Rules",
@@ -6949,7 +6949,7 @@
       "answer": [
         "D"
       ],
-      "explanation": "Predictive Intelligence uses machine-learning classification to read text such as the short description and automatically predict and populate fields like Category and Priority. Assignment Rules only set assignment fields based on static conditions and cannot interpret free-text, so the source key 'B' is incorrect and Predictive Intelligence (D) is the right framework. 178 of 204 CONFIDENTIAL",
+      "explanation": "Predictive Intelligence uses machine-learning classification to read text such as the short description and automatically predict and populate fields like Category and Priority. Assignment Rules only set assignment fields based on static conditions and cannot interpret free-text, so the source key 'B' is incorrect and Predictive Intelligence (D) is the right framework.",
       "reference": "ServiceNow Docs - Predictive Intelligence",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-now-intelligence/page/administer/predictive-intelligence/concept/predictive-intelligence-overview.html"
     },
@@ -6988,7 +6988,7 @@
       "answer": [
         "C"
       ],
-      "explanation": "179 of 204 CONFIDENTIAL Making a field mandatory based on another field's value and hiding a field based on the user's role are both client-side form behaviors, which is exactly what a UI Policy (optionally with a UI Policy script) does without coding. 'Dictionary Design', 'UI Design', 'Field Limiter', and 'Form Constraint' are not the standard mechanisms for these dynamic form rules, so UI Policy is correct.",
+      "explanation": "Making a field mandatory based on another field's value and hiding a field based on the user's role are both client-side form behaviors, which is exactly what a UI Policy (optionally with a UI Policy script) does without coding. 'Dictionary Design', 'UI Design', 'Field Limiter', and 'Form Constraint' are not the standard mechanisms for these dynamic form rules, so UI Policy is correct.",
       "reference": "ServiceNow Docs - UI policies",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-application-development/page/script/ui-policies/concept/c_UIPolicy.html"
     },
@@ -7026,7 +7026,7 @@
       "answer": [
         "C"
       ],
-      "explanation": "180 of 204 CONFIDENTIAL The breadcrumb is the clickable string shown above a list that displays the applied filter conditions and lets you step back through them by removing the rightmost parts. 'Choice', 'Topic', and 'Menu' do not name this filter string, so Breadcrumb (C) is correct.",
+      "explanation": "The breadcrumb is the clickable string shown above a list that displays the applied filter conditions and lets you step back through them by removing the rightmost parts. 'Choice', 'Topic', and 'Menu' do not name this filter string, so Breadcrumb (C) is correct.",
       "reference": "ServiceNow Docs - List breadcrumbs",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/use/using-lists/concept/c_ListBreadcrumbs.html"
     },
@@ -7061,7 +7061,7 @@
         "Add User Account to ACL",
         "Add User Account to network group",
         "Add User Account to IT Knowledgebase",
-        "Create User Account 181 of 204 CONFIDENTIAL",
+        "Create User Account",
         "Add User Account to Hardware group"
       ],
       "answer": [
@@ -7098,7 +7098,7 @@
       "number": "Q359",
       "category": "Filters & Forms",
       "difficulty": "medium",
-      "question": "THE CUSTOMER HAS ASKED THAT YOUR CHANGE THE DEFAULT LAYOUT OF THE TASK LIST. Number Task Type Parent Short Description Assignment Group 182 of 204 CONFIDENTIAL Assignment Updated After navigation to the list, where would you click, to meet this requirement? Lists,",
+      "question": "THE CUSTOMER HAS ASKED THAT YOUR CHANGE THE DEFAULT LAYOUT OF THE TASK LIST. Number Task Type Parent Short Description Assignment Group Assignment Updated After navigation to the list, where would you click, to meet this requirement? Lists,",
       "options": [
         "Right click on any column header, Context menu > Configure > List Layout",
         "Right click List Gear icon > Configure > Columns",
@@ -7127,7 +7127,7 @@
       "answer": [
         "A"
       ],
-      "explanation": "183 of 204 CONFIDENTIAL When 'Match All' is set to Yes, the user criteria are combined with AND, so a user must satisfy every condition - be in ACME North America, in the HR department, and in the ACME Manager group - to gain access (A). The 'or' interpretations (B, C) describe Match All = No behavior, and D ignores the company condition.",
+      "explanation": "When 'Match All' is set to Yes, the user criteria are combined with AND, so a user must satisfy every condition - be in ACME North America, in the HR department, and in the ACME Manager group - to gain access (A). The 'or' interpretations (B, C) describe Match All = No behavior, and D ignores the company condition.",
       "reference": "ServiceNow Docs - Knowledge user criteria (Match All)",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/knowledge-management/concept/knowledge-user-criteria.html"
     },
@@ -7161,7 +7161,7 @@
         "Setting fields hidden",
         "Setting fields to accept the data in an expected format",
         "Settings fields read-only",
-        "Setting fields mandatory 184 of 204 CONFIDENTIAL"
+        "Setting fields mandatory"
       ],
       "answer": [
         "B",
@@ -7198,7 +7198,7 @@
       "number": "Q364",
       "category": "Database Administration",
       "difficulty": "medium",
-      "question": "FROM AN OPEN FORM, YOU CLICK THE FORM CONTEXT MENU (THE ICON AT THE TOP-LEFT OF THE FORM HEADER), WHICH LISTS OPTIONS SUCH AS SAVE, CONFIGURE, EXPORT, VIEW, CREATE FAVORITE, COPY URL, SHOW XML, HISTORY, AND RELOAD FORM. 185 of 204 CONFIDENTIAL WHICH PATH FROM THIS MENU OPENS THE TABLE CONFIGURATION PAGE?",
+      "question": "FROM AN OPEN FORM, YOU CLICK THE FORM CONTEXT MENU (THE ICON AT THE TOP-LEFT OF THE FORM HEADER), WHICH LISTS OPTIONS SUCH AS SAVE, CONFIGURE, EXPORT, VIEW, CREATE FAVORITE, COPY URL, SHOW XML, HISTORY, AND RELOAD FORM. WHICH PATH FROM THIS MENU OPENS THE TABLE CONFIGURATION PAGE?",
       "options": [
         "The Form Context menu > View > Table",
         "The Form Context menu > Configure > Table",
@@ -7385,7 +7385,7 @@
       "answer": [
         "C"
       ],
-      "explanation": "190 of 204 CONFIDENTIAL Right-clicking a cell value such as 'Hardware' and choosing Show Matching instantly filters the list to only rows sharing that value (C). 'Filter Out' would do the opposite. The other options describe controls (breadcrumb >, a column 'Show' submenu, the magnifier) that do not perform this one-click contextual filter.",
+      "explanation": "Right-clicking a cell value such as 'Hardware' and choosing Show Matching instantly filters the list to only rows sharing that value (C). 'Filter Out' would do the opposite. The other options describe controls (breadcrumb >, a column 'Show' submenu, the magnifier) that do not perform this one-click contextual filter.",
       "reference": "ServiceNow Docs - Filtering lists (Show Matching)",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/use/using-lists/concept/c_ListVControls.html"
     },
@@ -7424,7 +7424,7 @@
       "answer": [
         "C"
       ],
-      "explanation": "191 of 204 CONFIDENTIAL The security_admin role needed for High Security Settings is an elevated privilege that persists only for the current login session. It is released automatically by session timeout or by logging out, so logging out and back in (C) returns the user to normal administrator privileges. The 'Normal Security' module in option A does not exist in the base instance.",
+      "explanation": "The security_admin role needed for High Security Settings is an elevated privilege that persists only for the current login session. It is released automatically by session timeout or by logging out, so logging out and back in (C) returns the user to normal administrator privileges. The 'Normal Security' module in option A does not exist in the base instance.",
       "reference": "ServiceNow Docs - Elevate role privileges",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/contextual-security/task/t_ElevatePrivilegeRole.html"
     },
@@ -7435,9 +7435,9 @@
       "difficulty": "medium",
       "question": "Access control rules are applied to a specific table, like the incident table. What is the object name for a rule that applies to the entire incident table (All rows and fields)?",
       "options": [
-        "incident .*",
+        "incident.*",
         "incident.all",
-        "incident .!",
+        "incident.!",
         "incident.None"
       ],
       "answer": [
@@ -7462,7 +7462,7 @@
       "answer": [
         "B"
       ],
-      "explanation": "192 of 204 CONFIDENTIAL A list displays the records from a table, with each row representing one record (B) and each column representing a field on that table. The list as a whole is the view of the table, so 'a table' and 'a field' describe the wrong granularity, and a filter merely narrows which rows appear.",
+      "explanation": "A list displays the records from a table, with each row representing one record (B) and each column representing a field on that table. The list as a whole is the view of the table, so 'a table' and 'a field' describe the wrong granularity, and a filter merely narrows which rows appear.",
       "reference": "ServiceNow Docs - Lists",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/use/using-lists/concept/c_Lists.html"
     },
@@ -7500,7 +7500,7 @@
       "answer": [
         "C"
       ],
-      "explanation": "193 of 204 CONFIDENTIAL The Activity formatter (the activity stream) tracks information that is not stored in a single editable field, such as journal entries like comments and work notes, plus a running history of field changes (C). The List Editor edits field values inline, and the Dictionary defines fields - neither captures this activity history.",
+      "explanation": "The Activity formatter (the activity stream) tracks information that is not stored in a single editable field, such as journal entries like comments and work notes, plus a running history of field changes (C). The List Editor edits field values inline, and the Dictionary defines fields - neither captures this activity history.",
       "reference": "ServiceNow Docs - Activity stream / formatter",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/use/navigation/concept/activity-stream.html"
     },
@@ -7539,7 +7539,7 @@
       "answer": [
         "B"
       ],
-      "explanation": "194 of 204 CONFIDENTIAL A policy that governs all data regardless of entry channel - UI, Import Sets, or Web Services - is a Data Policy, and because those channels include non-UI paths it must run on the server (B). Client-side enforcement (browser) only applies to the form UI, so it cannot cover import or webservice data.",
+      "explanation": "A policy that governs all data regardless of entry channel - UI, Import Sets, or Web Services - is a Data Policy, and because those channels include non-UI paths it must run on the server (B). Client-side enforcement (browser) only applies to the form UI, so it cannot cover import or webservice data.",
       "reference": "ServiceNow Docs - Data policies",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/field-administration/concept/c_DataPolicy.html"
     },
@@ -7577,7 +7577,7 @@
       "answer": [
         "A"
       ],
-      "explanation": "195 of 204 CONFIDENTIAL Tags are labels you apply to records to categorize, filter, and find them, and a tag can be shared so it is visible to other users or groups (A). Favorites are personal navigation shortcuts, History shows recently visited records, and the Activity Formatter displays record updates - none of which categorize records for sharing.",
+      "explanation": "Tags are labels you apply to records to categorize, filter, and find them, and a tag can be shared so it is visible to other users or groups (A). Favorites are personal navigation shortcuts, History shows recently visited records, and the Activity Formatter displays record updates - none of which categorize records for sharing.",
       "reference": "ServiceNow Docs - Tagging records",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-user-interface/page/use/using-lists/concept/c_Tagging.html"
     },
@@ -7611,7 +7611,7 @@
         "Incident",
         "Item",
         "Issue",
-        "Project 196 of 204 CONFIDENTIAL",
+        "Project",
         "Task"
       ],
       "answer": [
@@ -7631,7 +7631,7 @@
       "question": "An administrator creates \"customer_table_admin\" and \"customer_table_user\" roles for the newly created \"customer table\". Which ACL rule would grant access to all rows and all fields to both the customer_table_admin and customer_table_user roles?",
       "options": [
         "customer.all",
-        "customer .*",
+        "customer.*",
         "customer.field",
         "customer.none"
       ],
@@ -7650,7 +7650,7 @@
       "question": "What contains the configuration changes made in an instance (I.e. Changes in a form) and helps to implement the changes from the dev environment to another environment?",
       "options": [
         "Update sets",
-        "Transform maps 197 of 204 CONFIDENTIAL",
+        "Transform maps",
         "System dictionaries",
         "Import sets"
       ],
@@ -7688,7 +7688,7 @@
       "question": "What process allows users to create, categorize, review approve and browse important information in a centralized location that is shared oy the entire organization?",
       "options": [
         "Self Service Management",
-        "Knowledge Management 198 of 204 CONFIDENTIAL",
+        "Knowledge Management",
         "Knowledge-Centered Management",
         "Information Portal Management",
         "Business Information Management"
@@ -7726,7 +7726,7 @@
       "difficulty": "medium",
       "question": "Which feature ensures data consistency white importing data using import sets and web services?",
       "options": [
-        "Client Script 199 of 204 CONFIDENTIAL",
+        "Client Script",
         "Ul Policy",
         "Data Policy",
         "CSDM",
@@ -7766,7 +7766,7 @@
       "difficulty": "easy",
       "question": "When using flow designer what is the flow execution initiated by?",
       "options": [
-        "A trigger 200 of 204 CONFIDENTIAL",
+        "A trigger",
         "An existing subflow",
         "Allow logic",
         "An execution data pill"
@@ -7785,16 +7785,16 @@
       "difficulty": "hard",
       "question": "Which system property is added and set to true in order to see impersonation events in the system log?",
       "options": [
-        "glide user_setting",
-        "glide sys all_jmpersonation",
-        "glide sys log_jmpersonabon",
+        "glide.user_setting",
+        "glide.sys.all_impersonation",
+        "glide.sys.log_impersonation",
         "glide.impersonation_setting",
-        "glide sys admin_login"
+        "glide.sys.admin_login"
       ],
       "answer": [
         "C"
       ],
-      "explanation": "Adding the system property glide.sys.log_impersonation and setting it to true causes impersonation start/stop events to be written to the Event log, viewable under System Logs (C). The other property names are OCR-garbled or fabricated and do not control impersonation logging.",
+      "explanation": "Adding the system property glide.sys.log_impersonation and setting it to true causes impersonation start/stop events to be written to the Event log, viewable under System Logs (C). The other property names are fabricated and do not control impersonation logging.",
       "reference": "ServiceNow Docs - Impersonate a user",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/users-and-groups/task/t_ImpersonateAUser.html"
     },
@@ -7805,7 +7805,7 @@
       "difficulty": "medium",
       "question": "A customer wants to be able to identify and track components of their infrastructure that support their ecommerce service. What ServiceNow products could support this requirement? Choose 3 answers",
       "options": [
-        "Performance Analytics 201 of 204 CONFIDENTIAL",
+        "Performance Analytics",
         "Configuration Management (CMDB)",
         "Financial Management",
         "Discovery",
@@ -7844,7 +7844,7 @@
       "number": "Q397",
       "category": "Database Administration",
       "difficulty": "medium",
-      "question": "WHICH TABLES ARE CHILDREN OF THE TASK TABLE AND COME WITH THE BASE SYSTEM? CHOOSE 3 ANSWERS 202 of 204 CONFIDENTIAL",
+      "question": "WHICH TABLES ARE CHILDREN OF THE TASK TABLE AND COME WITH THE BASE SYSTEM? CHOOSE 3 ANSWERS",
       "options": [
         "Incident",
         "Problem",
