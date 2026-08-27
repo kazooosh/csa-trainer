@@ -1064,10 +1064,10 @@
       "number": "Q55",
       "category": "Self-Service & Notifications",
       "difficulty": "easy",
-      "question": "WHAT IS THE NAME OF THE CONVERSATIONAL BOT PLATFORM THAT PROVIDES ASSISTANCE TO HELP USERS OBTAIN INFORMATION, MAKE DECISIONS, AND PERFORM COMMON TASKS?",
+      "question": "What is the name of the conversational bot platform that provides assistance to help users obtain information, make decisions, and perform common tasks?",
       "options": [
         "Answer Agent",
-        "live Feed",
+        "Live Feed",
         "Virtual Agent",
         "Connect Chat"
       ],
@@ -1140,7 +1140,7 @@
       "number": "Q59",
       "category": "Application Access & Security",
       "difficulty": "medium",
-      "question": "Which are valid service Now user authentication methods? (Choose three.)",
+      "question": "Which are valid ServiceNow user authentication methods? (Choose three.)",
       "options": [
         "XML feed",
         "Local database",
@@ -1221,7 +1221,7 @@
       "number": "Q63",
       "category": "User Interface & Navigation",
       "difficulty": "medium",
-      "question": "WHAT ARE THE MAIN UI COMPONENT(S) OF THE SERVICENOW PLATFORM?",
+      "question": "What are the main UI component(s) of the ServiceNow platform?",
       "options": [
         "Banner Navigator",
         "Banner Frame",
@@ -1238,7 +1238,7 @@
     {
       "id": "q1k9cs1c",
       "number": "Q64",
-      "category": "Ohne Kategorie",
+      "category": "User Interface & Navigation",
       "difficulty": "medium",
       "question": "There are six common types of interfaces. Which interface enables the user to enter data?",
       "options": [
@@ -1261,7 +1261,7 @@
       "number": "Q65",
       "category": "Reporting & Analytics",
       "difficulty": "easy",
-      "question": "WHICH TYPE OF INTERFACE ENABLES YOU TO DISPLAY MULTIPLE PERFORMANCE ANALYTICS, REPORTING AND OTHER WIDGETS ON A SINGLE SCREEN?",
+      "question": "Which type of interface enables you to display multiple performance analytics, reporting and other widgets on a single screen?",
       "options": [
         "Form",
         "List",
@@ -1872,7 +1872,7 @@
       "number": "Q98",
       "category": "Application Access & Security",
       "difficulty": "medium",
-      "question": "What is (Are) best practice(S) regarding users/groups/roles? Choose 2 answers",
+      "question": "What is (Are) best practice(S) regarding users/groups/roles? (Choose two.)",
       "options": [
         "You should never assign roles to groups.",
         "You should assign roles to users.",
@@ -2063,7 +2063,7 @@
       "number": "Q108",
       "category": "Database Administration",
       "difficulty": "medium",
-      "question": "A change request has been approved and assigned to you as the system administrator to change the incident number prefix from the default of \"inc\" to the company standard in.\" what are the next steps to be taken\"",
+      "question": "A change request has been approved and assigned to you as the system administrator to change the incident number prefix from the default of \"INC\" to the company standard \"IN\" what are the next steps to be taken",
       "options": [
         "Go to the Number Maintenance application and change the prefix to \"IN\" for incident",
         "Create a Business Rule that modifies the prefix before the Insert operation",
@@ -2232,9 +2232,9 @@
     {
       "id": "q1cu0mk4",
       "number": "Q117",
-      "category": "Choose 3 answers Application Access & Security",
+      "category": "Application Access & Security",
       "difficulty": "hard",
-      "question": "What are the three permission requirements that must evaluate to true for an access control rule to apply?",
+      "question": "What are the three permission requirements that must evaluate to true for an access control rule to apply? (Choose three.)",
       "options": [
         "Conditions",
         "table.",
@@ -2430,7 +2430,7 @@
       "number": "Q127",
       "category": "Flow Designer & Workflows",
       "difficulty": "medium",
-      "question": "Where in flow designer can users access information about actions that are added to the flow?",
+      "question": "Where in Flow Designer can users access information about actions that are added to the flow?",
       "options": [
         "Virtual Agent Help",
         "Local Action Help",
@@ -2449,7 +2449,7 @@
       "number": "Q128",
       "category": "Flow Designer & Workflows",
       "difficulty": "medium",
-      "question": "How are local flow variables accessed in the flow designer data panel?",
+      "question": "How are local flow variables accessed in the Flow Designer Data panel?",
       "options": [
         "As newly generated icons",
         "As scratchpad variables",
@@ -2602,7 +2602,7 @@
       "number": "Q136",
       "category": "Task Management",
       "difficulty": "easy",
-      "question": "WHICH CORE TABLE IN THE SERVICENOW PLATFORM PROVIDES A SERIES OF STANDARD FIELDS USED ON EACH OF THE TABLES THAT EXTEND IT, SUCH AS THE INCIDENT [INCIDENT] AND PROBLEM [PROBLEM] TABLES?",
+      "question": "Which core table in the ServiceNow platform provides a series of standard fields used on each of the tables that extend it, such as the Incident [incident] and Problem [problem] tables?",
       "options": [
         "Task [task]",
         "Assignment [assignment]",
@@ -2912,7 +2912,7 @@
       "number": "Q152",
       "category": "Migration & Update Sets",
       "difficulty": "hard",
-      "question": "WHICH OF THE FOLLOWING ARE NOT INCLUDED IN AN UPDATE SET, BY DEFAULT? (CHOOSE FOUR.)",
+      "question": "Which of the following are not included in an update set, by default? (Choose four.)",
       "options": [
         "Homepages",
         "Data",
@@ -2923,7 +2923,8 @@
         "Related Lists",
         "Report Definitions",
         "Scheduled Jobs",
-        "Client Scripts K. Views"
+        "Client Scripts",
+        "Views"
       ],
       "answer": [
         "B",
@@ -4063,7 +4064,7 @@
       "number": "Q208",
       "category": "Flow Designer & Workflows",
       "difficulty": "medium",
-      "question": "What are advantages of using flow designer? (Choose three.)",
+      "question": "What are advantages of using Flow Designer? (Choose three.)",
       "options": [
         "Supports advanced developers",
         "Enables complicated scripting",
@@ -4784,7 +4785,7 @@
       "number": "Q244",
       "category": "Service Catalog",
       "difficulty": "hard",
-      "question": "You have been asked to configure a form so an employee could a tablet and select the standard accessary options to purchase with it. These standard options are: carrying case, screen cleaner, tablet stand, and screen protector. What approach would you take? Choose 3 answers",
+      "question": "You have been asked to configure a form so an employee could a tablet and select the standard accessary options to purchase with it. These standard options are: carrying case, screen cleaner, tablet stand, and screen protector. What approach would you take? (Choose three.)",
       "options": [
         "Create Catalog item for the tablet, and on the form, add a check box variable for each accessary option.",
         "Create Catalog item for the tablet, and add a variable set to the form, for the accessary options.",
@@ -4867,7 +4868,7 @@
       "number": "Q248",
       "category": "Self-Service & Notifications",
       "difficulty": "easy",
-      "question": "When creating a new notification, what must you define? Choose 3 answers",
+      "question": "When creating a new notification, what must you define? (Choose three.)",
       "options": [
         "What is the content of the notification",
         "The associated knowledge base",
@@ -4927,12 +4928,12 @@
       "number": "Q251",
       "category": "Task Management",
       "difficulty": "easy",
-      "question": "What types of entities can receive task assignments, in ServiceNow? Choose 2 answers",
+      "question": "What types of entities can receive task assignments, in ServiceNow? (Choose two.)",
       "options": [
         "Groups",
         "Users",
         "Departments",
-        "Teams."
+        "Teams"
       ],
       "answer": [
         "A",
@@ -4947,7 +4948,7 @@
       "number": "Q252",
       "category": "Platform Automation",
       "difficulty": "medium",
-      "question": "What are examples of UI actions relating to forms? Choose 3 answers",
+      "question": "What are examples of UI actions relating to forms? (Choose three.)",
       "options": [
         "Form Context Menu",
         "Form View",
@@ -4988,7 +4989,7 @@
       "number": "Q254",
       "category": "Application Access & Security",
       "difficulty": "medium",
-      "question": "When a custom table is created, which access control rules are automatically created? Choose 4 answers",
+      "question": "When a custom table is created, which access control rules are automatically created? (Choose four.)",
       "options": [
         "delete",
         "create",
@@ -5090,7 +5091,7 @@
       "number": "Q259",
       "category": "Import Sets & Data Sources",
       "difficulty": "hard",
-      "question": "When selecting the target table for an import, which tables can you select? Choose 3 answers",
+      "question": "When selecting the target table for an import, which tables can you select? (Choose three.)",
       "options": [
         "Tables within the global scope",
         "Tables within the existing application scope",
@@ -5112,7 +5113,7 @@
       "number": "Q260",
       "category": "Lists, Filters & Forms",
       "difficulty": "medium",
-      "question": "Farm a form, what would you click, to modify the order of the fields on the form? Choose 2 answers",
+      "question": "From a form, what would you click, to modify the order of the fields on the form? (Choose two.)",
       "options": [
         "Context Menu > Configure > Form Layout",
         "Context Menu > Form > Layout",
@@ -5248,7 +5249,7 @@
       "number": "Q267",
       "category": "Database Administration",
       "difficulty": "medium",
-      "question": "When building an extended table from a base table, which fields do you need to create? Choose 2 answers",
+      "question": "When building an extended table from a base table, which fields do you need to create? (Choose two.)",
       "options": [
         "The mandatory fields for the base table.",
         "The reference fields for the base table.",
@@ -5327,7 +5328,7 @@
       "number": "Q271",
       "category": "Lists, Filters & Forms",
       "difficulty": "hard",
-      "question": "When adding a related list to a form, you choose the related list from the list collector, what is an example of a related list you might see on the list collector? Choose 3 answers:",
+      "question": "When adding a related list to a form, you choose the related list from the list collector, what is an example of a related list you might see on the list collector? (Choose three.)",
       "options": [
         "Release Phase==Parent",
         "Catalog Task->Parent",
@@ -5349,7 +5350,7 @@
       "number": "Q272",
       "category": "Flow Designer & Workflows",
       "difficulty": "hard",
-      "question": "MANY ACTIONS ARE INCLUDED WITH FLOW DESIGNER, WHAT ARE SOME FREQUENTLY USED CORE ACTIONS? CHOOSE 4 ANSWERS.",
+      "question": "Many actions are included with Flow Designer. What are some frequently used core actions? (Choose four.)",
       "options": [
         "Wait for Condition",
         "Ask for Approval",
@@ -5411,7 +5412,7 @@
       "number": "Q275",
       "category": "Knowledge Management",
       "difficulty": "medium",
-      "question": "What features are available in knowledge management, to support continuous improvement on the knowledge articles? Choose 4 answers",
+      "question": "What features are available in knowledge management, to support continuous improvement on the knowledge articles? (Choose four.)",
       "options": [
         "Submit KB Errata",
         "Add Comments",
@@ -5455,7 +5456,7 @@
       "number": "Q277",
       "category": "Flow Designer & Workflows",
       "difficulty": "medium",
-      "question": "In flow designer, where is the data from an action stored so it can be used in subsequent actions in the flow?",
+      "question": "In Flow Designer, where is the data from an action stored so it can be used in subsequent actions in the flow?",
       "options": [
         "Field Icon",
         "Field Value",
@@ -5494,7 +5495,7 @@
       "number": "Q279",
       "category": "Database Administration",
       "difficulty": "hard",
-      "question": "For your implementation, the following tables. Are extended from each other: * incident table is extended from task table. * super incident table is extended from incident table, in this situation, which table(S) are parent, child and base tables? Choose 5 answers",
+      "question": "For your implementation, the following tables. Are extended from each other: * incident table is extended from task table. * super incident table is extended from incident table, in this situation, which table(S) are parent, child and base tables? (Choose five.)",
       "options": [
         "Incident table is a Base table",
         "Incident table is. a Parent table",
@@ -5599,7 +5600,7 @@
       "number": "Q284",
       "category": "Database Administration",
       "difficulty": "hard",
-      "question": "What are the three key tables in an enterprise CMDB? Choose 3 answers.",
+      "question": "What are the three key tables in an enterprise CMDB? (Choose three.)",
       "options": [
         "cmdb_rel_ci",
         "sn_emdb",
@@ -5623,7 +5624,7 @@
       "number": "Q285",
       "category": "Application Access & Security",
       "difficulty": "medium",
-      "question": "On access control definitions, what are ways you can set the permissions on a table? Choose 3 answers",
+      "question": "On access control definitions, what are ways you can set the permissions on a table? (Choose three.)",
       "options": [
         "Groups",
         "CRUD",
@@ -5688,9 +5689,9 @@
       "options": [
         "Arrows",
         "Plus, Minus",
-        "Ctrl c, Ctrl",
+        "Ctrl c, Ctrl v",
         "Ctrl <, Ctrl >",
-        "Shift F4, Shit FS"
+        "Shift F4, Shift F5"
       ],
       "answer": [
         "A"
@@ -5723,7 +5724,7 @@
       "number": "Q290",
       "category": "Database Administration",
       "difficulty": "medium",
-      "question": "Which modules can you use to create a new table? Choose 2 answers",
+      "question": "Which modules can you use to create a new table? (Choose two.)",
       "options": [
         "Tables & Columns",
         "Schema Map",
@@ -5763,7 +5764,7 @@
       "number": "Q292",
       "category": "User Interface & Navigation",
       "difficulty": "medium",
-      "question": "When managing tags, you can adjust who is able to see it. What are the visibility options? Choose 3 answers",
+      "question": "When managing tags, you can adjust who is able to see it. What are the visibility options? (Choose three.)",
       "options": [
         "Admins",
         "Everyone",
@@ -5938,7 +5939,7 @@
       "number": "Q301",
       "category": "Database Administration",
       "difficulty": "hard",
-      "question": "What are the three key tables in an enterprise CMDB? Choose 3 answers",
+      "question": "What are the three key tables in an enterprise CMDB? (Choose three.)",
       "options": [
         "sn_cmdt_bak",
         "Sh_emdb_ci",
@@ -5962,7 +5963,7 @@
       "number": "Q302",
       "category": "Application Access & Security",
       "difficulty": "medium",
-      "question": "Which role(S) are required to impersonate a user? Choose 2 answers",
+      "question": "Which role(S) are required to impersonate a user? (Choose two.)",
       "options": [
         "admin",
         "sys_admin",
@@ -6098,7 +6099,7 @@
       "number": "Q309",
       "category": "User Interface & Navigation",
       "difficulty": "medium",
-      "question": "After you create a new table, what is the best practice regarding the navigation pane? Choose 2 answers",
+      "question": "After you create a new table, what is the best practice regarding the navigation pane? (Choose two.)",
       "options": [
         "Set the filter condition on the Application Menu",
         "Set the font style on both the Application Menu and the Module",
@@ -6139,7 +6140,7 @@
       "number": "Q311",
       "category": "Database Administration",
       "difficulty": "medium",
-      "question": "What options can you see, when you right click on a CI, from the CI dependency view map? Choose 3 answers",
+      "question": "What options can you see, when you right click on a CI, from the CI dependency view map? (Choose three.)",
       "options": [
         "View Affected CIs",
         "View Related Tasks",
@@ -6161,7 +6162,7 @@
       "number": "Q312",
       "category": "Reporting & Analytics",
       "difficulty": "medium",
-      "question": "ServiceNow contains over 25 different report types. What are some of the types? Choose 5 answers",
+      "question": "ServiceNow contains over 25 different report types. What are some of the types? (Choose five.)",
       "options": [
         "Pie",
         "Speedometer",
@@ -6206,7 +6207,7 @@
       "number": "Q314",
       "category": "Lists, Filters & Forms",
       "difficulty": "medium",
-      "question": "On a related list, which buttons are commonly used for managing the records on the list? Choose 3 answers",
+      "question": "On a related list, which buttons are commonly used for managing the records on the list? (Choose three.)",
       "options": [
         "Publish",
         "New",
@@ -6305,7 +6306,7 @@
       "number": "Q319",
       "category": "Flow Designer & Workflows",
       "difficulty": "medium",
-      "question": "Which feature enables business process owners to organize flow designer content into unified and digitized cross-enterprise processes via a digitized task board interface?",
+      "question": "Which feature enables business process owners to organize Flow Designer content into unified and digitized cross-enterprise processes via a digitized task board interface?",
       "options": [
         "Flow Designer",
         "Process Automation Designer",
@@ -6343,7 +6344,7 @@
       "number": "Q321",
       "category": "Flow Designer & Workflows",
       "difficulty": "hard",
-      "question": "What are advantages of using spokes for integrations? Choose 3 answers",
+      "question": "What are advantages of using spokes for integrations? (Choose three.)",
       "options": [
         "Reduces the need for code",
         "Features scale and control mechanisms",
@@ -6404,7 +6405,7 @@
       "number": "Q324",
       "category": "Lists, Filters & Forms",
       "difficulty": "medium",
-      "question": "What are the components that make up a filer condition? Choose 3 answers",
+      "question": "What are the components that make up a filer condition? (Choose three.)",
       "options": [
         "Column",
         "Match Criteria",
@@ -6428,7 +6429,7 @@
       "difficulty": "medium",
       "question": "You have been asked to create a way for users to order a new iphone, but only if they get two levels of approval. The approvers and users should be automatically notified at each approval level. What feature would you use to manage the approvals and notifications?",
       "options": [
-        "Parent-Child Approvers.",
+        "Parent-Child Approvers",
         "Approval Chains",
         "Flows",
         "Approval Criteria",
@@ -6504,7 +6505,7 @@
       "number": "Q329",
       "category": "Application Access & Security",
       "difficulty": "medium",
-      "question": "An it user calls the service desk because they need to work on task records. All they can see is self service on their homepage when they login to the ServiceNow instance. What issue could explain this? Choose 2 answers",
+      "question": "An it user calls the service desk because they need to work on task records. All they can see is self service on their homepage when they login to the ServiceNow instance. What issue could explain this? (Choose two.)",
       "options": [
         "Their user account failed LDAP authentication",
         "Their user account is not logged in properly",
@@ -6523,9 +6524,9 @@
     {
       "id": "qjkyrvx",
       "number": "Q330",
-      "category": "Ohne Kategorie",
+      "category": "Service Catalog",
       "difficulty": "medium",
-      "question": "A SERVICE CATALOG PROJECT WILL INVOLVE BUILDING 80 CATALOG ITEMS. FOR EACH OF THE CATALOG ITEMS, THE FOLLOWING FIELDS WILL BE MANDATORY ON THE FORMS: Requested for *Requested by Approving manager Delivery instructions All of the other variables will be specific to the individual catalog item. What features would you use when designing the catalog item form? Service Catalog · medium",
+      "question": "A service catalog project will involve building 80 catalog items. For each of the catalog items, the following fields will be mandatory on the forms: 'Requested for', 'Requested by', 'Approving manager', 'Delivery instructions'. All of the other variables will be specific to the individual catalog item. What features would you use when designing the catalog item form?",
       "options": [
         "Create one Variable Set for the four variables; then add that variable set to each of the 80 catalog items.",
         "Create a Record Producer that contains the four fields: then add to the record producer related list on the Catalog files.",
@@ -6640,7 +6641,7 @@
       "number": "Q336",
       "category": "Platform Automation",
       "difficulty": "hard",
-      "question": "What are examples of Ul actions, relating to lists? Choose 4 answers",
+      "question": "What are examples of Ul actions, relating to lists? (Choose four.)",
       "options": [
         "List Links",
         "List Control",
@@ -6762,7 +6763,7 @@
       "number": "Q342",
       "category": "Application Access & Security",
       "difficulty": "easy",
-      "question": "SECURITY RULES ARE DEFINED TO RESTRICT THE PERMISSION OF USERS FROM VIEWING AND INTERACTING WITH DATA. WHAT ARE THESE SECURITY RULES CALLED?",
+      "question": "Security rules are defined to restrict the permission of users from viewing and interacting with data. What are these security rules called?",
       "options": [
         "Role Assignment Rules",
         "CRUD Rules",
@@ -6879,7 +6880,7 @@
       "number": "Q348",
       "category": "Lists, Filters & Forms",
       "difficulty": "medium",
-      "question": "While showing a customer their incident form, they ask to change the priority field title to display their internal terminology pvalue. How would you do that? Choose 2 answers",
+      "question": "While showing a customer their incident form, they ask to change the priority field title to display their internal terminology pvalue. How would you do that? (Choose two.)",
       "options": [
         "Right click on Priority and select Configure Dictionary",
         "Right click on Priority and select Configure Display Settings",
@@ -6975,9 +6976,9 @@
     {
       "id": "q1c8nhce",
       "number": "Q353",
-      "category": "Ohne Kategorie",
+      "category": "Lists, Filters & Forms",
       "difficulty": "medium",
-      "question": "A CUSTOMER HAS ASKED FOR THE FOLLOWING UPDATES TO A FORM: Make Resolution code mandatory, admin state is changed to Resolved. Hide major incident check box, unless logged in user has Major incident Manager role What type of rules (s) would you use to implement this requirement? Lists, Filters & Forms · medium",
+      "question": "A customer has asked for the following updates to a form: make 'Resolution code' mandatory, 'Admin State' is changed to 'Resolved'. Hide 'Major Incident' check box, unless logged in user has 'Major Incident Manager' role. What type of rules would you use to implement this requirement?",
       "options": [
         "Dictionary Design",
         "Field Limiter",
@@ -7020,7 +7021,7 @@
       "options": [
         "Topic",
         "Choice",
-        "Breadcrump",
+        "Breadcrumb",
         "Menu"
       ],
       "answer": [
@@ -7033,9 +7034,9 @@
     {
       "id": "qv7ax18",
       "number": "Q356",
-      "category": "Ohne Kategorie",
+      "category": "Lists, Filters & Forms",
       "difficulty": "medium",
-      "question": "A CUSTOMER HAS ASKED FOR THE FOLLOWING UPDATES TO A FORM: Make Resolution code mandatory, admin state is changed to Resolved. Hide major incident check box, unless logged in user has Major incident Manager role. What type of rules (s) would you use to implement this requirement? Lists, Filters & Forms · medium",
+      "question": "A customer has asked for the following updates to a form: Make 'Resolution code' mandatory, 'Admin State' is changed to 'Resolved'. Hide 'Major Incident' check box, unless logged in user has 'Major Incident Manager' role. What type of rules would you use to implement this requirement?",
       "options": [
         "Dictionary Design",
         "Field Limiter",
@@ -7055,7 +7056,7 @@
       "number": "Q357",
       "category": "Application Access & Security",
       "difficulty": "medium",
-      "question": "A new employee joins the it deployment and needs to perform work assigned to network and hardware groups. How would you set up their access? Choose 3 answers",
+      "question": "A new employee joins the it deployment and needs to perform work assigned to network and hardware groups. How would you set up their access? (Choose three.)",
       "options": [
         "Add User Account to itll group",
         "Add User Account to ACL",
@@ -7102,7 +7103,7 @@
       "options": [
         "Right click on any column header, Context menu > Configure > List Layout",
         "Right click List Gear icon > Configure > Columns",
-        "Click List Context Menu >Personalize List",
+        "Click List Context Menu > Personalize List",
         "Click List Context Menu > Configure Columns"
       ],
       "answer": [
@@ -7155,7 +7156,7 @@
       "number": "Q362",
       "category": "Lists, Filters & Forms",
       "difficulty": "medium",
-      "question": "Which data consistency settings can be achieved using UI policy? Choose 3 answers",
+      "question": "Which data consistency settings can be achieved using UI policy? (Choose three.)",
       "options": [
         "Setting fields to accept the data with ̃n' number of characters",
         "Setting fields hidden",
@@ -7177,7 +7178,7 @@
       "number": "Q363",
       "category": "Application Access & Security",
       "difficulty": "medium",
-      "question": "An it user calls the service desk because his work needs to be completed on ask records. All he can see a self service on his homepage when he Logs in to the ServiceNow instance. What issue could explain this? Choose 2 answers",
+      "question": "An it user calls the service desk because his work needs to be completed on ask records. All he can see a self service on his homepage when he Logs in to the ServiceNow instance. What issue could explain this? (Choose two.)",
       "options": [
         "His user account failed LDAP authentication",
         "His user account does not Belong to any groups, which contain the ITIL role",
@@ -7198,7 +7199,7 @@
       "number": "Q364",
       "category": "Database Administration",
       "difficulty": "medium",
-      "question": "FROM AN OPEN FORM, YOU CLICK THE FORM CONTEXT MENU (THE ICON AT THE TOP-LEFT OF THE FORM HEADER), WHICH LISTS OPTIONS SUCH AS SAVE, CONFIGURE, EXPORT, VIEW, CREATE FAVORITE, COPY URL, SHOW XML, HISTORY, AND RELOAD FORM. WHICH PATH FROM THIS MENU OPENS THE TABLE CONFIGURATION PAGE?",
+      "question": "From an open form, you click the Form Context menu (the icon at the top-left of the form header), which lists options such as Save, Configure, Export, View, Create Favorite, Copy URL, Show XML, History, and Reload Form. Which path from this menu opens the table configuration page?",
       "options": [
         "The Form Context menu > View > Table",
         "The Form Context menu > Configure > Table",
@@ -7353,7 +7354,7 @@
       "number": "Q372",
       "category": "Task Management",
       "difficulty": "medium",
-      "question": "If users would like to locate and assign a task to themselves in the platform, what action could they perform from the list view to make the assignment? Choose 2 answers",
+      "question": "If users would like to locate and assign a task to themselves in the platform, what action could they perform from the list view to make the assignment? (Choose two.)",
       "options": [
         "Select the record using the check box, then select the Person icon",
         "Double click on the Assigned to value, type the name of the user, and select the green check",
@@ -7605,7 +7606,7 @@
       "number": "Q385",
       "category": "Database Administration",
       "difficulty": "medium",
-      "question": "Which tables are available by default in a ServiceNow instance? Choose 3 answers",
+      "question": "Which tables are available by default in a ServiceNow instance? (Choose three.)",
       "options": [
         "User",
         "Incident",
@@ -7764,7 +7765,7 @@
       "number": "Q393",
       "category": "Flow Designer & Workflows",
       "difficulty": "easy",
-      "question": "When using flow designer what is the flow execution initiated by?",
+      "question": "When using Flow Designer what is the flow execution initiated by?",
       "options": [
         "A trigger",
         "An existing subflow",
@@ -7803,7 +7804,7 @@
       "number": "Q395",
       "category": "Database Administration",
       "difficulty": "medium",
-      "question": "A customer wants to be able to identify and track components of their infrastructure that support their ecommerce service. What ServiceNow products could support this requirement? Choose 3 answers",
+      "question": "A customer wants to be able to identify and track components of their infrastructure that support their ecommerce service. What ServiceNow products could support this requirement? (Choose three.)",
       "options": [
         "Performance Analytics",
         "Configuration Management (CMDB)",
@@ -7844,7 +7845,7 @@
       "number": "Q397",
       "category": "Database Administration",
       "difficulty": "medium",
-      "question": "WHICH TABLES ARE CHILDREN OF THE TASK TABLE AND COME WITH THE BASE SYSTEM? CHOOSE 3 ANSWERS",
+      "question": "Which tables are children of the Task table and come with the base system? (Choose three.)",
       "options": [
         "Incident",
         "Problem",
@@ -7867,7 +7868,7 @@
       "number": "Q398",
       "category": "Flow Designer & Workflows",
       "difficulty": "medium",
-      "question": "What are the benefits of building flows using flow designer? Choose 3 answers",
+      "question": "What are the benefits of building flows using Flow Designer? (Choose three.)",
       "options": [
         "Supports easy integration with 3rd party systems",
         "Provides IDE for complicated scripting",
