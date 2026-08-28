@@ -329,7 +329,7 @@
         "Avoid using the Default Update set as an Update Set for moving customizations from instance to instance",
         "Before moving customizations from instance to instance with Update Sets, ensure that both instances are different versions",
         "Use the Baseline Update Set to store the contents of items after they are changed the first time",
-        "Once an Update Set is closed as 'œComplete', change it back to 'œIn Progress' until it is applied to another instance"
+        "Once an Update Set is closed as 'Complete', change it back to 'In Progress' until it is applied to another instance"
       ],
       "answer": [
         "A"
@@ -779,7 +779,7 @@
       "number": "Q40",
       "category": "Platform Automation",
       "difficulty": "medium",
-      "question": "How is the event log different from the event Registry?",
+      "question": "How is the Event Log different from the Event Registry?",
       "options": [
         "Event Log contains generated Events, the Event Registry is a table of Event definitions",
         "Event Log is formatted in the Log style, the Event Registry displays different fields",
@@ -1968,7 +1968,7 @@
       "number": "Q103",
       "category": "Task Management",
       "difficulty": "hard",
-      "question": "WHICH ONE OF THE FOLLOWING STATEMENTS IS TRUE?",
+      "question": "Which one of the following statements is true?",
       "options": [
         "When an incident form is saved, all the Work Notes field text is recorded to the Activity Log field",
         "When an incident form is saved, the Work Notes field text is overwritten each time work is logged against the incident",
@@ -2139,7 +2139,7 @@
       "number": "Q112",
       "category": "Platform Automation",
       "difficulty": "hard",
-      "question": "What is the purpose of the event Registry?",
+      "question": "What is the purpose of the Event Registry?",
       "options": [
         "The Event Registry lists all Events that have successfully completed within a 24-hour period",
         "The Event Registry is a list of all Events that originate through an integration",
@@ -2487,7 +2487,7 @@
       "number": "Q130",
       "category": "User Interface & Navigation",
       "difficulty": "medium",
-      "question": "What would not appear in the application navigator if 'Œservice' is typed into the filter field?",
+      "question": "What would not appear in the application navigator if 'service' is typed into the filter field?",
       "options": [
         "Configuration > Business Services",
         "Self-Service > Knowledge",
@@ -2563,7 +2563,7 @@
       "number": "Q134",
       "category": "Self-Service & Notifications",
       "difficulty": "easy",
-      "question": "WHAT IS A NOTIFICATION?",
+      "question": "What is a notification?",
       "options": [
         "A new Knowledge article created by a Business Rule",
         "A tool for alerting users that events that concern them have occurred",
@@ -2582,7 +2582,7 @@
       "number": "Q135",
       "category": "Platform Automation",
       "difficulty": "medium",
-      "question": "What are two ways to generate an event? (Choose two.)",
+      "question": "What are two ways to generate an Event? (Choose two.)",
       "options": [
         "Business Rule",
         "Workflow",
@@ -2659,7 +2659,7 @@
       "number": "Q139",
       "category": "Database Administration",
       "difficulty": "medium",
-      "question": "When creating a global custom table named 'Œabc', what is the table name that is automatically assigned by the platform?",
+      "question": "When creating a global custom table named 'abc', what is the table name that is automatically assigned by the platform?",
       "options": [
         "snc_abc",
         "abc",
@@ -3374,7 +3374,7 @@
       "number": "Q174",
       "category": "Lists, Filters & Forms",
       "difficulty": "medium",
-      "question": "A USER WANTS TO CREATE A SET OF FILTER CONDITIONS, WHERE THEY WANT TO SHOW RECORDS WHICH SATISFY TWO CONDITIONS: INCIDENTS WHERE THE STATE IS CLOSED INCIDENTS WHERE ASSIGNMENT GROUP IS NETWORK AFTER CLICKING THE FUNNEL ICON, WHAT SHOULD THE USER DO?",
+      "question": "A user wants to create a set of filter conditions, where they want to show records which satisfy two conditions: Incidents where the State is Closed, Incidents where Assignment Group is Network after clicking the Funnel icon, what should the user do?",
       "options": [
         "Define the first condition; click AND button; define second condition; click Run",
         "Define the first condition; click AND button; define second condition; press enter",
@@ -3433,7 +3433,7 @@
       "number": "Q177",
       "category": "Application Access & Security",
       "difficulty": "medium",
-      "question": "AFTER FINISHING YOUR WORK ON HIGH SECURITY SETTINGS, WHAT DO YOU DO TO RETURN TO NORMAL ADMIN SECURITY LEVELS?",
+      "question": "After finishing your work on high security settings, what do you do to return to normal admin security levels?",
       "options": [
         "Select Normal role",
         "Log out and back in",
@@ -4785,12 +4785,12 @@
       "number": "Q244",
       "category": "Service Catalog",
       "difficulty": "hard",
-      "question": "You have been asked to configure a form so an employee could a tablet and select the standard accessary options to purchase with it. These standard options are: carrying case, screen cleaner, tablet stand, and screen protector. What approach would you take? (Choose three.)",
+      "question": "You have been asked to configure a form so an employee could order a tablet and select the standard accessory options to purchase with it. These standard options are: carrying case, screen cleaner, tablet stand, and screen protector. What approach would you take? (Choose three.)",
       "options": [
-        "Create Catalog item for the tablet, and on the form, add a check box variable for each accessary option.",
-        "Create Catalog item for the tablet, and add a variable set to the form, for the accessary options.",
+        "Create Catalog item for the tablet, and on the form, add a check box variable for each accessory option.",
+        "Create Catalog item for the tablet, and add a variable set to the form, for the accessory options.",
         "Create one Catalog item for each: tablet, carrying case, screen cleaner, tablet stand, and screen protector.",
-        "Create a Records producer, and on the form, add a check box variable for each accessary option.",
+        "Create a Records producer, and on the form, add a check box variable for each accessory option.",
         "On shopping Cart configuration, select option to show the Add Accessories button."
       ],
       "answer": [
@@ -5495,7 +5495,7 @@
       "number": "Q279",
       "category": "Database Administration",
       "difficulty": "hard",
-      "question": "For your implementation, the following tables. Are extended from each other: * incident table is extended from task table. * super incident table is extended from incident table, in this situation, which table(S) are parent, child and base tables? (Choose five.)",
+      "question": "For your implementation, the following tables are extended from each other: Incident table is extended from Task table, Super Incident table is extended from Incident table. In this situation, which tables are parent, child and base tables? (Choose five.)",
       "options": [
         "Incident table is a Base table",
         "Incident table is. a Parent table",
@@ -5666,7 +5666,7 @@
       "number": "Q287",
       "category": "Import Sets & Data Sources",
       "difficulty": "medium",
-      "question": "WHAT MODULE ENABLES AN ADMINISTRATOR TO DEFINE DESTINATIONS FOR IMPORTED DATA ON ANY SERVICENOW TABLE?",
+      "question": "What module enables an administrator to define destinations for imported data on any ServiceNow table?",
       "options": [
         "Field Transform",
         "Transform Map",
@@ -6605,8 +6605,8 @@
       "difficulty": "medium",
       "question": "On a business rule, the when salting determines at what point the rule executes. What are the options for specifying that timing?",
       "options": [
-        "Insert, Update, Delete. Query",
-        "4G} Before, After, Async, Display",
+        "Insert, Update, Delete, Query",
+        "Before, After, Async, Display",
         "Prior to, Synchronous, on Update",
         "Before, Synchronous, Scheduled Job, View"
       ],
@@ -6665,12 +6665,12 @@
       "number": "Q337",
       "category": "Platform Automation",
       "difficulty": "easy",
-      "question": "Which type of scripts nun in the browser?",
+      "question": "Which type of scripts run in the browser?",
       "options": [
-        "Script include Scripts",
+        "Script Include Scripts",
         "Business Rule Scripts",
-        "Access Contra! Scripts",
-        "Ul Policies and Client Scripts"
+        "Access Control Scripts",
+        "UI Policies and Client Scripts"
       ],
       "answer": [
         "D"
@@ -6743,10 +6743,10 @@
       "number": "Q341",
       "category": "Reporting & Analytics",
       "difficulty": "easy",
-      "question": "What do you click when you have made modification to your report, and your want to see the results without saving?",
+      "question": "What do you click when you have made modification to your report, and you want to see the results without saving?",
       "options": [
         "Execute",
-        "Try ir",
+        "Try it",
         "Run",
         "Test",
         "Preview"
@@ -7085,7 +7085,7 @@
         "UI Builder",
         "Assignment Rule",
         "Flow Designer",
-        "UI Actions="
+        "UI Actions"
       ],
       "answer": [
         "A"
@@ -7137,12 +7137,12 @@
       "number": "Q361",
       "category": "Lists, Filters & Forms",
       "difficulty": "medium",
-      "question": "What actions art taken to filter a long list of records to show only those which have 'Œemail' short description?",
+      "question": "What actions are taken to filter a long list of records to show only those which have 'email' short description?",
       "options": [
-        "Click List Magnifier to expand column search. on Short Description type %email. click enter",
+        "Click List Magnifier to expand column search, on Short Description, type %email, click enter",
         "Click List Magnifier to expand column search, on Short Description, type email, click enter",
-        "On Search box. select text, type email, click enter",
-        "Click List Magnifier to expand column search, on Short Description type 'email, dick enter"
+        "On Search box, select text, type email, click enter",
+        "Click List Magnifier to expand column search, on Short Description, type 'email, click enter"
       ],
       "answer": [
         "D"
@@ -7158,10 +7158,10 @@
       "difficulty": "medium",
       "question": "Which data consistency settings can be achieved using UI policy? (Choose three.)",
       "options": [
-        "Setting fields to accept the data with ̃n' number of characters",
+        "Setting fields to accept the data with a number of characters",
         "Setting fields hidden",
         "Setting fields to accept the data in an expected format",
-        "Settings fields read-only",
+        "Setting fields read-only",
         "Setting fields mandatory"
       ],
       "answer": [
@@ -7872,7 +7872,7 @@
       "options": [
         "Supports easy integration with 3rd party systems",
         "Provides IDE for complicated scripting",
-        "Provides natural-langauge descriptions of flow logic",
+        "Provides natural-language descriptions of flow logic",
         "Supports No-Code application development",
         "Automatically populates SLA records",
         "Provides built-in libraries /API for complex coding"
