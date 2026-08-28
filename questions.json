@@ -12,7 +12,7 @@
       "number": "Q1",
       "category": "Service Catalog",
       "difficulty": "easy",
-      "question": "A service catalog may include which of the following components?",
+      "question": "A Service Catalog may include which of the following components?",
       "options": [
         "Order Guides, Exchange Rates, Calendars",
         "Order Guides, Catalog Items, and Interceptors",
@@ -69,7 +69,7 @@
       "number": "Q4",
       "category": "Service Catalog",
       "difficulty": "medium",
-      "question": "The display Sequence is controlled in a service catalog item using which of the following?",
+      "question": "The display Sequence is controlled in a Service Catalog item using which of the following?",
       "options": [
         "The Default Value field in the Catalog Item form",
         "The Sequence field in the Catalog Item form",
@@ -168,7 +168,7 @@
       "number": "Q9",
       "category": "Service Catalog",
       "difficulty": "easy",
-      "question": "What is generated from the service catalog once a user places an order for an item or service?",
+      "question": "What is generated from the Service Catalog once a user places an order for an item or service?",
       "options": [
         "A change request",
         "An Order Guide",
@@ -229,7 +229,7 @@
       "number": "Q12",
       "category": "Service Catalog",
       "difficulty": "easy",
-      "question": "Which of the following is true of service catalog items in relation to the service catalog?",
+      "question": "Which of the following is true of Service Catalog items in relation to the Service Catalog?",
       "options": [
         "They run behind the scenes.",
         "They are the building blocks.",
@@ -286,7 +286,7 @@
       "number": "Q15",
       "category": "Service Catalog",
       "difficulty": "easy",
-      "question": "A req number in the service catalog represents\"",
+      "question": "A req number in the Service Catalog represents",
       "options": [
         "the order number.",
         "the stage.",
@@ -362,7 +362,7 @@
       "number": "Q19",
       "category": "Service Catalog",
       "difficulty": "hard",
-      "question": "For administrators creating new service catalog items, what is a characteristic they should know about service catalog variables?",
+      "question": "For administrators creating new Service Catalog items, what is a characteristic they should know about Service Catalog variables?",
       "options": [
         "Service Catalog variables can only be used in Record Producers",
         "Service Catalog variables can only be used in Order Guides",
@@ -855,7 +855,7 @@
       "number": "Q44",
       "category": "Service Catalog",
       "difficulty": "medium",
-      "question": "Create incident, password reset, and report Outage: what do these services in the service catalog have in common?",
+      "question": "Create incident, password reset, and report Outage: what do these services in the Service Catalog have in common?",
       "options": [
         "They direct the user to a record producer",
         "They direct the user to a catalog property",
@@ -912,7 +912,7 @@
       "number": "Q47",
       "category": "Service Catalog",
       "difficulty": "easy",
-      "question": "What module in the service catalog application does an administrator access to begin creating a new item?",
+      "question": "What module in the Service Catalog application does an administrator access to begin creating a new item?",
       "options": [
         "Maintain Categories",
         "Maintain Items",
@@ -950,7 +950,7 @@
       "number": "Q49",
       "category": "Service Catalog",
       "difficulty": "medium",
-      "question": "Which three variable types can be added to a service catalog item?",
+      "question": "Which three variable types can be added to a Service Catalog item?",
       "options": [
         "True/False, Multiple Choice, and Ordered",
         "True/False, Checkbox, and Number List",
@@ -988,7 +988,7 @@
       "number": "Q51",
       "category": "Service Catalog",
       "difficulty": "medium",
-      "question": "The baseline service catalog homepage contains links to which of the following components?",
+      "question": "The baseline Service Catalog homepage contains links to which of the following components?",
       "options": [
         "Record Producers, Order Guides, and Catalog Items",
         "Order Guides, Item Variables, and Workflows",
@@ -1102,7 +1102,7 @@
       "number": "Q57",
       "category": "Flow Designer & Workflows",
       "difficulty": "medium",
-      "question": "WHICH ONE OF THE FOLLOWING STATEMENTS DESCRIBES THE PURPOSE OF A SERVICE CATALOG WORKFLOW?",
+      "question": "Which one of the following statements describes the purpose of a Service Catalog workflow?",
       "options": [
         "A Service Catalog workflow generates three basic components: item variable types, tasks, and approvals",
         "Although a Service Catalog workflow cannot send notifications, the workflow drives complex fulfillment processes",
@@ -1635,10 +1635,10 @@
       "difficulty": "medium",
       "question": "What are the two pathways to view feedback left on a published article?",
       "options": [
-        "Knowledge > articles > My Flagged",
-        "Knowledge base > my knowledge > flagged articles",
+        "Knowledge > Articles > My Flagged",
+        "Knowledge base > My knowledge > Flagged articles",
         "Knowledge > My articles > Flagged",
-        "Knowledge > articles > published"
+        "Knowledge > Articles > Published"
       ],
       "answer": [
         "A",
@@ -1932,10 +1932,10 @@
       "difficulty": "easy",
       "question": "What is a role in ServiceNow?",
       "options": [
-        "A role is one record m the Role [sys_user_role] table",
-        "A role is one record in the Role Iuser_sys_role] table",
-        "A role is a persona used In Live Feed Chat",
-        "A role Is a set of modules for a particular application"
+        "A role is one record in the Role [sys_user_role] table",
+        "A role is one record in the Role [user_sys_role] table",
+        "A role is a persona used in Live Feed Chat",
+        "A role is a set of modules for a particular application"
       ],
       "answer": [
         "A"
@@ -1972,7 +1972,7 @@
       "options": [
         "When an incident form is saved, all the Work Notes field text is recorded to the Activity Log field",
         "When an incident form is saved, the Work Notes field text is overwritten each time work is logged against the incident",
-        "When an incident form is saved, the impact field is calculated by adding the Prion:, and Urgency values",
+        "When an incident form is saved, the impact field is calculated by adding the Priority and Urgency values",
         "When an Incident form is saved, the Additional Comments field text is cleared and recorded to the Work Notes section"
       ],
       "answer": [
@@ -1990,7 +1990,7 @@
       "question": "What kind of data can import sets use to populate tables in ServiceNow?",
       "options": [
         "CSS, SOAP, and Excel",
-        "XML. CSV, and Excel",
+        "XML, CSV, and Excel",
         "SOAP, REST, and XML",
         "XML, SOAP, and CSS"
       ],
@@ -2105,7 +2105,7 @@
       "options": [
         "Search",
         "Form buttons",
-        "list Buttons",
+        "List Buttons",
         "Related Links"
       ],
       "answer": [
@@ -2124,7 +2124,7 @@
       "options": [
         "personalize_control",
         "personal_list",
-        "ul_page_admin",
+        "ui_page_admin",
         "ui_action_admin"
       ],
       "answer": [
@@ -2158,12 +2158,12 @@
       "number": "Q113",
       "category": "User Interface & Navigation",
       "difficulty": "medium",
-      "question": "What is the purpose of the fitter navigator in the application navigator?",
+      "question": "What is the purpose of the filter navigator in the application navigator?",
       "options": [
         "Filter applications in order of use",
         "Quickly navigate to applications and modules",
         "Collapse and expand applications",
-        "List applications In order of Top Requests"
+        "List applications in order of top requests"
       ],
       "answer": [
         "B"
@@ -2219,8 +2219,8 @@
       "options": [
         "Changes made to tables, forms, schedules, and client scripts",
         "Changes made to tables, forms, views, and fields",
-        "Changes made to: tables, forms. Business Rules, and data records",
-        "Changes made to: tables. forms groups, and configuration items (Cls)"
+        "Changes made to tables, forms, Business Rules, and data records",
+        "Changes made to tables, forms, groups, and configuration items (Cls)"
       ],
       "answer": [
         "A"
@@ -2352,7 +2352,7 @@
       "number": "Q123",
       "category": "Platform Automation",
       "difficulty": "hard",
-      "question": "Which plugin allows users to Install multiple applications, application-customizations. Or plugins at once?",
+      "question": "Which plugin allows users to Install multiple applications, application-customizations or plugins at once?",
       "options": [
         "Application Integration and Plugin Delivery (A1PD) SpokeBatch Install",
         "Continuous Integration and Continuous Delivery (CICD) SpokeBatch Install",
@@ -2390,7 +2390,7 @@
       "number": "Q125",
       "category": "Application Access & Security",
       "difficulty": "medium",
-      "question": "Which certificate-based authentication methods can be enabled so that users can log into the service portal? (Select all that apply) select 2 answers from the below options",
+      "question": "Which certificate-based authentication methods can be enabled so that users can log into the service portal? (Choose two.)",
       "options": [
         "Extended Validation Access (EVA)",
         "Organization Verification Card (OVC)",
@@ -2849,7 +2849,7 @@
       "number": "Q149",
       "category": "Task Management",
       "difficulty": "hard",
-      "question": "An it manager is responsible for the network and hardware assignment groups, each containing five team members. The members are working on many tasks, but the manager cannot see any tasks on the service desk > my groups work list - even with the filter set to assignment group is network or hardware. What could explain this?",
+      "question": "An IT manager is responsible for the network and hardware assignment groups, each containing five team members. The members are working on many tasks, but the manager cannot see any tasks on the service desk > my groups work list - even with the filter set to assignment group is network or hardware. What could explain this?",
       "options": [
         "The Service Desk > My Groups Work list shows active work tasks that are not yet assigned.",
         "The manager does not have the itil role.",
@@ -3070,7 +3070,7 @@
         "Hamburger",
         "Pencil",
         "Three dots",
-        "Triangle.",
+        "Triangle",
         "Star"
       ],
       "answer": [
@@ -3171,7 +3171,7 @@
       "number": "Q164",
       "category": "Knowledge Management",
       "difficulty": "easy",
-      "question": "As an it employee what interface would you use, if you wanted to browse internal it documentation, like troubleshooting scripts and faqs?",
+      "question": "As an IT employee what interface would you use, if you wanted to browse internal IT documentation, like troubleshooting scripts and FAQs?",
       "options": [
         "Knowledge",
         "ServiceNow Wiki",
@@ -3354,13 +3354,13 @@
       "number": "Q173",
       "category": "Service Catalog",
       "difficulty": "medium",
-      "question": "A new service catalog item is being developed, but should only be visible to managers inside the HR department. What method would you use to fulfill this requirement?",
+      "question": "A new Service Catalog item is being developed, but should only be visible to managers inside the HR department. What method would you use to fulfill this requirement?",
       "options": [
         "Specify the Dept_Mgr role on the catalog content block",
         "Add the Department Manager group to the catalog item's user criteria",
         "Add the Department Manager group to the catalog item's ACL",
-        "Only publish the item in the HR service catalog",
-        "Use a Dept_Mgr ACL on the HR service catalog"
+        "Only publish the item in the HR Service Catalog",
+        "Use a Dept_Mgr ACL on the HR Service Catalog"
       ],
       "answer": [
         "B"
@@ -3414,7 +3414,7 @@
       "number": "Q176",
       "category": "Service Catalog",
       "difficulty": "hard",
-      "question": "Two departments (HR onboarding and Facilities) have come to you, asking for a way for employees to request event Room set up services. The requirements are the same for the form and the task routing to the facilities' assignment group. For HR, the item will be used primarily for the onboarding coordinators, for employee orientation sessions. For Facilities, the item will be used for anyone in the company who needs Room set up services. However, both departments have their own service catalogs. What do you do, to support these requirements?",
+      "question": "Two departments (HR onboarding and Facilities) have come to you, asking for a way for employees to request event Room set up services. The requirements are the same for the form and the task routing to the facilities' assignment group. For HR, the item will be used primarily for the onboarding coordinators, for employee orientation sessions. For Facilities, the item will be used for anyone in the company who needs Room set up services. However, both departments have their own Service Catalogs. What do you do, to support these requirements?",
       "options": [
         "Create one Catalog Item for HR Event Room Set Up and one for Facilities Event Room Set Up; then publish each to the appropriate Catalog.",
         "Create one Catalog Item for Event Room Set Up; then publish to both Catalogs.",
@@ -3594,7 +3594,7 @@
       "number": "Q185",
       "category": "Self-Service & Notifications",
       "difficulty": "medium",
-      "question": "Your customer would like to create a new template to notify users who are Affected by network Outages at their site. Which module would you use to create a new notification?",
+      "question": "Your customer would like to create a new template to notify users who are affected by network outages at their site. Which module would you use to create a new notification?",
       "options": [
         "System Notification > Email > Notifications",
         "Administration > Notification Overview",
@@ -3945,7 +3945,7 @@
       "number": "Q202",
       "category": "Service Catalog",
       "difficulty": "medium",
-      "question": "Tables may have a one to many relationships. From the service catalog, what are examples of tables having a one to many relationships? (Choose three.)",
+      "question": "Tables may have a one to many relationships. From the Service Catalog, what are examples of tables having a one to many relationships? (Choose three.)",
       "options": [
         "One Approval can have many Requests",
         "One Request can have many Requested Items",
@@ -4126,7 +4126,7 @@
       "number": "Q211",
       "category": "User Interface & Navigation",
       "difficulty": "medium",
-      "question": "The wait time for end users is based on the round- trip between the client and the server. What activities are included in the round-trips?",
+      "question": "The wait time for end users is based on the round-trip between the client and the server. What activities are included in the round-trips?",
       "options": [
         "Request + Response",
         "Save + Update",
@@ -4185,7 +4185,7 @@
       "number": "Q214",
       "category": "Service Catalog",
       "difficulty": "easy",
-      "question": "What feature do you use to specify which users are able to access a service catalog item?",
+      "question": "What feature do you use to specify which users are able to access a Service Catalog item?",
       "options": [
         "Can Read Role",
         "Catalog User Role",
@@ -4428,7 +4428,7 @@
       "number": "Q226",
       "category": "Service Catalog",
       "difficulty": "medium",
-      "question": "You are asked to create an option in the service catalog, which will allow a user to click get help and describe the issue they are having. These forms should create incident records, which are automatically routed to the service desk. Which method would you use?",
+      "question": "You are asked to create an option in the Service Catalog, which will allow a user to click get help and describe the issue they are having. These forms should create incident records, which are automatically routed to the service desk. Which method would you use?",
       "options": [
         "Create Record Producer",
         "Create Catalog Item",
@@ -4807,7 +4807,7 @@
       "number": "Q245",
       "category": "Flow Designer & Workflows",
       "difficulty": "medium",
-      "question": "The ServiceNow platform supports a wide variety of plus-and-play application. You can choose from the included workflow or build your own workflow. Which of following these workflows are included in the platform?",
+      "question": "The ServiceNow platform supports a wide variety of plug-and-play application. You can choose from the included workflow or build your own workflow. Which of following these workflows are included in the platform?",
       "options": [
         "Employee Workflows",
         "Infrastructure Workflows",
@@ -4830,7 +4830,7 @@
       "number": "Q246",
       "category": "Service Catalog",
       "difficulty": "medium",
-      "question": "What service catalog feature do you use to organize items into logical groups?",
+      "question": "What Service Catalog feature do you use to organize items into logical groups?",
       "options": [
         "Variable sets",
         "Catalog items",
@@ -4953,7 +4953,7 @@
         "Form Context Menu",
         "Form View",
         "Form Buttons",
-        "Form Links.",
+        "Form Links",
         "Form Columns"
       ],
       "answer": [
@@ -5053,12 +5053,12 @@
       "number": "Q257",
       "category": "Migration & Update Sets",
       "difficulty": "hard",
-      "question": "When would you use the following steps? 1, homepage admin > pages 2. Right click on homepage record 3. Select unioad portal page",
+      "question": "When would you use the following steps? 1. homepage admin > pages, 2. right click on homepage record 3. select unload portal page",
       "options": [
         "To publish a Homepage to the Portal",
         "To retire a Homepage",
         "To delete a Homepage",
-        "o To add a Homepage to an update set"
+        "To add a Homepage to an update set"
       ],
       "answer": [
         "D"
@@ -5210,7 +5210,7 @@
       "number": "Q265",
       "category": "Service Catalog",
       "difficulty": "hard",
-      "question": "WHILE TESTING A CATALOG ITEM FOR ORDERING AN EXPENSIVE COMPUTER, THE MANDATORY APPROVAL IS BEING SKIPPED FOR REQUESTER BOB, SMITH, BUT NOT FOR ANY OF THE OTHER REQUESTERS. WHAT COULD EXPLAIN THE ISSUE?",
+      "question": "While testing a catalog item for ordering an expensive computer, the mandatory approval is being skipped for requester Bob, Smith, but not for any of the other requesters. What could explain the issue?",
       "options": [
         "There is a business rule, excluding Bob.Smith from any approvals.",
         "Bob Smith does not have a delegate set up on his account,",
@@ -5747,9 +5747,9 @@
       "question": "When looking at a long list of records, you want to quickly filter, to show only those which have category of hardware. How might you do that?",
       "options": [
         "On the list, locate and right click on the value Hardware, select Show Matching",
-        "Click Funnel ten, type Hardware and click enter",
+        "Click Funnel, then type Hardware and click enter",
         "On the Category column header, right click and select Show > Hardware",
-        "Right dick on magnifier, type Hardware and click enter",
+        "Right click on magnifier, type Hardware and click enter",
         "On Breadcrumb, click > icon, type Hardware and click enter"
       ],
       "answer": [
@@ -6376,7 +6376,7 @@
       "answer": [
         "C"
       ],
-      "explanation": "The out-of-box Service Catalog Request workflow runs against the Request (sc_request) record, where the order total lives, so the approval-threshold logic that compares the request total against a dollar amount is edited there. The other names are not the standard catalog re‐ quest workflow that evaluates the overall request total for approval.",
+      "explanation": "The out-of-box Service Catalog Request workflow runs against the Request (sc_request) record, where the order total lives, so the approval-threshold logic that compares the request total against a dollar amount is edited there. The other names are not the standard catalog request workflow that evaluates the overall request total for approval.",
       "reference": "ServiceNow Docs - Service Catalog request fulfillment",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-servicenow-platform/page/product/service-catalog-management/concept/c_RequestFulfillment.html"
     },
@@ -6385,13 +6385,13 @@
       "number": "Q323",
       "category": "Application Access & Security",
       "difficulty": "hard",
-      "question": "How would you define an access control, to allow a user with iti role to have permission to create incident records?",
+      "question": "How would you define an access control, to allow a user with itil role to have permission to create incident records?",
       "options": [
-        "Name: incident' ; Permission: write; Role: itil",
-        "Name: incident Any, Operation: write, Permission: itil",
+        "Name: incident'; Permission: write; Role: itil",
+        "Name: incident Any; Operation: write; Permission: itil",
         "Name: incident.*; Operation: write; Permission: itil",
-        "Name: incident None, Permission: create: Role: itil",
-        "Name: incident. None; Operation: create; Role: itil"
+        "Name: incident.None; Operation: create; Role: itil",
+        "Name: incident.None; Permission: create; Role: itil"
       ],
       "answer": [
         "D"
@@ -6405,7 +6405,7 @@
       "number": "Q324",
       "category": "Lists, Filters & Forms",
       "difficulty": "medium",
-      "question": "What are the components that make up a filer condition? (Choose three.)",
+      "question": "What are the components that make up a filter condition? (Choose three.)",
       "options": [
         "Column",
         "Match Criteria",
@@ -6505,7 +6505,7 @@
       "number": "Q329",
       "category": "Application Access & Security",
       "difficulty": "medium",
-      "question": "An it user calls the service desk because they need to work on task records. All they can see is self service on their homepage when they login to the ServiceNow instance. What issue could explain this? (Choose two.)",
+      "question": "An IT user calls the service desk because they need to work on task records. All they can see is self service on their homepage when they login to the ServiceNow instance. What issue could explain this? (Choose two.)",
       "options": [
         "Their user account failed LDAP authentication",
         "Their user account is not logged in properly",
@@ -6526,7 +6526,7 @@
       "number": "Q330",
       "category": "Service Catalog",
       "difficulty": "medium",
-      "question": "A service catalog project will involve building 80 catalog items. For each of the catalog items, the following fields will be mandatory on the forms: 'Requested for', 'Requested by', 'Approving manager', 'Delivery instructions'. All of the other variables will be specific to the individual catalog item. What features would you use when designing the catalog item form?",
+      "question": "A Service Catalog project will involve building 80 catalog items. For each of the catalog items, the following fields will be mandatory on the forms: 'Requested for', 'Requested by', 'Approving manager', 'Delivery instructions'. All of the other variables will be specific to the individual catalog item. What features would you use when designing the catalog item form?",
       "options": [
         "Create one Variable Set for the four variables; then add that variable set to each of the 80 catalog items.",
         "Create a Record Producer that contains the four fields: then add to the record producer related list on the Catalog files.",
@@ -6603,7 +6603,7 @@
       "number": "Q334",
       "category": "Platform Automation",
       "difficulty": "medium",
-      "question": "On a business rule, the when salting determines at what point the rule executes. What are the options for specifying that timing?",
+      "question": "On a business rule, the when setting determines at what point the rule executes. What are the options for specifying that timing?",
       "options": [
         "Insert, Update, Delete, Query",
         "Before, After, Async, Display",
@@ -6684,7 +6684,7 @@
       "number": "Q338",
       "category": "Reporting & Analytics",
       "difficulty": "medium",
-      "question": "THE REPORT DESIGNER CONTAINS DIFFERENT SECTIONS FOR CONFIGURING YOUR REPORT. WHICH SECTION IS USED TO SPECIFY GROUPING AND CALCULATIONS TO BE RUN AGAINST ME DATA?",
+      "question": "The Report Designer contains different sections for configuring your report. Which section is used to specify grouping and calculations to be run against me data?",
       "options": [
         "Style",
         "Format",
@@ -6802,13 +6802,13 @@
       "number": "Q344",
       "category": "Database Administration",
       "difficulty": "medium",
-      "question": "How would you describe the relationship between the incident and task table?",
+      "question": "How would you describe the relationship between the Incident and Task table?",
       "options": [
         "Incident table has a many to many relationships with the Task table.",
         "Incident table has a one to much relationship with the Task table.",
-        "Incident table is extended from task table.",
-        "incident table is related to the Task table via the INC number",
-        "incident table is a database view of the Task table"
+        "Incident table is extended from Task table.",
+        "Incident table is related to the Task table via the INC number",
+        "Incident table is a database view of the Task table"
       ],
       "answer": [
         "C"
@@ -6904,8 +6904,8 @@
       "options": [
         "Selenium",
         "Test Driven Framework (TDF)",
-        "Junit",
-        "Automated test Framework (ATF)"
+        "JUnit",
+        "Automated Test Framework (ATF)"
       ],
       "answer": [
         "D"
@@ -7056,9 +7056,9 @@
       "number": "Q357",
       "category": "Application Access & Security",
       "difficulty": "medium",
-      "question": "A new employee joins the it deployment and needs to perform work assigned to network and hardware groups. How would you set up their access? (Choose three.)",
+      "question": "A new employee joins the IT deployment and needs to perform work assigned to network and hardware groups. How would you set up their access? (Choose three.)",
       "options": [
-        "Add User Account to itll group",
+        "Add User Account to ITIL group",
         "Add User Account to ACL",
         "Add User Account to network group",
         "Add User Account to IT Knowledgebase",
@@ -7079,7 +7079,7 @@
       "number": "Q358",
       "category": "Service Catalog",
       "difficulty": "easy",
-      "question": "Which allows the creation of a task-based record from service catalog?",
+      "question": "Which allows the creation of a task-based record from Service Catalog?",
       "options": [
         "Record Producers",
         "UI Builder",
@@ -7097,9 +7097,9 @@
     {
       "id": "q613q4l",
       "number": "Q359",
-      "category": "Filters & Forms",
+      "category": "Lists, Filters & Forms",
       "difficulty": "medium",
-      "question": "THE CUSTOMER HAS ASKED THAT YOUR CHANGE THE DEFAULT LAYOUT OF THE TASK LIST. Number Task Type Parent Short Description Assignment Group Assignment Updated After navigation to the list, where would you click, to meet this requirement? Lists,",
+      "question": "The customer has asked that your change the default layout of the task list. Number, Task Type, Parent, Short Description, Assignment Group, Assignment, Updated. After navigation to the list, where would you click, to meet this requirement?",
       "options": [
         "Right click on any column header, Context menu > Configure > List Layout",
         "Right click List Gear icon > Configure > Columns",
@@ -7118,7 +7118,7 @@
       "number": "Q360",
       "category": "Knowledge Management",
       "difficulty": "hard",
-      "question": "HERE IS AN EXAMPLE OF THE CRITERIA SET FOR A KNOWLEDGE BASE: Companies: ACME North America Department: HR Groups: ACME Manager Match All: Yes In this example, what users would have access to this knowledge base?",
+      "question": "Here is an example of the criteria set for a Knowledge base: Companies: ACME North America, Department: HR, Groups: ACME Manager, Match All: Yes. In this example, what users would have access to this knowledge base?",
       "options": [
         "Members of the ACME manager group, who are also members of HR Department and part of the ACME North America",
         "Employees of ACME North America, who are members of HR Department or the ACME Manager group",
@@ -7178,19 +7178,19 @@
       "number": "Q363",
       "category": "Application Access & Security",
       "difficulty": "medium",
-      "question": "An it user calls the service desk because his work needs to be completed on ask records. All he can see a self service on his homepage when he Logs in to the ServiceNow instance. What issue could explain this? (Choose two.)",
+      "question": "An IT user calls the Service Desk because his work needs to be completed on task records. All he can see a Self Service on his homepage when he logs in to the ServiceNow instance. What issue could explain this? (Choose two.)",
       "options": [
         "His user account failed LDAP authentication",
-        "His user account does not Belong to any groups, which contain the ITIL role",
+        "His user account does not belong to any groups, which contain the ITIL role",
         "His user account was not approved by his manager",
         "His user account does not have ITIL role",
-        "His user account Is not logged in properly"
+        "His user account is not logged in properly"
       ],
       "answer": [
         "B",
         "D"
       ],
-      "explanation": "Only seeing Self Service indicates the user is missing the itil role, which is granted either directly (D) or by membership in a group that carries it (B); without it, the fulfiller apps and task records stay hidden. A failed LDAP login would prevent access entirely and a 'manager approval' gate does not exist for roles, so those options do not explain the symptom.",
+      "explanation": "Only seeing Self Service indicates the user is missing the ITIL role, which is granted either directly (D) or by membership in a group that carries it (B); without it, the fulfiller apps and task records stay hidden. A failed LDAP login would prevent access entirely and a 'manager approval' gate does not exist for roles, so those options do not explain the symptom.",
       "reference": "ServiceNow Docs - Roles",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/administer/roles/concept/c_Roles.html"
     },
@@ -7256,7 +7256,7 @@
       "number": "Q367",
       "category": "Service Catalog",
       "difficulty": "medium",
-      "question": "An order placed through the service catalog creates two records in the platform for the newly ordered item. Which two records are these? (Choose two.)",
+      "question": "An order placed through the Service Catalog creates two records in the platform for the newly ordered item. Which two records are these? (Choose two.)",
       "options": [
         "A record in the sc_task table",
         "A record in the sc_req_item table",
@@ -7279,7 +7279,7 @@
       "difficulty": "medium",
       "question": "Which admin role is required to make changes to high security settings?",
       "options": [
-        "security _admin",
+        "security_admin",
         "sn_ad_admin",
         "high_sec_admin",
         "admin"
@@ -7316,7 +7316,7 @@
       "number": "Q370",
       "category": "Service Catalog",
       "difficulty": "medium",
-      "question": "An order for new Office equipment has men placed through the service catalog. How would you view the lists of requests after the orders have men placed?",
+      "question": "An order for new office equipment has been placed through the Service Catalog. How would you view the lists of requests after the orders have been placed?",
       "options": [
         "All > Service Catalog > Open Records > Items",
         "In the Navigation Filter, type 'requests. Let' and press the Enter key.",
@@ -7335,10 +7335,10 @@
       "number": "Q371",
       "category": "Service Catalog",
       "difficulty": "hard",
-      "question": "Roles can inherit permissions from other roles. Which role inherits all of the permissions of the catalog role and the user_critena_admm role plus has permissions to create items and services?",
+      "question": "Roles can inherit permissions from other roles. Which role inherits all of the permissions of the catalog role and the user_criteria_admin role plus has permissions to create items and services?",
       "options": [
         "item Admin [sn_item_admin]",
-        "Sys Admin [sys_admln]",
+        "Sys Admin [sys_admin]",
         "Catalog Admin [catalog_admin]",
         "Catalog Auinor (sn_cataiog_write)"
       ],
@@ -7686,7 +7686,7 @@
       "number": "Q389",
       "category": "Knowledge Management",
       "difficulty": "easy",
-      "question": "What process allows users to create, categorize, review approve and browse important information in a centralized location that is shared oy the entire organization?",
+      "question": "What process allows users to create, categorize, review, approve and browse important information in a centralized location that is shared by the entire organization?",
       "options": [
         "Self Service Management",
         "Knowledge Management",
@@ -7725,7 +7725,7 @@
       "number": "Q391",
       "category": "Import Sets & Data Sources",
       "difficulty": "medium",
-      "question": "Which feature ensures data consistency white importing data using import sets and web services?",
+      "question": "Which feature ensures data consistency while importing data using import sets and web services?",
       "options": [
         "Client Script",
         "Ul Policy",
