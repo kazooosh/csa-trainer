@@ -41,7 +41,7 @@
       "answer": [
         "A"
       ],
-      "explanation": "The coalesce field(s) serve as the match key during a transform. When the system finds an existing record whose coalesce value equals the incoming row, it updates that record rather than inserting a duplicate (A). If no match exists it inserts a new record, so options C and D have the logic reversed, and coalescing has no bearing on whether a Transform Map is created (B).",
+      "explanation": "The coalesce fields serve as the match key during a transform. When the system finds an existing record whose coalesce value equals the incoming row, it updates that record rather than inserting a duplicate (A). If no match exists it inserts a new record, so options C and D have the logic reversed, and coalescing has no bearing on whether a Transform Map is created (B).",
       "reference": "ServiceNow Docs - Field mapping and coalesce",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-administration/page/script/server-scripting/concept/c_MappingOptions.html"
     },
@@ -600,7 +600,7 @@
       "number": "Q31",
       "category": "Lists, Filters & Forms",
       "difficulty": "medium",
-      "question": "What is a formatter? Select one of the following.",
+      "question": "What is a formatter?",
       "options": [
         "A formatter allows you to configure applications on your instance",
         "A formatter is a form element used to display information that is not a field in the record",
@@ -700,7 +700,7 @@
       "number": "Q36",
       "category": "User Interface & Navigation",
       "difficulty": "medium",
-      "question": "Which of the following can be customized through the basic configuration UI 16 module? (Choose three.)",
+      "question": "Which of the following can be customized through the Basic Configuration UI 16 module? (Choose three.)",
       "options": [
         "Banner Image",
         "Record Number Format",
@@ -1221,7 +1221,7 @@
       "number": "Q63",
       "category": "User Interface & Navigation",
       "difficulty": "medium",
-      "question": "What are the main UI component(s) of the ServiceNow platform?",
+      "question": "What is the main UI component of the ServiceNow platform?",
       "options": [
         "Banner Navigator",
         "Banner Frame",
@@ -1802,7 +1802,7 @@
       "number": "Q94",
       "category": "Platform Automation",
       "difficulty": "medium",
-      "question": "DATA POLICY CAN ENFORCE MANDATORY DATA ON IMPORT.",
+      "question": "Data Policy can enforce mandatory data on import.",
       "options": [
         "True",
         "False"
@@ -1872,7 +1872,7 @@
       "number": "Q98",
       "category": "Application Access & Security",
       "difficulty": "medium",
-      "question": "What is (Are) best practice(S) regarding users/groups/roles? (Choose two.)",
+      "question": "What are best practices regarding users/groups/roles? (Choose two.)",
       "options": [
         "You should never assign roles to groups.",
         "You should assign roles to users.",
@@ -1951,8 +1951,8 @@
       "difficulty": "easy",
       "question": "What are the three components of a filter condition?",
       "options": [
-        "Field. Operator and Value",
-        "Condition. Operator, and Value",
+        "Field, Operator, and Value",
+        "Condition, Operator, and Value",
         "Field, Condition, and Value",
         "Variable, Field, and Value"
       ],
@@ -2248,7 +2248,7 @@
         "C",
         "D"
       ],
-      "explanation": "An Access Control rule grants access only when all three of its permission requirements pass: the required Roles, the Condition(s), and the Script must each evaluate to true (any empty one is treated as true). Mapping to the options, these are Conditions (A), Roles (C), and Script (D); the 'table.' variants are corrupted text, not requirements.",
+      "explanation": "An Access Control rule grants access only when all three of its permission requirements pass: the required Roles, the Conditions, and the Script must each evaluate to true (any empty one is treated as true). Mapping to the options, these are Conditions (A), Roles (C), and Script (D); the 'table.' variants are corrupted text, not requirements.",
       "reference": "ServiceNow Docs - Access control rules",
       "referenceUrl": "https://www.servicenow.com/docs/bundle/xanadu-platform-security/page/administer/contextual-security/concept/access-control-rules.html"
     },
@@ -4382,7 +4382,7 @@
       "number": "Q224",
       "category": "User Interface & Navigation",
       "difficulty": "medium",
-      "question": "What attributes can you manage, using system properties > basic configuration UI16? (Choose five.)",
+      "question": "What attributes can you manage, using System Properties > Basic Configuration UI16? (Choose five.)",
       "options": [
         "Browser tab title",
         "Module text color",
@@ -5191,7 +5191,7 @@
       "number": "Q264",
       "category": "Database Administration",
       "difficulty": "easy",
-      "question": "Which best describes a field in a senicenow table?",
+      "question": "Which best describes a field in a ServiceNow table?",
       "options": [
         "A field is a table cell that stores data",
         "A field is a table row",
@@ -5269,9 +5269,9 @@
       "number": "Q268",
       "category": "Lists, Filters & Forms",
       "difficulty": "medium",
-      "question": "On a form, one type of field shows a small preview icon beside its value that, when clicked, opens a preview (A peek) of the record it points to. Which type of field is this?",
+      "question": "On a form, one type of field shows a small preview icon beside its value that, when clicked, opens a preview (a peek) of the record it points to. Which type of field is this?",
       "options": [
-        "Drilkdown",
+        "Drilldown",
         "Lookup",
         "Quickview",
         "Preview",
@@ -5332,7 +5332,7 @@
       "options": [
         "Release Phase==Parent",
         "Catalog Task->Parent",
-        "HR Case-=Parent",
+        "HR Case->Parent",
         "Problem==Parent",
         "Outage->Task number"
       ],
@@ -5583,10 +5583,10 @@
       "question": "Access controls are evaluated in this order: 1. Match object against table ACL 2. Match the object against field ACL within step 1 above, what order are the table ACLs evaluated?",
       "options": [
         "Specific to general: Table.Field ACL, Parent Table.Field ACL, *.Field ACL",
-        "Bottom to top: Table ACL. Table.Field ACL, Parent Table. Field ACL",
+        "Bottom to top: Table ACL, Table.Field ACL, Parent Table. Field ACL",
         "General to specific: Table ACL, Table.Field ACL, Parent Table, Field ACL",
         "Top to bottom: Wildcard Table ACL, Parent Table ACL, Table ACL",
-        "Specific general: Table ACL, Parent Table ACL, Wildcard (*) ACL"
+        "Specific to general: Table ACL, Parent Table ACL, Wildcard (*) ACL"
       ],
       "answer": [
         "E"
@@ -5923,7 +5923,7 @@
       "question": "When looking at a long list of records, you want to quickly filter, to show only those which have short description containing email how might you do that?",
       "options": [
         "Click List Magnifier to expand column search, on Short Description, type *email, click enter",
-        "Click List Magnifier to expand column search, on Short Description, type *email, click enter",
+        "Click List Magnifier to expand column search, on Short Description, type %email, click enter",
         "Click List Magnifier to expand column search, on Short Description, type email, click enter",
         "On Search box, select text, type email, click enter"
       ],
@@ -5963,7 +5963,7 @@
       "number": "Q302",
       "category": "Application Access & Security",
       "difficulty": "medium",
-      "question": "Which role(S) are required to impersonate a user? (Choose two.)",
+      "question": "Which roles are required to impersonate a user? (Choose two.)",
       "options": [
         "admin",
         "sys_admin",
@@ -6584,11 +6584,11 @@
       "number": "Q333",
       "category": "Platform Automation",
       "difficulty": "easy",
-      "question": "You have heard about a new application released by sericenow, you want to try it out, to-see if it might be useful for your company's ServiceNow implementation. What would be the best way to get hands-on experience with the new application?",
+      "question": "You have heard about a new application released by ServiceNow, you want to try it out, to see if it might be useful for your company's ServiceNow implementation. What would be the best way to get hands-on experience with the new application?",
       "options": [
         "Check the latest release notes at docs.servicenow.com.",
         "Activate the application plug in, on your personal dev instance.",
-        "Search the wiki for the sales demo request form,",
+        "Search the wiki for the sales demo request form.",
         "Activate the application plug in, on your company's production instance."
       ],
       "answer": [
@@ -6841,7 +6841,7 @@
       "number": "Q346",
       "category": "Knowledge Management",
       "difficulty": "medium",
-      "question": "What setting allows users to view a knowledge base article even if the are not logged in?",
+      "question": "What setting allows users to view a knowledge base article even if they are not logged in?",
       "options": [
         "The View All setting",
         "The Allow role",
