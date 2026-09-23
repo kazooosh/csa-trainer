@@ -8,7 +8,8 @@ index.html       Gerüst mit allen Screens
 parse_pdf.py     PDF nach questions.json
 styles.css       Dark Theme
 app.js           Logik
-questions.json   Fragenkatalog
+questions.json   Fragenkatalog (aus der PDF)
+measureup.json   MeasureUp-Fragen, Kategorie "MeasureUp", Schwierigkeit unbekannt
 build.py         baut standalone.html
 standalone.html  alles in einer Datei, läuft per Doppelklick
 ```
@@ -121,7 +122,11 @@ Sonderlayout, etwa Tabellen oder Screenshots, hilft `--dump-text` beim Nachjusti
 ```
 
 - `answer` mit mehr als einem Buchstaben macht die Frage automatisch zur Mehrfachauswahl.
-- `difficulty` erwartet `easy`, `medium` oder `hard`.
+- `difficulty` erwartet `easy`, `medium`, `hard` oder `unknown` (leer zählt als `unknown`, in der App "unbekannt").
+- `topic` ist optional und erscheint als zusätzlicher Tag, bei MeasureUp steht dort das Original-Thema.
+- `referenceUrl` darf auch eine Liste sein, dann wird jede URL ein eigener Link.
+
+Weitere Kataloge: Datei ins Wurzelverzeichnis legen und in `CATALOG_FILES` in `app.js` und `build.py` eintragen. Alle Kataloge werden zusammengeführt.
 - `referenceUrl` ist optional. Ist sie gesetzt, wird die Quelle unter der Erklärung zum Link.
 - `id` ist optional. Ohne Angabe wird sie aus dem Fragetext gehasht, damit ein Neu-Parsen der PDF den Fortschritt nicht zerstört. Umformulierte Fragen gelten dann allerdings als neu.
 

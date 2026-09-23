@@ -197,6 +197,8 @@ input[type="number"] { max-width: 150px; }
 .tag.easy { color: var(--ok); border-color: rgba(52,211,153,0.3); }
 .tag.medium { color: var(--warn); border-color: rgba(251,191,36,0.3); }
 .tag.hard { color: var(--bad); border-color: rgba(251,113,133,0.3); }
+.tag.unknown { color: var(--faint); }
+.tag.topic { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .q-meta .spacer { flex: 1; }
 .mark-btn {
   background: transparent; border: 1px solid var(--line); border-radius: 8px;
@@ -258,6 +260,8 @@ input[type="number"] { max-width: 150px; }
 .explain .verdict.ok { color: var(--ok); }
 .explain .verdict.bad { color: var(--bad); }
 .explain p { margin: 0; font-size: 14.5px; color: #cfcfdd; line-height: 1.62; }
+.explain p + p { margin-top: 10px; }
+.explain .ref + .ref { margin-top: 4px; padding-top: 0; border-top: 0; }
 .explain .ref {
   margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line-soft);
   font-family: var(--font-mono); font-size: 11.5px; color: var(--faint);

@@ -13,6 +13,14 @@ const K_PROGRESS = 'csa.progress.v1';
 const K_SESSION = 'csa.session.v1';
 const K_QUESTIONS = 'csa.questions.v1';
 
+/* Mitgelieferte Kataloge. Werden zusammengeführt, die Kategorie kommt aus der jeweiligen Datei. */
+const CATALOG_FILES = ['questions.json', 'measureup.json'];
+
+/* Schwierigkeitsgrade in Anzeige-Reihenfolge. 'unknown' für Kataloge ohne Einstufung (z. B. MeasureUp). */
+const DIFFS = ['easy', 'medium', 'hard', 'unknown'];
+const DIFF_LABEL = { easy: 'easy', medium: 'medium', hard: 'hard', unknown: 'unbekannt' };
+const diffLabel = (d) => DIFF_LABEL[d] || d;
+
 /* ------------------------------------------------------------------ *
  * Notfall-Katalog: greift nur, wenn questions.json nicht ladbar ist   *
  * (z. B. beim Öffnen per Doppelklick ohne Webserver).                 *
@@ -75,6 +83,29 @@ function hashId(str) {
   return 'q' + h.toString(36);
 }
 
+/* Mehrere Kataloge zu einem zusammenführen. Nimmt ein einzelnes Objekt oder ein Array davon. */
+function mergeCatalogs(list) {
+  const arr = (Array.isArray(list) ? list : [list]).filter((c) => c && Array.isArray(c.questions));
+  return {
+    meta: Object.assign({}, (arr[0] && arr[0].meta) || {}, { sources: arr.map((c) => (c.meta && c.meta.source) || '') }),
+    questions: arr.reduce((all, c) => all.concat(c.questions), [])
+  };
+}
+
+async function loadBundled() {
+  const results = await Promise.all(CATALOG_FILES.map(async (f) => {
+    try {
+      const res = await fetch(f, { cache: 'no-store' });
+      if (!res.ok) throw new Error(res.status);
+      return await res.json();
+    } catch (e) {
+      console.info(f + ' nicht geladen.');
+      return null;
+    }
+  }));
+  return mergeCatalogs(results);
+}
+
 function normalize(raw) {
   META = raw.meta || {};
   QUESTIONS = (raw.questions || []).map((q, i) => {
@@ -84,18 +115,23 @@ function normalize(raw) {
     const answer = answerLetters
       .map((l) => (/^\d+$/.test(l) ? Number(l) : LETTERS.indexOf(l)))
       .filter((n) => n >= 0 && n < options.length);
+    const urls = (Array.isArray(q.referenceUrl) ? q.referenceUrl : [q.referenceUrl])
+      .map((u) => String(u || '').trim())
+      .filter((u) => /^https?:\/\//i.test(u));
+    const diff = String(q.difficulty || '').trim().toLowerCase();
     return {
       id: q.id || hashId(q.question || ('idx' + i)),
       number: q.number || 'Q' + (i + 1),
       category: q.category || 'Ohne Kategorie',
-      difficulty: (q.difficulty || 'medium').toLowerCase(),
+      topic: q.topic || '',
+      difficulty: DIFFS.includes(diff) ? diff : 'unknown',
       question: q.question || '',
       options,
       answer,
       multi: answer.length > 1,
       explanation: q.explanation || '',
       reference: q.reference || '',
-      referenceUrl: /^https?:\/\//i.test(q.referenceUrl || '') ? q.referenceUrl : ''
+      referenceUrls: urls
     };
   }).filter((q) => q.question && q.options.length >= 2 && q.answer.length);
   BY_ID = {};
@@ -123,16 +159,13 @@ async function boot() {
     try { normalize(JSON.parse(imported)); questionsFromImport = true; } catch (e) { /* fällt unten durch */ }
   }
   if (!QUESTIONS.length && window.__EMBEDDED_QUESTIONS__) {
-    try { normalize(window.__EMBEDDED_QUESTIONS__); } catch (e) { /* fällt unten durch */ }
+    try { normalize(mergeCatalogs(window.__EMBEDDED_QUESTIONS__)); } catch (e) { /* fällt unten durch */ }
   }
   if (!QUESTIONS.length) {
-    try {
-      const res = await fetch('questions.json', { cache: 'no-store' });
-      if (!res.ok) throw new Error(res.status);
-      normalize(await res.json());
-    } catch (e) {
+    normalize(await loadBundled());
+    if (!QUESTIONS.length) {
       normalize(FALLBACK);
-      console.info('questions.json nicht geladen, Notfall-Katalog aktiv.');
+      console.info('Keine Kataloge geladen, Notfall-Katalog aktiv.');
     }
   }
 
@@ -258,9 +291,9 @@ function openSetup(mode) {
     '<button class="chip" data-cat="' + esc(c) + '">' + esc(c) + '<span class="n">' + QUESTIONS.filter((q) => q.category === c).length + '</span></button>'
   ).join('');
 
-  const diffs = ['easy', 'medium', 'hard'].filter((d) => QUESTIONS.some((q) => q.difficulty === d));
+  const diffs = DIFFS.filter((d) => QUESTIONS.some((q) => q.difficulty === d));
   $('#diffChips').innerHTML = diffs.map((d) =>
-    '<button class="chip" data-diff="' + d + '">' + d + '<span class="n">' + QUESTIONS.filter((q) => q.difficulty === d).length + '</span></button>'
+    '<button class="chip" data-diff="' + d + '">' + diffLabel(d) + '<span class="n">' + QUESTIONS.filter((q) => q.difficulty === d).length + '</span></button>'
   ).join('');
 
   syncSetup();
@@ -342,7 +375,8 @@ function renderQuiz() {
   $('#qMeta').innerHTML =
     '<span class="tag num">' + esc(q.number) + '</span>' +
     '<span class="tag">' + esc(q.category) + '</span>' +
-    '<span class="tag ' + esc(q.difficulty) + '">' + esc(q.difficulty) + '</span>' +
+    (q.topic ? '<span class="tag topic" title="' + esc(q.topic) + '">' + esc(q.topic) + '</span>' : '') +
+    '<span class="tag ' + esc(q.difficulty) + '">' + esc(diffLabel(q.difficulty)) + '</span>' +
     '<span class="spacer"></span>' +
     '<span class="leitner"><span class="cap">BOX</span>' +
       [0, 1, 2, 3, 4].map((b) => '<span class="pip' + (b <= p.box && p.seen ? ' on' : '') + '"></span>').join('') +
@@ -386,13 +420,28 @@ function explainHtml(q, a) {
   return '<div class="explain">' +
     '<div class="verdict ' + (a.firstTry ? 'ok' : 'bad') + '">' +
       verdict + ' &middot; Lösung ' + letters +
-    '</div><p>' + esc(q.explanation) + '</p>' +
-    (q.reference
-      ? '<div class="ref">' + (q.referenceUrl
-          ? '<a href="' + esc(q.referenceUrl) + '" target="_blank" rel="noopener noreferrer">' + esc(q.reference) + ' &#8599;</a>'
-          : esc(q.reference)) + '</div>'
-      : '') +
+    '</div>' + paragraphs(q.explanation) + refHtml(q) +
     '</div>';
+}
+
+/* Absätze aus Zeilenumbrüchen, MeasureUp erklärt jede Option in einer eigenen Zeile */
+function paragraphs(text) {
+  return String(text).split(/\n+/).map((t) => t.trim()).filter(Boolean)
+    .map((t) => '<p>' + esc(t) + '</p>').join('');
+}
+
+function refHtml(q) {
+  const urls = q.referenceUrls;
+  if (!urls.length) return q.reference ? '<div class="ref">' + esc(q.reference) + '</div>' : '';
+  const label = (u, i) => {
+    if (q.reference && urls.length === 1) return q.reference;
+    let host = '';
+    try { host = new URL(u).hostname.replace(/^www\./, ''); } catch (e) { host = 'Link'; }
+    return (q.reference ? q.reference + ' ' : 'Quelle ') + (i + 1) + ' (' + host + ')';
+  };
+  return urls.map((u, i) =>
+    '<div class="ref"><a href="' + esc(u) + '" target="_blank" rel="noopener noreferrer">' + esc(label(u, i)) + ' &#8599;</a></div>'
+  ).join('');
 }
 
 function shake() {
@@ -556,7 +605,7 @@ function renderStats() {
   const cats = group((q) => q.category);
   $('#sCats').innerHTML = Object.keys(cats).sort().map((k) => bar(k, cats[k].right, cats[k].total)).join('') || '<div class="empty">Noch keine Antworten.</div>';
   const diffs = group((q) => q.difficulty);
-  $('#sDiffs').innerHTML = ['easy', 'medium', 'hard'].filter((d) => diffs[d]).map((d) => bar(d, diffs[d].right, diffs[d].total)).join('');
+  $('#sDiffs').innerHTML = DIFFS.filter((d) => diffs[d]).map((d) => bar(diffLabel(d), diffs[d].right, diffs[d].total)).join('');
 }
 
 /* ------------------------------------------------------------------ *
@@ -583,7 +632,7 @@ function readFile(input, cb) {
 function renderData() {
   $('#qSourceHint').textContent = questionsFromImport
     ? 'Aktiv ist ein selbst geladener Katalog mit ' + QUESTIONS.length + ' Fragen.'
-    : 'Aktiv ist die mitgelieferte questions.json mit ' + QUESTIONS.length + ' Fragen.';
+    : 'Aktiv sind die mitgelieferten Kataloge (' + CATALOG_FILES.join(', ') + ') mit ' + QUESTIONS.length + ' Fragen.';
 }
 
 /* ------------------------------------------------------------------ *
@@ -695,15 +744,14 @@ function wire() {
   $('#resetQuestions').onclick = async () => {
     store.del(K_QUESTIONS);
     questionsFromImport = false;
-    try {
-      const res = await fetch('questions.json', { cache: 'no-store' });
-      normalize(await res.json());
-    } catch (err) { normalize(FALLBACK); }
+    if (window.__EMBEDDED_QUESTIONS__) normalize(mergeCatalogs(window.__EMBEDDED_QUESTIONS__));
+    else normalize(await loadBundled());
+    if (!QUESTIONS.length) normalize(FALLBACK);
     session = null;
     saveSession();
     renderMenu();
     renderData();
-    toast('Mitgelieferter Katalog aktiv.');
+    toast('Mitgelieferte Kataloge aktiv.');
   };
 
   $('#resetConfirm').oninput = (e) => { $('#resetBtn').disabled = e.target.value.trim() !== 'FORTSCHRITT LOESCHEN'; };
