@@ -21,6 +21,7 @@ const DEFAULT_MANIFEST = {
   catalogs: [
     { id: 'csa-pdf', exam: 'CSA', label: 'Practice Exam', file: 'questions.json' },
     { id: 'csa-measureup', exam: 'CSA', label: 'MeasureUp', file: 'measureup.json' },
+    { id: 'csa-skillcertpro', exam: 'CSA', label: 'SkillCertPro', file: 'skillcertpro-csa.json' },
     { id: 'cad-muriellelutz', exam: 'CAD', label: 'Murielle und Lutz', file: 'cad-muriellelutz.json' }
   ]
 };

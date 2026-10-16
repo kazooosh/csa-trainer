@@ -10,6 +10,7 @@ styles.css       Dark Theme
 app.js           Logik
 questions.json   Fragenkatalog (aus der PDF)
 measureup.json   MeasureUp-Fragen, Kategorie "MeasureUp", Schwierigkeit unbekannt
+skillcertpro-csa.json  SkillCertPro-Fragen (17 Practice Tests, Duplikate zusammengeführt)
 cad-muriellelutz.json  CAD-Fragen (Murielle und Lutz), 180 Stück
 catalogs.json    Manifest: welche Kataloge es gibt und zu welcher Prüfung sie gehören
 build.py         baut standalone.html
