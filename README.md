@@ -10,6 +10,8 @@ styles.css       Dark Theme
 app.js           Logik
 questions.json   Fragenkatalog (aus der PDF)
 measureup.json   MeasureUp-Fragen, Kategorie "MeasureUp", Schwierigkeit unbekannt
+cad-muriellelutz.json  CAD-Fragen (Murielle und Lutz), 180 Stück
+catalogs.json    Manifest: welche Kataloge es gibt und zu welcher Prüfung sie gehören
 build.py         baut standalone.html
 standalone.html  alles in einer Datei, läuft per Doppelklick
 ```
@@ -48,6 +50,22 @@ git push -u origin main
 Wichtig: Die Dateien müssen im Wurzelverzeichnis des Repos liegen, nicht in einem Unterordner, sonst zeigt Pages ein 404.
 
 Fragen aktualisieren heißt danach nur noch: `questions.json` ändern, committen, pushen. Wenn du die Einzeldatei-Version weiterreichst, vorher `python build.py` laufen lassen.
+
+## Prüfungen und Kataloge
+
+Im Hauptmenü wählst du oben die Prüfung (CSA, CAD, ...) und darunter, welche Kataloge dieser Prüfung aktiv sind.
+Standard ist CSA mit allen CSA-Katalogen. Die Auswahl wird im Browser gespeichert, und zwar pro Prüfung.
+Menüzahlen, Runden und Statistik beziehen sich immer nur auf die aktiven Fragen.
+
+Neuen Katalog hinzufügen:
+
+1. JSON im App-Format ablegen (`question`, `options`, `answer` als Buchstaben, optional `id`, `category`, `difficulty`, `explanation`, `reference`, `referenceUrl`).
+2. In `catalogs.json` eintragen: `{ "id": "...", "exam": "CAD", "label": "...", "file": "datei.json" }`.
+   Gibt es die Prüfung noch nicht, unter `exams` den Langnamen ergänzen.
+3. Optional `python build.py` für die Einzeldatei-Version.
+
+Neue Kataloge sind beim nächsten Laden automatisch aktiv, abgewählte bleiben abgewählt.
+Die `id` eines Katalogs nicht mehr ändern, daran hängt die gespeicherte Auswahl.
 
 ## Bedienung
 

@@ -12,9 +12,18 @@ const store = {
 const K_PROGRESS = 'csa.progress.v1';
 const K_SESSION = 'csa.session.v1';
 const K_QUESTIONS = 'csa.questions.v1';
+const K_CATSEL = 'csa.catalogs.v1';
 
-/* Mitgelieferte Kataloge. Werden zusammengeführt, die Kategorie kommt aus der jeweiligen Datei. */
-const CATALOG_FILES = ['questions.json', 'measureup.json'];
+/* Katalog-Manifest. Die Wahrheit steht in catalogs.json, das hier greift nur, wenn die Datei fehlt. */
+const DEFAULT_MANIFEST = {
+  defaultExam: 'CSA',
+  exams: { CSA: 'Certified System Administrator', CAD: 'Certified Application Developer' },
+  catalogs: [
+    { id: 'csa-pdf', exam: 'CSA', label: 'Practice Exam', file: 'questions.json' },
+    { id: 'csa-measureup', exam: 'CSA', label: 'MeasureUp', file: 'measureup.json' },
+    { id: 'cad-muriellelutz', exam: 'CAD', label: 'Murielle und Lutz', file: 'cad-muriellelutz.json' }
+  ]
+};
 
 /* Schwierigkeitsgrade in Anzeige-Reihenfolge. 'unknown' für Kataloge ohne Einstufung (z. B. MeasureUp). */
 const DIFFS = ['easy', 'medium', 'hard', 'unknown'];
@@ -64,9 +73,12 @@ const FALLBACK = {
 /* ------------------------------------------------------------------ *
  * Zustand                                                             *
  * ------------------------------------------------------------------ */
-let META = {};
-let QUESTIONS = [];
-let BY_ID = {};
+let MANIFEST = DEFAULT_MANIFEST;
+let CATALOGS = [];   // { id, exam, label, count }
+let ALL = [];        // alle geladenen Fragen
+let QUESTIONS = [];  // nur die aktiven Kataloge
+let BY_ID = {};      // über alle Kataloge, damit eine laufende Runde einen Wechsel übersteht
+let sel = null;      // { exam, active: { CSA: [ids] }, known: [ids] }
 let progress = {};
 let session = null;
 let setup = { mode: 'all', sources: ['all'], cats: [], diffs: [], count: 20 };
@@ -83,59 +95,153 @@ function hashId(str) {
   return 'q' + h.toString(36);
 }
 
-/* Mehrere Kataloge zu einem zusammenführen. Nimmt ein einzelnes Objekt oder ein Array davon. */
-function mergeCatalogs(list) {
-  const arr = (Array.isArray(list) ? list : [list]).filter((c) => c && Array.isArray(c.questions));
+async function fetchJson(f) {
+  try {
+    const res = await fetch(f, { cache: 'no-store' });
+    if (!res.ok) throw new Error(res.status);
+    return await res.json();
+  } catch (e) {
+    console.info(f + ' nicht geladen.');
+    return null;
+  }
+}
+
+/* Liefert { manifest, catalogs: [{ id, exam, label, data }] } */
+async function loadBundled() {
+  const man = (await fetchJson('catalogs.json')) || DEFAULT_MANIFEST;
+  const datas = await Promise.all(man.catalogs.map((c) => fetchJson(c.file)));
+  return { manifest: man, catalogs: man.catalogs.map((c, i) => Object.assign({}, c, { data: datas[i] })) };
+}
+
+function normalizeQuestion(q, i, catId) {
+  const options = q.options || [];
+  const answerLetters = (Array.isArray(q.answer) ? q.answer : [q.answer])
+    .map((a) => String(a).trim().toUpperCase());
+  const answer = answerLetters
+    .map((l) => (/^\d+$/.test(l) ? Number(l) : LETTERS.indexOf(l)))
+    .filter((n) => n >= 0 && n < options.length);
+  const urls = (Array.isArray(q.referenceUrl) ? q.referenceUrl : [q.referenceUrl])
+    .map((u) => String(u || '').trim())
+    .filter((u) => /^https?:\/\//i.test(u));
+  const diff = String(q.difficulty || '').trim().toLowerCase();
   return {
-    meta: Object.assign({}, (arr[0] && arr[0].meta) || {}, { sources: arr.map((c) => (c.meta && c.meta.source) || '') }),
-    questions: arr.reduce((all, c) => all.concat(c.questions), [])
+    id: q.id || hashId(q.question || ('idx' + i)),
+    catalog: catId,
+    number: q.number || 'Q' + (i + 1),
+    category: q.category || 'Ohne Kategorie',
+    topic: q.topic || '',
+    difficulty: DIFFS.includes(diff) ? diff : 'unknown',
+    question: q.question || '',
+    options,
+    answer,
+    multi: answer.length > 1,
+    explanation: q.explanation || '',
+    reference: q.reference || '',
+    referenceUrls: urls
   };
 }
 
-async function loadBundled() {
-  const results = await Promise.all(CATALOG_FILES.map(async (f) => {
-    try {
-      const res = await fetch(f, { cache: 'no-store' });
-      if (!res.ok) throw new Error(res.status);
-      return await res.json();
-    } catch (e) {
-      console.info(f + ' nicht geladen.');
-      return null;
-    }
-  }));
-  return mergeCatalogs(results);
+/* Ein selbst geladener Katalog läuft als zusätzlicher Katalog mit, Prüfung kommt aus meta.exam */
+function importEntry(data) {
+  const m = data.meta || {};
+  return { id: 'import', exam: m.exam || 'Import', label: 'Eigener Import' + (m.source ? ' (' + m.source + ')' : ''), data };
 }
 
-function normalize(raw) {
-  META = raw.meta || {};
-  QUESTIONS = (raw.questions || []).map((q, i) => {
-    const options = q.options || [];
-    const answerLetters = (Array.isArray(q.answer) ? q.answer : [q.answer])
-      .map((a) => String(a).trim().toUpperCase());
-    const answer = answerLetters
-      .map((l) => (/^\d+$/.test(l) ? Number(l) : LETTERS.indexOf(l)))
-      .filter((n) => n >= 0 && n < options.length);
-    const urls = (Array.isArray(q.referenceUrl) ? q.referenceUrl : [q.referenceUrl])
-      .map((u) => String(u || '').trim())
-      .filter((u) => /^https?:\/\//i.test(u));
-    const diff = String(q.difficulty || '').trim().toLowerCase();
-    return {
-      id: q.id || hashId(q.question || ('idx' + i)),
-      number: q.number || 'Q' + (i + 1),
-      category: q.category || 'Ohne Kategorie',
-      topic: q.topic || '',
-      difficulty: DIFFS.includes(diff) ? diff : 'unknown',
-      question: q.question || '',
-      options,
-      answer,
-      multi: answer.length > 1,
-      explanation: q.explanation || '',
-      reference: q.reference || '',
-      referenceUrls: urls
-    };
-  }).filter((q) => q.question && q.options.length >= 2 && q.answer.length);
+function normalize(bundle, imported) {
+  MANIFEST = bundle.manifest || DEFAULT_MANIFEST;
+  const entries = bundle.catalogs.filter((c) => c.data && Array.isArray(c.data.questions));
+  if (imported) entries.push(importEntry(imported));
+  CATALOGS = [];
+  ALL = [];
+  entries.forEach((c) => {
+    const qs = c.data.questions.map((q, i) => normalizeQuestion(q, i, c.id))
+      .filter((q) => q.question && q.options.length >= 2 && q.answer.length);
+    CATALOGS.push({ id: c.id, exam: c.exam || 'Sonstige', label: c.label || c.id, count: qs.length });
+    ALL = ALL.concat(qs);
+  });
   BY_ID = {};
-  QUESTIONS.forEach((q) => { BY_ID[q.id] = q; });
+  ALL.forEach((q) => { BY_ID[q.id] = q; });
+  sanitizeSel();
+  applySelection();
+}
+
+/* ------------------------------------------------------------------ *
+ * Prüfungs- und Katalogauswahl                                        *
+ * ------------------------------------------------------------------ */
+function examList() {
+  const out = [];
+  CATALOGS.forEach((c) => { if (!out.includes(c.exam)) out.push(c.exam); });
+  return out;
+}
+const examName = (e) => (MANIFEST.exams && MANIFEST.exams[e]) || e;
+const catsOf = (exam) => CATALOGS.filter((c) => c.exam === exam);
+
+function sanitizeSel() {
+  if (!sel) { try { sel = JSON.parse(store.get(K_CATSEL) || 'null'); } catch (e) { sel = null; } }
+  const exams = examList();
+  const firstRun = !sel;
+  if (!sel || typeof sel !== 'object') sel = {};
+  sel.active = sel.active || {};
+  sel.known = sel.known || [];
+  if (!exams.includes(sel.exam)) sel.exam = exams.includes(MANIFEST.defaultExam) ? MANIFEST.defaultExam : exams[0];
+  exams.forEach((e) => {
+    const ids = catsOf(e).map((c) => c.id);
+    let act = (sel.active[e] || []).filter((id) => ids.includes(id));
+    /* neu hinzugekommene Kataloge sind automatisch an, abgewählte bleiben aus */
+    ids.forEach((id) => { if (!firstRun && !sel.known.includes(id) && !act.includes(id)) act.push(id); });
+    if (!act.length) act = ids.slice();
+    sel.active[e] = act;
+  });
+  sel.known = Array.from(new Set(sel.known.concat(CATALOGS.map((c) => c.id))));
+  saveSel();
+}
+function saveSel() { store.set(K_CATSEL, JSON.stringify(sel)); }
+
+function applySelection() {
+  const act = sel.active[sel.exam] || [];
+  const seenIds = {};
+  QUESTIONS = ALL.filter((q) => {
+    if (!act.includes(q.catalog) || seenIds[q.id]) return false;
+    seenIds[q.id] = true;
+    return true;
+  });
+}
+
+function switchExam(exam) {
+  if (exam === sel.exam) return;
+  sel.exam = exam;
+  saveSel();
+  applySelection();
+  renderMenu();
+  toast(examName(exam) + ': ' + QUESTIONS.length + ' Fragen aktiv.');
+}
+
+function toggleCatalog(id) {
+  const act = sel.active[sel.exam];
+  const at = act.indexOf(id);
+  if (at >= 0) {
+    if (act.length === 1) return toast('Mindestens ein Katalog muss aktiv bleiben.');
+    act.splice(at, 1);
+  } else act.push(id);
+  saveSel();
+  applySelection();
+  renderMenu();
+}
+
+function renderCatalogPicker() {
+  const exams = examList();
+  $('#examSwitch').innerHTML = exams.map((e) => {
+    const ids = catsOf(e).map((c) => c.id);
+    const n = new Set(ALL.filter((q) => ids.includes(q.catalog)).map((q) => q.id)).size;
+    return '<button class="exam-tab' + (e === sel.exam ? ' on' : '') + '" data-exam="' + esc(e) + '" title="' + esc(examName(e)) + '">' +
+      '<span class="code">' + esc(e) + '</span><span class="nm">' + esc(examName(e)) + '</span><span class="n">' + n + '</span></button>';
+  }).join('');
+  $('#examSwitch').classList.toggle('hidden', exams.length < 2);
+  const cats = catsOf(sel.exam);
+  $('#catalogChips').innerHTML = cats.map((c) =>
+    '<button class="chip' + (sel.active[sel.exam].includes(c.id) ? ' on' : '') + '" data-catalog="' + esc(c.id) + '">' +
+    esc(c.label) + '<span class="n">' + c.count + '</span></button>'
+  ).join('');
 }
 
 const BLANK = { box: 0, streak: 0, correct: 0, wrong: 0, seen: 0, needsWork: false, marked: false, last: 0 };
@@ -154,20 +260,10 @@ function saveSession() { session ? store.set(K_SESSION, JSON.stringify(session))
 async function boot() {
   try { progress = JSON.parse(store.get(K_PROGRESS) || '{}'); } catch (e) { progress = {}; }
 
-  const imported = store.get(K_QUESTIONS);
-  if (imported) {
-    try { normalize(JSON.parse(imported)); questionsFromImport = true; } catch (e) { /* fällt unten durch */ }
-  }
-  if (!QUESTIONS.length && window.__EMBEDDED_QUESTIONS__) {
-    try { normalize(mergeCatalogs(window.__EMBEDDED_QUESTIONS__)); } catch (e) { /* fällt unten durch */ }
-  }
-  if (!QUESTIONS.length) {
-    normalize(await loadBundled());
-    if (!QUESTIONS.length) {
-      normalize(FALLBACK);
-      console.info('Keine Kataloge geladen, Notfall-Katalog aktiv.');
-    }
-  }
+  let imported = null;
+  try { imported = JSON.parse(store.get(K_QUESTIONS) || 'null'); } catch (e) { imported = null; }
+  questionsFromImport = !!(imported && imported.questions);
+  await loadAll(imported);
 
   try {
     const s = JSON.parse(store.get(K_SESSION) || 'null');
@@ -177,6 +273,15 @@ async function boot() {
   wire();
   renderMenu();
   show('menu');
+}
+
+async function loadAll(imported) {
+  const bundle = window.__EMBEDDED_QUESTIONS__ || await loadBundled();
+  normalize(bundle, imported);
+  if (!ALL.length) {
+    normalize({ manifest: DEFAULT_MANIFEST, catalogs: [{ id: 'fallback', exam: 'CSA', label: 'Notfall-Katalog', data: FALLBACK }] });
+    console.info('Keine Kataloge geladen, Notfall-Katalog aktiv.');
+  }
 }
 
 /* ------------------------------------------------------------------ *
@@ -189,7 +294,7 @@ function show(name) {
   const quiz = name === 'quiz';
   $('#rail').classList.toggle('hidden', !quiz);
   if (!quiz) $('#counter').textContent = '';
-  $('#brandSub').textContent = quiz ? '' : (META.title || '');
+  $('#brandSub').textContent = quiz ? '' : (sel ? sel.exam : '');
   window.scrollTo(0, 0);
   document.body.dataset.screen = name;
 }
@@ -245,6 +350,19 @@ function drawWeighted(pool, n) {
   return out;
 }
 
+/* Kennzahlen nur über die aktiven Fragen, sonst mischen sich CSA und CAD */
+function tally() {
+  let seen = 0, right = 0, total = 0;
+  QUESTIONS.forEach((q) => {
+    const p = progress[q.id];
+    if (!p) return;
+    if (p.seen) seen++;
+    right += p.correct;
+    total += p.correct + p.wrong;
+  });
+  return { seen, right, total };
+}
+
 /* ------------------------------------------------------------------ *
  * Hauptmenü                                                           *
  * ------------------------------------------------------------------ */
@@ -261,12 +379,14 @@ function renderMenu() {
   $('#cardMarked').disabled = marked === 0;
   $('#cardMix').disabled = mix === 0;
 
-  let seen = 0, right = 0, total = 0;
-  Object.values(progress).forEach((p) => { if (p.seen) seen++; right += p.correct; total += p.correct + p.wrong; });
+  renderCatalogPicker();
+  const { seen, right, total } = tally();
   $('#mStatSeen').textContent = seen + ' / ' + QUESTIONS.length;
   $('#mStatRate').textContent = total ? Math.round((right / total) * 100) + '%' : '--';
   $('#mStatGaps').textContent = wrong;
-  $('#menuSub').textContent = (META.title || 'Fragenkatalog') + ' mit ' + QUESTIONS.length + ' Fragen.';
+  const nCat = sel.active[sel.exam].length;
+  $('#menuSub').textContent = examName(sel.exam) + ' · ' + QUESTIONS.length + ' Fragen aus ' + nCat + (nCat === 1 ? ' Katalog.' : ' Katalogen.');
+  $('#brandSub').textContent = sel.exam;
 
   const open = session ? session.ids.filter((id) => !session.answers[id] || !session.answers[id].resolved).length : 0;
   $('#resumeCard').classList.toggle('hidden', !session || open === 0);
@@ -574,8 +694,9 @@ function bar(name, right, total) {
 }
 
 function renderStats() {
-  let seen = 0, right = 0, total = 0;
-  Object.values(progress).forEach((p) => { if (p.seen) seen++; right += p.correct; total += p.correct + p.wrong; });
+  const { seen, right, total } = tally();
+  $('#statsSub').textContent = examName(sel.exam) + ', aktive Kataloge: ' +
+    catsOf(sel.exam).filter((c) => sel.active[sel.exam].includes(c.id)).map((c) => c.label).join(', ') + '.';
   $('#sTotal').textContent = QUESTIONS.length;
   $('#sSeen').textContent = seen;
   $('#sRate').textContent = total ? Math.round((right / total) * 100) + '%' : '--';
@@ -630,9 +751,9 @@ function readFile(input, cb) {
 }
 
 function renderData() {
-  $('#qSourceHint').textContent = questionsFromImport
-    ? 'Aktiv ist ein selbst geladener Katalog mit ' + QUESTIONS.length + ' Fragen.'
-    : 'Aktiv sind die mitgelieferten Kataloge (' + CATALOG_FILES.join(', ') + ') mit ' + QUESTIONS.length + ' Fragen.';
+  $('#qSourceHint').textContent = 'Geladen: ' + CATALOGS.map((c) => c.exam + ' / ' + c.label + ' (' + c.count + ')').join(', ') + '.' +
+    (questionsFromImport ? ' Der eigene Import erscheint unter seiner Prüfung (meta.exam) im Hauptmenü.' : '');
+  $('#resetQuestions').disabled = !questionsFromImport;
 }
 
 /* ------------------------------------------------------------------ *
@@ -644,6 +765,14 @@ function wire() {
 
   $$('.menu-card[data-mode]').forEach((b) => { b.onclick = () => openSetup(b.dataset.mode); });
   $('#resumeCard').onclick = () => { renderQuiz(); show('quiz'); };
+  $('#examSwitch').onclick = (e) => {
+    const b = e.target.closest('[data-exam]');
+    if (b) switchExam(b.dataset.exam);
+  };
+  $('#catalogChips').onclick = (e) => {
+    const b = e.target.closest('[data-catalog]');
+    if (b) toggleCatalog(b.dataset.catalog);
+  };
   $('#toStats').onclick = () => { renderStats(); show('stats'); };
   $('#toData').onclick = () => { renderData(); show('data'); };
 
@@ -730,28 +859,30 @@ function wire() {
   });
 
   $('#impQuestionsBtn').onclick = () => $('#impQuestions').click();
-  $('#impQuestions').onchange = (e) => readFile(e.target, (data) => {
+  $('#impQuestions').onchange = (e) => readFile(e.target, async (data) => {
     if (!data.questions || !data.questions.length) return toast('Keine Fragen in der Datei gefunden.');
     store.set(K_QUESTIONS, JSON.stringify(data));
-    normalize(data);
     questionsFromImport = true;
-    session = null;
-    saveSession();
+    await loadAll(data);
+    const imp = CATALOGS.find((c) => c.id === 'import');
+    if (imp) {
+      sel.exam = imp.exam;
+      if (!sel.active[imp.exam].includes('import')) sel.active[imp.exam].push('import');
+      saveSel();
+      applySelection();
+    }
     renderMenu();
     renderData();
-    toast(QUESTIONS.length + ' Fragen geladen.');
+    toast((imp ? imp.count : 0) + ' Fragen geladen, Prüfung ' + (imp ? imp.exam : '?') + ' aktiv.');
   });
   $('#resetQuestions').onclick = async () => {
     store.del(K_QUESTIONS);
     questionsFromImport = false;
-    if (window.__EMBEDDED_QUESTIONS__) normalize(mergeCatalogs(window.__EMBEDDED_QUESTIONS__));
-    else normalize(await loadBundled());
-    if (!QUESTIONS.length) normalize(FALLBACK);
-    session = null;
-    saveSession();
+    await loadAll(null);
+    if (session && !session.ids.every((id) => BY_ID[id])) { session = null; saveSession(); }
     renderMenu();
     renderData();
-    toast('Mitgelieferte Kataloge aktiv.');
+    toast('Eigener Katalog entfernt.');
   };
 
   $('#resetConfirm').oninput = (e) => { $('#resetBtn').disabled = e.target.value.trim() !== 'FORTSCHRITT LOESCHEN'; };

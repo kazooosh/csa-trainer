@@ -168,6 +168,21 @@ input[type="number"] { max-width: 150px; }
 .chip .n { font-family: var(--font-mono); font-size: 11px; opacity: 0.65; margin-left: 6px; }
 .chip:disabled { opacity: 0.35; cursor: not-allowed; }
 
+/* ---------- Prüfungs-Umschalter ---------- */
+.catalog-picker { margin: 24px 0 0; }
+.exam-switch { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin-bottom: 12px; }
+.exam-tab {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 2px; text-align: left;
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm);
+  padding: 11px 14px; color: var(--muted); transition: all 0.15s; min-width: 0;
+}
+.exam-tab:hover { border-color: #3a3a4e; color: var(--text); }
+.exam-tab .code { font-family: var(--font-display); font-weight: 600; font-size: 17px; color: var(--text); }
+.exam-tab .nm { font-size: 12px; line-height: 1.3; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.exam-tab .n { font-family: var(--font-mono); font-size: 11px; color: var(--faint); }
+.exam-tab.on { border-color: var(--accent); background: linear-gradient(135deg, rgba(168,85,247,0.14), rgba(236,72,153,0.06)); }
+.exam-tab.on .nm { color: #e5d5fb; }
+
 .btn {
   border-radius: var(--radius-sm); padding: 12px 20px; font-weight: 600;
   font-family: var(--font-display); border: 1px solid var(--line);
@@ -209,7 +224,7 @@ input[type="number"] { max-width: 150px; }
 
 .q-text {
   font-family: var(--font-display); font-size: 21px; line-height: 1.42;
-  font-weight: 500; margin-bottom: 8px;
+  font-weight: 500; margin-bottom: 8px; white-space: pre-line;
 }
 .q-note { font-size: 13px; color: var(--faint); margin-bottom: 20px; font-family: var(--font-mono); }
 

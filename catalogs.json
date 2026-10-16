@@ -1,0 +1,13 @@
+{
+  "_hinweis": "Neue Kataloge hier eintragen. exam gruppiert die Kataloge im Prüfungs-Umschalter, id muss stabil bleiben (daran hängt die gespeicherte Auswahl).",
+  "defaultExam": "CSA",
+  "exams": {
+    "CSA": "Certified System Administrator",
+    "CAD": "Certified Application Developer"
+  },
+  "catalogs": [
+    { "id": "csa-pdf", "exam": "CSA", "label": "Practice Exam", "file": "questions.json" },
+    { "id": "csa-measureup", "exam": "CSA", "label": "MeasureUp", "file": "measureup.json" },
+    { "id": "cad-muriellelutz", "exam": "CAD", "label": "Murielle und Lutz", "file": "cad-muriellelutz.json" }
+  ]
+}

@@ -33,6 +33,13 @@
     <h1 class="screen-title">Was üben wir heute?</h1>
     <p class="screen-sub" id="menuSub"></p>
 
+    <div class="field catalog-picker">
+      <label>Prüfung</label>
+      <div class="exam-switch" id="examSwitch"></div>
+      <div class="chips" id="catalogChips"></div>
+      <div class="hint">Kataloge an- und abwählen. Die Auswahl wird pro Prüfung gespeichert.</div>
+    </div>
+
     <div class="stat-strip">
       <div class="stat-box"><div class="value" id="mStatSeen">0</div><div class="label">Fragen gesehen</div></div>
       <div class="stat-box"><div class="value" id="mStatRate">0%</div><div class="label">Trefferquote</div></div>
@@ -170,7 +177,7 @@
   <section id="screen-stats" class="hidden">
     <div class="eyebrow">Auswertung</div>
     <h1 class="screen-title">Statistik</h1>
-    <p class="screen-sub">Alles über deinen gesamten Lernfortschritt.</p>
+    <p class="screen-sub" id="statsSub">Alles über deinen gesamten Lernfortschritt.</p>
     <div class="stat-strip">
       <div class="stat-box"><div class="value" id="sTotal">0</div><div class="label">Fragen im Katalog</div></div>
       <div class="stat-box"><div class="value" id="sSeen">0</div><div class="label">Davon bearbeitet</div></div>
@@ -191,7 +198,7 @@
   <section id="screen-data" class="hidden">
     <div class="eyebrow">Verwaltung</div>
     <h1 class="screen-title">Daten und Sicherung</h1>
-    <p class="screen-sub">Fortschritt sichern, auf ein anderes Gerät holen, oder den Fragenkatalog austauschen.</p>
+    <p class="screen-sub">Fortschritt sichern, auf ein anderes Gerät holen, oder einen eigenen Katalog dazuladen.</p>
 
     <div class="section-head">Fortschritt</div>
     <div class="btn-row">
@@ -203,9 +210,9 @@
 
     <div class="section-head">Fragenkatalog</div>
     <div class="btn-row">
-      <button class="btn" id="impQuestionsBtn">questions.json laden</button>
+      <button class="btn" id="impQuestionsBtn">Eigenen Katalog laden</button>
       <input type="file" id="impQuestions" accept="application/json,.json" class="hidden">
-      <button class="btn btn-ghost" id="resetQuestions">Auf mitgelieferte Datei zurücksetzen</button>
+      <button class="btn btn-ghost" id="resetQuestions">Eigenen Katalog entfernen</button>
     </div>
     <div class="hint" id="qSourceHint"></div>
 
