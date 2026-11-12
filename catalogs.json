@@ -29,6 +29,12 @@
       "exam": "CAD",
       "label": "Murielle und Lutz",
       "file": "cad-muriellelutz.json"
+    },
+    {
+      "id": "cad-measureup",
+      "exam": "CAD",
+      "label": "MeasureUp",
+      "file": "measureup_cad.json"
     }
   ]
 }
