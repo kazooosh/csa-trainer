@@ -35,6 +35,12 @@
       "exam": "CAD",
       "label": "MeasureUp",
       "file": "measureup_cad.json"
+    },
+    {
+      "id": "cad-snowprep",
+      "exam": "CAD",
+      "label": "SnowPrep",
+      "file": "snowprep_cad.json"
     }
   ]
 }
